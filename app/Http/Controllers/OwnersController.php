@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Owner;
+use App\Http\Resources\OwnerResource;
+use App\Http\Helpers;
 
 class OwnersController extends Controller
 {
@@ -11,9 +15,10 @@ class OwnersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function all()
     {
-        //
+        $owner=Owner::all();
+        return view ('admin.owner.all',compact('owner'));
     }
 
     /**
@@ -21,9 +26,9 @@ class OwnersController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function add()
     {
-        //
+        return view('admin.owner.add');
     }
 
     /**
@@ -34,7 +39,13 @@ class OwnersController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $owner = new Owner;
+        $owner -> fill($request->all());
+        $owner -> save();
+
+         //return $this->respondCreated(new OwnerResource($owner),"owner created successfully");
+
+         return redirect('/owner/all');
     }
 
     /**
@@ -45,7 +56,7 @@ class OwnersController extends Controller
      */
     public function show($id)
     {
-        //
+        
     }
 
     /**
@@ -56,7 +67,8 @@ class OwnersController extends Controller
      */
     public function edit($id)
     {
-        //
+        $owner = Owner::where('id','=',$id)->first();
+        return view('admin.owner.edit',compact('owner'));
     }
 
     /**
@@ -66,9 +78,13 @@ class OwnersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $req, $id)
     {
-        //
+        $owner = Owner::find($id);
+        $owner -> name= $req->name;
+        $owner ->save();
+
+        return redirect('/owner/all');
     }
 
     /**
@@ -77,8 +93,11 @@ class OwnersController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function delete($id)
     {
-        //
+        $owner = Owner::find($id);
+        $owner->delete();
+        return redirect('/owner/all');
+
     }
 }
