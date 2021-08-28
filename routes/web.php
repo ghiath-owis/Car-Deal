@@ -60,3 +60,9 @@ Route::get('/owner/all','OwnersController@all')->name('all-owners');
 Route::get('/owner/edit/{id}','OwnersController@edit')->name('edit-owner');
 Route::post('/owner/edit/{id}','OwnersController@update')->name('update-owner');
 Route::get('/owner/delete/{id}','OwnersController@delete')->name('delete-owner');
+
+Route::get('test', function () {
+
+    return view ('test');
+
+});
