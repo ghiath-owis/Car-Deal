@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use App\Models\Client;
+use App\Models\Vehicle;
 
 class CreateFavoriteVehiclesTable extends Migration
 {
@@ -14,12 +16,12 @@ class CreateFavoriteVehiclesTable extends Migration
     public function up()
     {
         Schema::create('favorite_vehicles', function (Blueprint $table) {
-            $table->bigInteger('customer_id')->unsigned();
-            $table->foreign('customer_id')->references('id')->on('customers')->onDelete('cascade');
+            $table->bigInteger('client_id')->unsigned();
+            $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
             $table->bigInteger('vehicle_id')->unsigned();
             $table->foreign('vehicle_id')->references('id')->on('vehicles')->onDelete('cascade');
 
-            $table->primary(['customer_id','vehicle_id']);
+            $table->primary(['client_id','vehicle_id']);
         });
     }
 

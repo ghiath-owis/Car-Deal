@@ -27,8 +27,8 @@ class CreateSpecialOffersTable extends Migration
         $special_offer = new SpecialOffer;
         $special_offer->description = "new year";
         $special_offer->ratio = "30";
-        //$special_offer->start_date = "1/1/2021";
-        //$special_offer->end_date = "10/1/2021";
+        $special_offer->start_date = "2021/2/2";
+        $special_offer->end_date = "2021/3/3";
         $special_offer->save();
 
     }

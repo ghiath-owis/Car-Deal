@@ -17,17 +17,17 @@ class CreateBrandsTable extends Migration
         Schema::create('brands', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string("name")->nullable();
+            $table->string('model')->nullable();
             $table->string('logo')->nullable();
-            $table->bigInteger('modell_id')->unsigned();
-            $table->foreign('modell_id')->references('id')->on('modells')->onDelete('cascade');
 
             $table->timestamps();
         });
 
         $brand = new Brand;
         $brand->name = "KIA";
+        $brand->model= "Rio";
         $brand->logo = "";
-        $brand->modell_id = "1";
+
         $brand->save();
     }
 

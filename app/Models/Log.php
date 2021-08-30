@@ -4,8 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Year extends Model
+class Log extends Model
 {
+
     protected $fillable =[
-    "factor_year"];
+        "action",
+        "client_id",
+        "vehicle_id",];
+
 }

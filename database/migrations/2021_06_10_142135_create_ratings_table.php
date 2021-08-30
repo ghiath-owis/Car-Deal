@@ -27,6 +27,7 @@ class CreateRatingsTable extends Migration
         $rate->final_rate = "3";
         $rate->sum_of_ratings = "3";
         $rate->sum_of_raters = "1";
+        
         $rate->save();
         
     }
