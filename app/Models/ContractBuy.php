@@ -8,7 +8,6 @@ class ContractBuy extends Model
 {
     protected $fillable =[
         "date",
-        "image",
-        "customer_id",
-        "owner_id"];
+        "client_id",
+        "vehicle_id"];
 }

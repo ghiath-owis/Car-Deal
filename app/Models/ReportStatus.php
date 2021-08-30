@@ -11,5 +11,6 @@ class ReportStatus extends Model
         "content",
         "date",
         "client_id",
-        "vehicle_id",];
+        "vehicle_id",
+        "request_table_id",];
 }

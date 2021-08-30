@@ -23,6 +23,7 @@ class CreateClientsTable extends Migration
             $table->string('password')->nullable();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
+            $table->string('photo')->nullable();
             
 
             $table->timestamps();
@@ -36,6 +37,8 @@ class CreateClientsTable extends Migration
         $client->password="gh1234";
         $client->phone="0941101108";
         $client->address="damascus";
+        $client->photo="";
+
         $client->save();
     }
 
