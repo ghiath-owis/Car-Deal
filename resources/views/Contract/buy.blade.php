@@ -7,7 +7,7 @@
 
 
                     <div class="row">
-                    <h3 class="text-center" >Contracts Rent Records </h3>
+                    <h3 class="text-center" >Contracts Buy Records </h3>
                         <div class="col-lg-12">
                             <div class="card-box">
 
@@ -18,23 +18,25 @@
                                         <thead>
                                             <tr>
                                                 <th>ID</th>
-                                                <th>Action</th>
-                                                <th>Vehicle Id</th>
+                                                <th>clients ID</th>
+                                                <th>FirstName</th>
+                                                <th>LastName</th>
+                                                <th>Vehicle ID</th>
                                                 <th>Vehicle Brand</th>
-                                                <th>User Id </th>
-                                                <th>UserName</th>
+                                                <th>Price</th>
                                                 <th>Date</th>
-                                                <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <tr>
                                                 <th scope="row">1</th>
-                                                <td>requst</td>
+                                               
                                                 <td>11</td>
-                                                <td>rio</td>
-                                                <td>55 </td>
                                                 <td>mohamad</td>
+                                                <td>haikal</td>
+                                                <td>55 </td>
+                                                <td>rio</td>
+                                                <td>1000$</td>
                                                 <td>1/1/2021 - 10:25:33 am</td>
                                                
 
@@ -42,23 +44,24 @@
                                             </tr>
                                             <tr>
                                             <th scope="row">1</th>
-                                                <td>requst</td>
-                                                <td>11</td>
-                                                <td>rio</td>
-                                                <td>55 </td>
+                                            <td>11</td>
                                                 <td>mohamad</td>
+                                                <td>haikal</td>
+                                                <td>55 </td>
+                                                <td>rio</td>
+                                                <td>1000$</td>
                                                 <td>1/1/2021 - 10:25:33 am</td>
-                                               
 
                                         
                                             </tr>
                                             <tr>
                                             <th scope="row">1</th>
-                                                <td>requst</td>
-                                                <td>11</td>
-                                                <td>rio</td>
-                                                <td>55 </td>
+                                            <td>11</td>
                                                 <td>mohamad</td>
+                                                <td>haikal</td>
+                                                <td>55 </td>
+                                                <td>rio</td>
+                                                <td>1000$</td>
                                                 <td>1/1/2021 - 10:25:33 am</td>
                                                
 
