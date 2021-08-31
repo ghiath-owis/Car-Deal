@@ -26,30 +26,21 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($brand as $brands )
                                             <tr>
-                                                <th scope="row">3</th>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
+                                                <th>{{$brands->id}}</th>
+                                                <td>{{$brands->name}}</td>
+                                                <td>{{$brands->model}}</td>
                                             
-                                                <td><button type="button"
-                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button>
-                                                    <button type="button"
-                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5">Delete</button>
+                                                <td>
+                                                <a href="/brand.edit{{$brands->id}}"> <button type="button"
+                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button></a>
+                                                        <a href="/brand/delete/{{$brands->id}}">  <button type="button"
+                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5"  >Delete</button></a>
                                                 </td>
 
                                             </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                               
-                                                <td><button type="button"
-                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button>
-                                                    <button type="button"
-                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5">Delete</button>
-                                                </td>
-
-                                            </tr>
+                                          @endforeach
 
                                         </tbody>
                                     </table>

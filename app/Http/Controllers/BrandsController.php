@@ -35,10 +35,10 @@ class BrandsController extends Controller
      */
 
     public function create()
-    //add
-    {
+    
+    { $brand=Brand::all();
 
-        return view('admin.brand.add');
+        return view('admin.brand.add')->with('brand',$brand);
 
     }
 
@@ -53,11 +53,13 @@ class BrandsController extends Controller
     public function store(Request $request)
     {
         $brand = new Brand;
-        $brand -> fill($request->all());
+        $brand->name = $request->name;
+        $brand->model = $request->model;
+        $logo = time() . '.' . $request->logo->getClientOriginalExtension();
+        $request->logo->move(public_path('Uploaded/image/brand'), $logo);
+        $brand->logo = $logo;
         $brand -> save();
-
-
-         return redirect('/brand/all');
+         return redirect('brand.all');
     }
     
 
@@ -98,11 +100,11 @@ class BrandsController extends Controller
         $brand = Brand::find($id);
         $brand -> name= $request->name;
         $brand -> model= $request->model;
-        $brand -> logo= $request->logo;
+        $brand -> logo= "xc";
 
         $brand ->save();
 
-        return redirect('/brand/all');
+        return redirect('/brand.all');
     }
 
     /**
@@ -115,6 +117,6 @@ class BrandsController extends Controller
     {
         $brand = Brand::find($id);
         $brand->delete();
-        return redirect('/brand/all');
+        return redirect('/brand.all');
     }
 }
