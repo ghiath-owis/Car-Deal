@@ -8,5 +8,5 @@ class Gallery extends Model
 {
     protected $fillable =[
         "image",
-        "vehicle_id",];
+        "vehicle_id"];
 }
