@@ -61,8 +61,29 @@ Route::get('/owner/edit/{id}','OwnersController@edit')->name('edit-owner');
 Route::post('/owner/edit/{id}','OwnersController@update')->name('update-owner');
 Route::get('/owner/delete/{id}','OwnersController@delete')->name('delete-owner');
 
-Route::get('test', function () {
 
-    return view ('test');
 
-});
+Route::get('/offer.create','SpecialOffersController@create')->name('create-offer');
+Route::post('/offer/store','SpecialOffersController@store')->name('store-offer');
+Route::get('//offer.index','SpecialOffersController@index')->name('all-offer');
+Route::get('/offer/edit/{id}','SpecialOffersController@edit')->name('edit-offer');
+Route::post('/offer/edit/{id}','SpecialOffersController@update')->name('update-offer');
+Route::get('/offer/delete/{id}','SpecialOffersController@destroy')->name('delete-offer');
+
+
+Route::get('/brand.create','BrandsController@create')->name('create-brand');
+Route::post('/brand/store','BrandsController@store')->name('store-brand');
+Route::get('/brand.index','BrandsController@index')->name('all-brand');
+Route::get('/brand/edit/{id}','BrandsController@edit')->name('edit-brand');
+Route::post('/brand/edit/{id}','BrandsController@update')->name('update-brand');
+Route::get('/brand/delete/{id}','BrandsController@destroy')->name('delete-brand');
+
+
+Route::get('/vehicle.create','vehiclesController@create')->name('create-vehicle');
+Route::post('/vehicle/store','vehiclesController@store')->name('store-vehicle');
+Route::get('/vehicle.index','vehiclesController@index')->name('all-vehicle');
+Route::get('/vehicle.edit{id}','vehiclesController@edit')->name('edit-vehicle');
+Route::post('/vehicle/edit/{id}','vehiclesController@update')->name('update-vehicle');
+Route::get('/vehicle/delete/{id}','vehiclesController@destroy')->name('delete-vehicle');
+
+Route::get('/log','LogController@index')->name('all-Log');
