@@ -61,6 +61,19 @@ Route::get('/owner/edit/{id}','OwnersController@edit')->name('edit-owner');
 Route::post('/owner/edit/{id}','OwnersController@update')->name('update-owner');
 Route::get('/owner/delete/{id}','OwnersController@delete')->name('delete-owner');
 
+
+// BrandController Routs
+
+Route::get('/brand/add','BrandsController@index')->name('add-brand');
+Route::post('/brand/store','BrandsController@store')->name('store-brand');
+Route::get('/brand/all','BrandsController@all')->name('all-brands');
+Route::get('/brand/edit/{id}','BrandsController@edit')->name('edit-brand');
+Route::post('/brand/edit/{id}','BrandsController@update')->name('update-brand');
+Route::get('/brand/delete/{id}','BrandsController@delete')->name('delete-brand');
+
+
+//test 
+
 Route::get('test', function () {
 
     return view ('test');
