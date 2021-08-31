@@ -90,3 +90,5 @@ Route::get('/log','LogController@index')->name('all-Log');
 
 Route::get('/rentContracts','ContractRentsController@index')->name('all-rent');
 Route::get('/buyContracts','ContractBuysController@index')->name('all-buy');
+
+Route::get('/request','RequestsTableController@index')->name('all-request');
