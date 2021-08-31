@@ -103,5 +103,6 @@ Route::get('/rentContracts.all','ContractRentsController@index')->name('all-rent
 
 
 
+
 // ContractBuysController Routs
-Route::get('/buyContracts ','ContarctBuysController@index')->name('all-buys');
+Route::get('/buyContracts.all','ContarctBuysController@index')->name('all-buys');

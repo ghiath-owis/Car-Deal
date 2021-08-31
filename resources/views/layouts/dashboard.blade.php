@@ -11,7 +11,7 @@
     <link rel="shortcut icon" href="assets/images/favicon.ico">
 
     <!-- App title -->
-    <title>Adminto - shared on themelock.com</title>
+    <title>Admin Dashboard</title>
 
     <!-- Plugins css-->
     <link href="assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
