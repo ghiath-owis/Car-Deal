@@ -38,7 +38,7 @@ class BrandsController extends Controller
     //add
     {
 
-        return view('admin.owner.add');
+        return view('admin.brand.add');
 
     }
 
@@ -56,11 +56,10 @@ class BrandsController extends Controller
         $brand -> fill($request->all());
         $brand -> save();
 
-         //return $this->respondCreated(new OwnerResource($owner),"owner created successfully");
 
-         return redirect('/owner/all');
+         return redirect('/brand/all');
     }
-    }
+    
 
     /**
      * Display the specified resource.

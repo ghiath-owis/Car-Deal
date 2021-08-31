@@ -3,6 +3,11 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\SpecialOffer;
+use App\Http\Resources\SpecialOfferResource;
+use App\Http\Helpers;
+
 
 class SpecialOffersController extends Controller
 {
@@ -12,9 +17,11 @@ class SpecialOffersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+    //all
     {
-        //
-        return view('SpecialOffers.index');
+        $special_offer=SpecialOffer::all();
+        return view ('admin.special_offer.all',compact('special_offer')); 
+    
     }
 
     /**
@@ -23,8 +30,10 @@ class SpecialOffersController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
+    //add
     {
-        return view('SpecialOffers.create');
+        return view('admin.special_offer.add');
+
     }
 
     /**
