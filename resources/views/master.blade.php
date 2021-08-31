@@ -43,11 +43,11 @@
 						<div class="row">
 							<div class="col-md-7 col-xs-12 hide_column">
 								<div class="header-top-menu">
-									<ul>
+									<!-- <ul>
 										<li><a href="#">Partners</a></li>
 										<li><a href="#">Community</a></li>
 										<li><a href="sell_a_product.html">Become A Seller</a></li>
-									</ul>
+									</ul> -->
 								</div>
 							</div>
 							<div class="col-lg-5 col-md-12 col-xs-12">
@@ -56,7 +56,7 @@
 										<li>
 											<a href="#">
 												<img src="img/boogyman.png" alt="">
-												BoogyMan  <span>$94.01 
+												<span> Customer Name  
 												<i class="fa fa-angle-down"></i></span>
 											</a>
 											<ul class="profile">
@@ -74,9 +74,9 @@
 										</li>
 									</ul>
 									<ul class="notification_icons">
-										<li>
+										<!-- <li>
 											<a href="#"><i class="fa fa-bell-o"></i><span class="number">11</span></a>
-										</li>
+										</li> -->
 										<li>
 											<a href="#"><i class="fa fa-envelope-o"></i><span class="number">5</span></a>
 										</li>
@@ -134,6 +134,9 @@
 						          <li class="menu-has-children"><a href="{{route('sell-product')}}" class="rounded ml-3 text-white sell-btn">Sell My Car</a>
 						          </li>			        	          
 						        </ul>
+								
+
+
 						      </nav><!-- #nav-menu-container -->
 					      </div>	    		
 				    	</div>

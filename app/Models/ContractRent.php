@@ -9,8 +9,6 @@ class ContractRent extends Model
     protected $fillable =[
         "start_date",
         "end_date",
-        "image",
-        "customer_id",
-        "vehicle_id",
-        "owner_id",];
+        "client_id",
+        "vehicle_id"];
 }

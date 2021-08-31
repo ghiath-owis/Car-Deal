@@ -8,6 +8,6 @@ class Brand extends Model
 {
     protected $fillable =[
         "name",
-        "logo",
-        "modell_id",];
+        "model",
+        "logo",];
 }
