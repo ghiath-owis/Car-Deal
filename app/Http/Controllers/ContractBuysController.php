@@ -14,6 +14,7 @@ class ContractBuysController extends Controller
     public function index()
     {
         //
+        return View('Contract.index.buy');
     }
 
     /**

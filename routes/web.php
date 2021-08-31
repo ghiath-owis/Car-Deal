@@ -87,3 +87,6 @@ Route::post('/vehicle/edit/{id}','vehiclesController@update')->name('update-vehi
 Route::get('/vehicle/delete/{id}','vehiclesController@destroy')->name('delete-vehicle');
 
 Route::get('/log','LogController@index')->name('all-Log');
+
+Route::get('/rentContracts','LogController@index')->name('all-rent');
+Route::get('/buyContracts ','LogController@index')->name('all-buy');

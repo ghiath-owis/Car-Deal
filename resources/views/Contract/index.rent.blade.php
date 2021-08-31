@@ -7,7 +7,7 @@
 
 
                     <div class="row">
-                    <h3 class="text-center" >Log Record </h3>
+                    <h3 class="text-center" >Contracts Rent Records </h3>
                         <div class="col-lg-12">
                             <div class="card-box">
 
