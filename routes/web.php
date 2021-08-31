@@ -106,7 +106,7 @@ Route::get('/rentContracts.all','ContractRentsController@index')->name('all-rent
 
 
 
-
+// RequestTablesController Routs
 Route::get('/request','RequestsTableController@index')->name('all-request');
 
 
