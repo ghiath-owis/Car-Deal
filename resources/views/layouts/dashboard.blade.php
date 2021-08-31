@@ -130,40 +130,24 @@
 
                         <li class="has_sub">
                             <a href="javascript:void(0);" class="waves-effect"><i
-                                    class="zmdi zmdi-collection-item"></i><span> Contracts </span> <span
+                                    class="ti-pencil-alt"></i><span> Contracts </span> <span
                                     class="menu-arrow"></span></a>
                             <ul class="list-unstyled">
                                 <li><a href="{{route('all-buy')}}">Buy</a></li>
                                 <li><a href="{{route('all-rent')}}">Rent</a></li>
                             </ul>
                         </li>
+
+                        <li >
+                            <a href="{{route('all-request')}}" class="waves-effect"><i
+                                    class="ti-location-arrow"></i><span>Request Table </span> </a>
+                            
+                        </li>
                         <li>
                             <a href="{{route('all-Log')}}" class="waves-effect"><i class="ti-comment"></i><span> Log </span></a>
                         </li>
 
-                      
-
-                        <li class="has_sub">
-                            <a href="javascript:void(0);" class="waves-effect"><i
-                                    class="zmdi zmdi-layers"></i><span>Extra Pages </span> <span
-                                    class="menu-arrow"></span></a>
-                            <ul class="list-unstyled">
-                                <li><a href="extras-projects.html">Projects</a></li>
-                                <li><a href="extras-tour.html">Tour</a></li>
-                                <li><a href="extras-taskboard.html">Taskboard</a></li>
-                                <li><a href="extras-taskdetail.html">Task Detail</a></li>
-                                <li><a href="extras-maps.html">Maps</a></li>
-                                <li><a href="extras-contact.html">Contact list</a></li>
-                                <li><a href="extras-pricing.html">Pricing</a></li>
-                                <li><a href="extras-timeline.html">Timeline</a></li>
-                                <li><a href="extras-invoice.html">Invoice</a></li>
-                                <li><a href="extras-faq.html">FAQ</a></li>
-                                <li><a href="extras-gallery.html">Gallery</a></li>
-                                <li><a href="extras-email-template.html">Email template</a></li>
-                                <li><a href="extras-maintenance.html">Maintenance</a></li>
-                                <li><a href="extras-comingsoon.html">Coming soon</a></li>
-                            </ul>
-                        </li>
+                    
 
                     </ul>
                     <div class="clearfix"></div>

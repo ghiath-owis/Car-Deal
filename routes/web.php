@@ -61,23 +61,6 @@ Route::get('/owner/edit/{id}','OwnersController@edit')->name('edit-owner');
 Route::post('/owner/edit/{id}','OwnersController@update')->name('update-owner');
 Route::get('/owner/delete/{id}','OwnersController@delete')->name('delete-owner');
 
-<<<<<<< HEAD
-
-// BrandController Routs
-
-Route::get('/brand/add','BrandsController@index')->name('add-brand');
-Route::post('/brand/store','BrandsController@store')->name('store-brand');
-Route::get('/brand/all','BrandsController@all')->name('all-brands');
-Route::get('/brand/edit/{id}','BrandsController@edit')->name('edit-brand');
-Route::post('/brand/edit/{id}','BrandsController@update')->name('update-brand');
-Route::get('/brand/delete/{id}','BrandsController@delete')->name('delete-brand');
-
-
-//test 
-
-Route::get('test', function () {
-=======
->>>>>>> mohamad
 
 
 Route::get('/offer.create','SpecialOffersController@create')->name('create-offer');
@@ -107,3 +90,5 @@ Route::get('/log','LogController@index')->name('all-Log');
 
 Route::get('/rentContracts','ContractRentsController@index')->name('all-rent');
 Route::get('/buyContracts','ContractBuysController@index')->name('all-buy');
+
+Route::get('/request','RequestsTableController@index')->name('all-request');
