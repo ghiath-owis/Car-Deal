@@ -14,6 +14,7 @@ class ContractRentsController extends Controller
     public function index()
     {
         //
+        return view('Contract.index.rent');
     }
 
     /**

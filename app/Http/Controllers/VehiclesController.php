@@ -14,6 +14,7 @@ class VehiclesController extends Controller
     public function index()
     {
         //
+        return view('vehicle.index');
     }
 
     /**
@@ -24,6 +25,7 @@ class VehiclesController extends Controller
     public function create()
     {
         //
+        return view('vehicle.create');
     }
 
     /**
@@ -57,6 +59,7 @@ class VehiclesController extends Controller
     public function edit($id)
     {
         //
+        return view('vehicle.edit');
     }
 
     /**
