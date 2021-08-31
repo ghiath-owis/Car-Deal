@@ -88,5 +88,5 @@ Route::get('/vehicle/delete/{id}','vehiclesController@destroy')->name('delete-ve
 
 Route::get('/log','LogController@index')->name('all-Log');
 
-Route::get('/rentContracts','LogController@index')->name('all-rent');
-Route::get('/buyContracts ','LogController@index')->name('all-buy');
+Route::get('/rentContracts','ContractRentsController@index')->name('all-rent');
+Route::get('/buyContracts ','ContarctBuysController@index')->name('all-buy');
