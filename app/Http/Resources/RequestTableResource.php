@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class BodyResource extends JsonResource
+class RequestTableResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -14,9 +14,12 @@ class BodyResource extends JsonResource
      */
     public function toArray($request)
     {
-        return [
             'id' => $this->id,
-            'name' => $this->name,
-        ];
+            'date' => $this->date,
+            'type' => $this->type,
+            'start_date' => $this->start_date,
+            'end_date' => $this->end_date,
+            'client' => $this->client_id,
+            'vehicle' => $this->vehicle_id,
     }
 }

@@ -63,32 +63,53 @@ Route::get('/owner/delete/{id}','OwnersController@delete')->name('delete-owner')
 
 
 
-Route::get('/offer.create','SpecialOffersController@create')->name('create-offer');
-Route::post('/offer/store','SpecialOffersController@store')->name('store-offer');
-Route::get('//offer.index','SpecialOffersController@index')->name('all-offer');
-Route::get('/offer/edit/{id}','SpecialOffersController@edit')->name('edit-offer');
-Route::post('/offer/edit/{id}','SpecialOffersController@update')->name('update-offer');
-Route::get('/offer/delete/{id}','SpecialOffersController@destroy')->name('delete-offer');
 
+// BrandController Routs
 
-Route::get('/brand.create','BrandsController@create')->name('create-brand');
+Route::get('/brand.add','BrandsController@create')->name('add-brand');
 Route::post('/brand/store','BrandsController@store')->name('store-brand');
-Route::get('/brand.index','BrandsController@index')->name('all-brand');
+Route::get('/brand.all','BrandsController@index')->name('all-brands');
 Route::get('/brand/edit/{id}','BrandsController@edit')->name('edit-brand');
 Route::post('/brand/edit/{id}','BrandsController@update')->name('update-brand');
 Route::get('/brand/delete/{id}','BrandsController@destroy')->name('delete-brand');
 
 
-Route::get('/vehicle.create','vehiclesController@create')->name('create-vehicle');
+// SpecialOfferController Routs
+
+Route::get('/offer.add','SpecialOffersController@create')->name('add-special_offer');
+Route::post('/offer/store','SpecialOffersController@store')->name('store-special_offer');
+Route::get('/offer.all','SpecialOffersController@index')->name('all-special_offers');
+Route::get('/offer.edit/{id}','SpecialOffersController@edit')->name('edit-special_offer');
+Route::post('/offer.edit/{id}','SpecialOffersController@update')->name('update-special_offer');
+Route::get('/offer/delete/{id}','SpecialOffersController@destroy')->name('delete-special_offer');
+
+
+
+// VehiclesController Routs
+
+Route::get('/vehicle.add','vehiclesController@create')->name('add-vehicle');
 Route::post('/vehicle/store','vehiclesController@store')->name('store-vehicle');
-Route::get('/vehicle.index','vehiclesController@index')->name('all-vehicle');
+Route::get('/vehicle.all','vehiclesController@index')->name('all-vehicles');
 Route::get('/vehicle.edit{id}','vehiclesController@edit')->name('edit-vehicle');
-Route::post('/vehicle/edit/{id}','vehiclesController@update')->name('update-vehicle');
+Route::post('/vehicle.edit/{id}','vehiclesController@update')->name('update-vehicle');
 Route::get('/vehicle/delete/{id}','vehiclesController@destroy')->name('delete-vehicle');
 
-Route::get('/log','LogController@index')->name('all-Log');
+// LogsController Routs
 
-Route::get('/rentContracts','ContractRentsController@index')->name('all-rent');
-Route::get('/buyContracts','ContractBuysController@index')->name('all-buy');
+Route::get('/log.all','LogController@index')->name('all-logs');
+
+
+
+// ContractRentsController Routs
+Route::get('/rentContracts.all','ContractRentsController@index')->name('all-rents');
+
+
+
+
 
 Route::get('/request','RequestsTableController@index')->name('all-request');
+
+
+// ContractBuysController Routs
+Route::get('/buyContracts.all','ContarctBuysController@index')->name('all-buys');
+

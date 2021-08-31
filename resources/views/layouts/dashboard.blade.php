@@ -100,8 +100,8 @@
                             <a href="javascript:void(0);" class="waves-effect"><i class="ti-car"></i>
                                 <span>Vehicles</span> <span class="menu-arrow"></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="{{route('create-vehicle')}}">Add Vehicle</a></li>
-                                <li><a href="{{route('all-vehicle')}}">All Vehicles</a></li>
+                                <li><a href="{{route('add-vehicle')}}">Add Vehicle</a></li>
+                                <li><a href="{{route('all-vehicles')}}">All Vehicles</a></li>
                             
                             </ul>
                         </li>
@@ -110,8 +110,8 @@
                             <a href="javascript:void(0);" class="waves-effect"><i class="ti-bookmark-alt"></i>
                                 <span>Brands</span> <span class="menu-arrow"></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="{{route('create-brand')}}">Add Brand</a></li>
-                                <li><a href="{{route('all-brand')}}">All Brans</a></li>
+                                <li><a href="{{route('add-brand')}}">Add Brand</a></li>
+                                <li><a href="{{route('all-brands')}}">All Brands</a></li>
                                 
                             </ul>
                         </li>
@@ -122,8 +122,8 @@
                             <a href="javascript:void(0);" class="waves-effect"><i class=" ti-stats-down"></i><span>
                                 Special Offers </span> <span class="menu-arrow"></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="{{route('create-offer')}}">Add Special Offers</a></li>
-                                <li><a href="{{route('all-offer')}}">All Special Offers</a></li>
+                                <li><a href="{{route('add-special_offer')}}">Add Special Offers</a></li>
+                                <li><a href="{{route('all-special_offers')}}">All Special Offers</a></li>
                               
                             </ul>
                         </li>
@@ -133,8 +133,8 @@
                                     class="ti-pencil-alt"></i><span> Contracts </span> <span
                                     class="menu-arrow"></span></a>
                             <ul class="list-unstyled">
-                                <li><a href="{{route('all-buy')}}">Buy</a></li>
-                                <li><a href="{{route('all-rent')}}">Rent</a></li>
+                                <li><a href="{{route('all-buys')}}">Buy</a></li>
+                                <li><a href="{{route('all-rents')}}">Rent</a></li>
                             </ul>
                         </li>
 
@@ -144,7 +144,7 @@
                             
                         </li>
                         <li>
-                            <a href="{{route('all-Log')}}" class="waves-effect"><i class="ti-comment"></i><span> Log </span></a>
+                            <a href="{{route('all-logs')}}" class="waves-effect"><i class="ti-comment"></i><span> Log </span></a>
                         </li>
 
                     
