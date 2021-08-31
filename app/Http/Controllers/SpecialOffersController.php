@@ -14,6 +14,7 @@ class SpecialOffersController extends Controller
     public function index()
     {
         //
+        return view('SpecialOffers.index');
     }
 
     /**
@@ -23,7 +24,7 @@ class SpecialOffersController extends Controller
      */
     public function create()
     {
-        //
+        return view('SpecialOffers.create');
     }
 
     /**
@@ -46,7 +47,9 @@ class SpecialOffersController extends Controller
     public function show($id)
     {
         //
+  
     }
+    
 
     /**
      * Show the form for editing the specified resource.
@@ -57,6 +60,7 @@ class SpecialOffersController extends Controller
     public function edit($id)
     {
         //
+        return view('SpecialOffers.edit');
     }
 
     /**

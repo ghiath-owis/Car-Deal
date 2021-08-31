@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
-class BrandsController extends Controller
+class LogController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class BrandsController extends Controller
      */
     public function index()
     {
-        return view('Brand.index');
+        return view('Log.index');
     }
 
     /**
@@ -24,7 +25,6 @@ class BrandsController extends Controller
     public function create()
     {
         //
-        return view('Brand.create');
     }
 
     /**
@@ -58,7 +58,6 @@ class BrandsController extends Controller
     public function edit($id)
     {
         //
-        return view('Brand.edit');
     }
 
     /**
