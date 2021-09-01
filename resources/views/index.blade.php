@@ -180,7 +180,7 @@
 												<li>
 													@foreach($brands as $brand)
 													@if($brand->id==$vehicle->brand_id)
-												<a href="#">{{$brand->name}} {{$brand->model}}</a>
+												<a href="{{route('product-listing-detail')}}">{{$brand->name}} {{$brand->model}}</a>
 												@endif
 												@endforeach
 													<a href="#" class="pull-right"><span class="mr-1">$</span>{{$vehicle->price}}</a>
