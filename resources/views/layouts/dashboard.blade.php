@@ -91,7 +91,7 @@
                        
 
                         <li>
-                            <a  class="waves-effect text-center"><i class=" ti-home"></i><span>
+                            <a  href="{{route('home')}}" class="waves-effect text-center"><i class=" ti-home"></i><span>
                                     Dashboard </span> </a>
                         </li>
 
@@ -147,7 +147,19 @@
                             <a href="{{route('all-logs')}}" class="waves-effect"><i class="ti-comment"></i><span> Log </span></a>
                         </li>
 
+                    <li>
                     
+                                    <a class="waves-effect" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();"><i class="fa fa-sign-out"></i>
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                
+                     </li>
 
                     </ul>
                     <div class="clearfix"></div>

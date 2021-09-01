@@ -39,6 +39,7 @@ class CreateVehiclesTable extends Migration
             $table->double("price_after_offer")->nullable();
             $table->string('origin_country')->nullable();
             $table->integer('year')->nullable();
+            $table->string('service_type')->nullable();
             $table->enum('transmission',[Transmissions::MANUAL, Transmissions::AUTOMATIC, Transmissions::TIPTRONIC])->default(Transmissions::AUTOMATIC);
             $table->enum('interior_color', [Colors::RED, Colors::BLUE, Colors::GREEN, Colors::BLACK,Colors::WHITE,Colors::GRAY, Colors::YELLOW, Colors::PINK, Colors::PURPLE, Colors::BROWN, Colors::OTHER])->default(Colors::OTHER);
             $table->enum('exterior_color', [Colors::RED, Colors::BLUE, Colors::GREEN, Colors::BLACK,Colors::WHITE,Colors::GRAY, Colors::YELLOW, Colors::PINK, Colors::PURPLE, Colors::BROWN, Colors::OTHER])->default(Colors::OTHER);
@@ -59,8 +60,8 @@ class CreateVehiclesTable extends Migration
             // $table->foreign('interior_id')->references('id')->on('colors')->onDelete('cascade');
             // $table->bigInteger('address_id')->unsigned();
             // $table->foreign('address_id')->references('id')->on('addresses')->onDelete('cascade');
-            $table->bigInteger('rating_id')->unsigned();
-            $table->foreign('rating_id')->references('id')->on('ratings')->onDelete('cascade');
+           // $table->bigInteger('rating_id')->unsigned();
+            //$table->foreign('rating_id')->references('id')->on('ratings')->onDelete('cascade')->default(1);
             $table->bigInteger('brand_id')->unsigned();
             $table->foreign('brand_id')->references('id')->on('brands')->onDelete('cascade');
             $table->bigInteger('special_offer_id')->unsigned();
@@ -83,10 +84,11 @@ class CreateVehiclesTable extends Migration
         $vehicle->price_after_offer = "7000000";
         $vehicle->origin_country = "Germany";
         $vehicle->year = 2021;
+       // $vehicle->service_type = buy;
         $vehicle->transmission = Transmissions::AUTOMATIC;
         $vehicle->exterior_color = Colors::RED;
         $vehicle->interior_color = Colors::RED;
-        $vehicle->rating_id = "1";
+       // $vehicle->rating_id = "1";
         $vehicle->brand_id = "1";
         $vehicle->special_offer_id = "1";
         $vehicle->save();

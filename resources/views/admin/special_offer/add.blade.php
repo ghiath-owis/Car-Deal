@@ -17,29 +17,31 @@
                                     <div class="col-lg-8">
 
                                         <div class="p-20">
-                                            <form action="#" class="form-horizontal">
+                                            <form  class="form-horizontal"  method="post"
+                                action="{{route('store-special_offer')}}"> 
+                                                @csrf
                                                  <div class="form-group">
                                                     <label class="control-label col-sm-4">Ratio:</label>
                                                     <div class="col-sm-8">
                                                         <input required type="string" type="text" class="form-control"
-                                                        placeholder="Ratio...">
+                                                        placeholder="Ratio..." name="ratio">
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-4">Description:</label>
                                                     <div class="col-sm-8">
                                                         <textarea required type="string" class="form-control" rows="3"
-                                                        placeholder="Descripton..."></textarea>
+                                                        placeholder="Descripton..." name="description"></textarea>
                                                     </div>
                                                 </div>
                                                 <div class="form-group">
                                                     <label class="control-label col-sm-4">Date Range:</label>
                                                     <div class="col-sm-8">
-                                                        <div class="input-daterange input-group" id="date-range">
-                                                            <input required type="string" type="text" class="form-control" name="start" />
+                                                        <div class="input-daterange input-group" >
+                                                            <input required type="date"  class="form-control" name="start_date" />
                                                             <span
                                                                 class="input-group-addon bg-primary b-0 text-white">to</span>
-                                                            <input required type="string" type="text" class="form-control" name="end" />
+                                                            <input required type="date" class="form-control" name="end_date" />
                                                         </div>
                                                     </div>
                                                 </div>
