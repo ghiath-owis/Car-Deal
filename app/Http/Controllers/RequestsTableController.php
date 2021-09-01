@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\RequestTable;
+use App\Http\Resources\RequestTableResource;
+use App\Http\Helpers;
 
 class RequestsTableController extends Controller
 {
@@ -14,8 +17,9 @@ class RequestsTableController extends Controller
      */
     public function index()
     {
-        //
-        return view('admin.requests_table.all');
+        $request_table=RequestTable::all();
+        return view ('admin.request_table.all',compact('request_table'));
+
     }
 
     /**
