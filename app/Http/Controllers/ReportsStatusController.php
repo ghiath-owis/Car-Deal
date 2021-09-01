@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\ReportStatus;
+use App\Http\Resources\ReportStatusResource;
+use App\Http\Helpers;
 
 class ReportsStatusController extends Controller
 {
@@ -14,7 +17,8 @@ class ReportsStatusController extends Controller
      */
     public function index()
     {
-        //
+        $report_status=ReportStatus::all();
+        return view ('admin.report_status.all',compact('report_status'));
     }
 
     /**

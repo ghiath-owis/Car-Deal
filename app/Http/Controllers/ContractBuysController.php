@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\ContractBuy;
+use App\Http\Resources\ContractBuyResource;
+use App\Http\Helpers;
 
 class ContractBuysController extends Controller
 {
@@ -12,9 +16,11 @@ class ContractBuysController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
+    //all
     {
-        //
-        return View('Contract.buy');
+        $contract_buy=ContractBuy::all();
+        return view ('admin.contract_buy.all',compact('contract_buy')); 
+
     }
 
     /**

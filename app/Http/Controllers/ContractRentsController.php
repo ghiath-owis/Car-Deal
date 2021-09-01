@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\ContractRent;
+use App\Http\Resources\ContractRentResource;
+use App\Http\Helpers;
 
 class ContractRentsController extends Controller
 {
@@ -13,8 +17,9 @@ class ContractRentsController extends Controller
      */
     public function index()
     {
-        //
-        return view('Contract.rent');
+        $contract_rent=ContractRent::all();
+        return view ('admin.contract_rent.all',compact('contract_rent')); 
+
     }
 
     /**
