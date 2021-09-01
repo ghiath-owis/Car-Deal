@@ -17,13 +17,11 @@ class LogController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
+
         $log=Log::all();
         return view ('admin.log.all',compact('log'));
 
-=======
-        return view('admin.Log.all');
->>>>>>> mohamad
+
     }
 
     /**
