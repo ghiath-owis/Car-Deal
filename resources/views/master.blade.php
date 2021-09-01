@@ -31,6 +31,14 @@
 			<link rel="stylesheet" href="css/carousel_advance.css">
 			<link rel="stylesheet" href="css/main.css">
 			<link rel="stylesheet" href="css/rangeslider.css">
+			 <!-- App CSS -->
+ 
+    <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 			<!--======= Responsive Bootstrap Carousel StyleSheet =========-->
 		<link href="css/testimonial_speech_bubble_border_carousel.css" rel="stylesheet" media="all">
 		</head>
@@ -97,7 +105,8 @@
 				    	<div class="row align-items-center d-flex">
 				    		<div class="col-lg-2 col-md-2">
 				    			<div id="logo">
-							        <a href="index.html"><img src="img/logo.png" alt="" /></a>
+				<a  class="logo"><span style="color:black;  font-size: 45px;
+}">Car<span style="color:red;">Deal</span></span><i class="zmdi zmdi-layers"></i></a>
 							    </div>
 				    		</div>
 					   		<div class="col-lg-10 col-md-2">				
@@ -131,8 +140,7 @@
 						          </li>
 						          
 						          <li class="menu-has-children"><a href="{{route('contact')}}">Contact</a></li>
-						          <li class="menu-has-children"><a href="{{route('sell-product')}}" class="rounded ml-3 text-white sell-btn">Sell My Car</a>
-						          </li>			        	          
+						          	        	          
 						        </ul>
 								
 

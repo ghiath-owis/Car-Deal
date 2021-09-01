@@ -10,7 +10,8 @@
                             <div class="card-box">
                                 
                                 <form class="form-horizontal" role="form" enctype="multipart/form-data" method="post"
-                                    action="/details">
+                                    action="{{route('store-vehicle')}}">
+                                    @csrf
                                     <div class="row">
                                         <div class="col-lg-6">
 
@@ -18,14 +19,9 @@
                                                 <label class="col-md-2 control-label">Brand:</label>
                                                 <div class="col-md-10">
                                                     <Select class="form-control" name="brand_id">
-
-                                                        <option value="1">1</option>
-                                                        <option value="1">1</option>
-                                                        <option value="1">1</option>
-                                                        <option value="1">1</option>
-                                                        <option value="1">1</option>
-                                                        <option value="1">1</option>
-                                                        
+                                                    @foreach($brand as $b)
+                                                        <option value="{{$b->id}}">{{$b->name}}</option>
+                                                     @endforeach
 
                                                     </Select>
                                                 </div>
@@ -34,21 +30,19 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label" style=" padding-right: 10px;"> Engine_Force: </label>
                                                 <div class="col-md-10">
-                                                    <input required type="string" type="text" name="Engine_Force" class="form-control"
+                                                    <input required type="string" type="text" name="engine_force" class="form-control"
                                                         placeholder="Engine Force...">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Fule:</label>
                                                 <div class="col-md-10">
-                                                    <Select class="form-control" name="fule">
-
-                                                        <option value="1">1</option>
-                                                        <option value="1">1</option>
-                                                        <option value="1">1</option>
-                                                        <option value="1">1</option>
-                                                        <option value="1">1</option>
-                                                        <option value="1">1</option>
+                                                    <Select class="form-control" name="fuel">
+                                                        
+                                                        <option value="BENZIN">BENZIN</option>
+                                                        <option value="DISEL">DISEL</option>
+                                                        <option value="ELICTRIC">ELICTRIC</option>
+                                                        <option value="OTHER">OTHER</option>
 
                                                     </Select>
                                                 </div>
@@ -58,28 +52,29 @@
                                                 <label class="col-md-2 control-label">Kilometrage:</label>
                                                 <div class="col-md-10">
                                                     <input required type="string" type="text" class="form-control"
-                                                        placeholder="Kilometrage...">
+                                                        placeholder="Kilometrage..." name="kilometrage">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Descripton:</label>
                                                 <div class="col-md-10">
                                                     <textarea  required type="string" class="form-control" rows="3"
-                                                        placeholder="Descripton..."></textarea>
+                                                        placeholder="Descripton..." name="description"></textarea>
                                                 </div>
                                             </div>
+
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">country:</label>
                                                 <div class="col-md-10">
                                                     <input required type="string" type="text" class="form-control"
-                                                        placeholder="origin-country...">
+                                                        placeholder="origin-country..." name="origin_country">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">isAvailable:</label>
                                                 <div class="col-md-10">
                                                     <Select class="form-control" name="is_available">
-                                                        <option value="1">false</option>
+                                                        <option value="0">false</option>
                                                         <option value="1">true</option>
 
 
@@ -89,9 +84,10 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">specialOffer:</label>
                                                 <div class="col-md-10">
-                                                    <Select class="form-control" name="special_Offer_id">
-                                                        <option value="1">false</option>
-                                                        <option value="1">true</option>
+                                                    <Select class="form-control" name="special_offer_id">
+                                                    @foreach($offers as $offer)
+                                                        <option value="{{$offer->id}}">{{$offer->ratio}}%</option>
+                                                     @endforeach
 
 
                                                     </Select>
@@ -111,41 +107,33 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Price:</label>
                                                 <div class="col-md-10">
-                                                    <input required type="string" type="text" class="form-control" placeholder="Price...">
+                                                    <input required type="string" type="text" class="form-control" placeholder="Price..." name="price">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">MaxSpeed:</label>
                                                 <div class="col-md-10">
-                                                    <input  required type="string" type="text" class="form-control" placeholder="Max speed...">
+                                                    <input  required type="string" type="text" class="form-control" placeholder="Max speed..." name="max_speed">
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Year:</label>
                                                 <div class="col-md-10">
-                                                    <Select class="form-control" name="year">
+                                                <input  required type="integar" class="form-control" placeholder="Year..." name="year">
 
-                                                        <option value="1">1999</option>
-                                                        <option value="1">2000</option>
-                                                        <option value="1">2001</option>
-                                                        <option value="1">2002</option>
-                                                        <option value="1">2003</option>
-                                                        <option value="1">2004</option>
-
-                                                    </Select>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Ex-color:</label>
                                                 <div class="col-md-10">
-                                                    <Select class="form-control" name="Ex-color:">
+                                                    <Select class="form-control" name="exterior_color">
 
-                                                        <option value="1">blue</option>
-                                                        <option value="1">red</option>
-                                                        <option value="1">green</option>
-                                                        <option value="1">gray</option>
-                                                        <option value="1">pink</option>
-                                                        <option value="1">black</option>
+                                                        <option value="blue">blue</option>
+                                                        <option value="red">red</option>
+                                                        <option value="green">green</option>
+                                                        <option value="gray">gray</option>
+                                                        <option value="pink">pink</option>
+                                                        <option value="black">black</option>
 
                                                     </Select>
                                                 </div>
@@ -153,14 +141,14 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">In-color:</label>
                                                 <div class="col-md-10">
-                                                    <Select class="form-control" name="In-color">
+                                                    <Select class="form-control" name="interior_color">
 
-                                                        <option value="1">blue</option>
-                                                        <option value="1">red</option>
-                                                        <option value="1">green</option>
-                                                        <option value="1">gray</option>
-                                                        <option value="1">pink</option>
-                                                        <option value="1">black</option>
+                                                    <option value="blue">blue</option>
+                                                        <option value="red">red</option>
+                                                        <option value="green">green</option>
+                                                        <option value="gray">gray</option>
+                                                        <option value="pink">pink</option>
+                                                        <option value="black">black</option>
 
                                                     </Select>
                                                 </div>
@@ -168,11 +156,11 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label" style=" padding-left: -50px;">Transmission:</label>
                                                 <div class="col-md-10">
-                                                    <Select class="form-control" name="Transmission">
+                                                    <Select class="form-control" name="transmission">
 
-                                                        <option value="1">manual</option>
-                                                        <option value="1">automatic</option>
-                                                        <option value="1">coutinuously</option>
+                                                        <option value="MANUAL">MANUAL</option>
+                                                        <option value="AUTOMATIC">AUTOMATIC</option>
+                                                        <option value="TIPTRONIC">TIPTRONIC</option>
 
 
                                                     </Select>
@@ -182,9 +170,9 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">status:</label>
                                                 <div class="col-md-10">
-                                                    <Select class="form-control" name="hasOffer">
-                                                        <option value="1">new</option>
-                                                        <option value="1">old</option>
+                                                    <Select class="form-control" name="status">
+                                                        <option value="new">new</option>
+                                                        <option value="used">used</option>
 
 
 
@@ -195,8 +183,8 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">hasOffer: </label>
                                                 <div class="col-md-10">
-                                                    <Select class="form-control" name="hasOffer">
-                                                        <option value="1">false</option>
+                                                    <Select class="form-control" name="has_offer">
+                                                        <option value="0">false</option>
                                                         <option value="1">true</option>
 
 
@@ -207,18 +195,23 @@
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">serviceType: </label>
                                                 <div class="col-md-10">
-                                                    <Select class="form-control" name="serviceType">
-                                                        <option value="1">buy</option>
-                                                        <option value="1">rent</option>
+                                                    <Select class="form-control" name="service_type">
+                                                        <option value="buy">buy</option>
+                                                        <option value="rent">rent</option>
                                                     </Select>
                                                 </div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">Bodies: </label>
                                                 <div class="col-md-10">
-                                                    <Select class="form-control" name="bodies_id">
-                                                        <option value="1">TowDoor</option>
-                                                        <option value="1">FourDoor</option>
+                                                    <Select class="form-control" name="body">
+                                                        <option value="TWO_DOOR">TWO_DOOR</option>
+                                                        <option value="FOUR_DOOR">FOUR_DOOR</option>
+                                                        <option value="SEDAN">SEDAN</option>
+                                                        <option value="SUV">SUV</option>
+                                                        <option value="SPORT">SPORT</option>
+                                                        <option value="HATCHBACK">HATCHBACK</option>
+                                                        <option value="OTHER">OTHER</option>
                                                     </Select>
                                                 </div>
                                             </div>

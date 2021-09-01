@@ -39,7 +39,6 @@ Route::get('/product_listing_detail','PagesController@product_listing_detail')->
 Route::get('/messages','PagesController@messages')->name('messages');
 Route::get('/notifications','PagesController@notifications')->name('notifications');
 Route::get('/search','PagesController@search')->name('search');
-Route::get('/sell_product','PagesController@sell_product')->name('sell-product');
 Route::get('/services','PagesController@services')->name('services');
 Route::get('/shopping_cart','PagesController@shopping_cart')->name('shopping-cart');
 Route::get('/sign_in','PagesController@sign_in')->name('sign-in');
@@ -79,8 +78,8 @@ Route::get('/brand/delete/{id}','BrandsController@destroy')->name('delete-brand'
 Route::get('/offer.add','SpecialOffersController@create')->name('add-special_offer');
 Route::post('/offer/store','SpecialOffersController@store')->name('store-special_offer');
 Route::get('/offer.all','SpecialOffersController@index')->name('all-special_offers');
-Route::get('/offer.edit/{id}','SpecialOffersController@edit')->name('edit-special_offer');
-Route::post('/offer.edit/{id}','SpecialOffersController@update')->name('update-special_offer');
+Route::get('/offer.edit{id}','SpecialOffersController@edit')->name('edit-special_offer');
+Route::post('/offer.update{id}','SpecialOffersController@update')->name('update-special_offer');
 Route::get('/offer/delete/{id}','SpecialOffersController@destroy')->name('delete-special_offer');
 
 
@@ -91,7 +90,7 @@ Route::get('/vehicle.add','vehiclesController@create')->name('add-vehicle');
 Route::post('/vehicle/store','vehiclesController@store')->name('store-vehicle');
 Route::get('/vehicle.all','vehiclesController@index')->name('all-vehicles');
 Route::get('/vehicle.edit{id}','vehiclesController@edit')->name('edit-vehicle');
-Route::post('/vehicle.edit/{id}','vehiclesController@update')->name('update-vehicle');
+Route::post('/vehicle.update{id}','vehiclesController@update')->name('update-vehicle');
 Route::get('/vehicle/delete/{id}','vehiclesController@destroy')->name('delete-vehicle');
 
 // LogsController Routs
@@ -111,5 +110,5 @@ Route::get('/request','RequestsTableController@index')->name('all-request');
 
 
 // ContractBuysController Routs
-Route::get('/buyContracts.all','ContarctBuysController@index')->name('all-buys');
+Route::get('/buyContracts.all','ContractBuysController@index')->name('all-buys');
 

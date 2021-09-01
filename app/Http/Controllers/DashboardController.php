@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class LogController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,8 @@ class LogController extends Controller
      */
     public function index()
     {
-        return view('admin.Log.all');
+        return view('layouts.dashboard');
+        //
     }
 
     /**
