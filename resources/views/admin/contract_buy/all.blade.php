@@ -10,77 +10,83 @@
                     <h3 class="text-center" >Contracts Buy Records </h3>
                         <div class="col-lg-12">
                             <div class="card-box">
+                                @if(count($contract_buy) != 0)
 
 
+                                            <div class="table-responsive">
+                                                <table class="table table-striped " id="datatable-editable">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>ID</th>
+                                                            <th>clients ID</th>
+                                                            <th>FirstName</th>
+                                                            <th>LastName</th>
+                                                            <th>Vehicle ID</th>
+                                                            <th>Vehicle Brand</th>
+                                                            <th>Price</th>
+                                                            <th>Date</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th scope="row">1</th>
+                                                        
+                                                            <td>11</td>
+                                                            <td>mohamad</td>
+                                                            <td>haikal</td>
+                                                            <td>55 </td>
+                                                            <td>rio</td>
+                                                            <td>1000$</td>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
+                                                        
 
-                                <div class="table-responsive">
-                                    <table class="table table-striped " id="datatable-editable">
-                                        <thead>
-                                            <tr>
-                                                <th>ID</th>
-                                                <th>clients ID</th>
-                                                <th>FirstName</th>
-                                                <th>LastName</th>
-                                                <th>Vehicle ID</th>
-                                                <th>Vehicle Brand</th>
-                                                <th>Price</th>
-                                                <th>Date</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <th scope="row">1</th>
-                                               
-                                                <td>11</td>
-                                                <td>mohamad</td>
-                                                <td>haikal</td>
-                                                <td>55 </td>
-                                                <td>rio</td>
-                                                <td>1000$</td>
-                                                <td>1/1/2021 - 10:25:33 am</td>
-                                               
+                                                        
+                                                        </tr>
+                                                        <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>11</td>
+                                                            <td>mohamad</td>
+                                                            <td>haikal</td>
+                                                            <td>55 </td>
+                                                            <td>rio</td>
+                                                            <td>1000$</td>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
 
-                                              
-                                            </tr>
-                                            <tr>
-                                            <th scope="row">1</th>
-                                            <td>11</td>
-                                                <td>mohamad</td>
-                                                <td>haikal</td>
-                                                <td>55 </td>
-                                                <td>rio</td>
-                                                <td>1000$</td>
-                                                <td>1/1/2021 - 10:25:33 am</td>
+                                                    
+                                                        </tr>
+                                                        <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>11</td>
+                                                            <td>mohamad</td>
+                                                            <td>haikal</td>
+                                                            <td>55 </td>
+                                                            <td>rio</td>
+                                                            <td>1000$</td>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
+                                                        
 
-                                        
-                                            </tr>
-                                            <tr>
-                                            <th scope="row">1</th>
-                                            <td>11</td>
-                                                <td>mohamad</td>
-                                                <td>haikal</td>
-                                                <td>55 </td>
-                                                <td>rio</td>
-                                                <td>1000$</td>
-                                                <td>1/1/2021 - 10:25:33 am</td>
-                                               
+                                                        
 
-                                              
+                                                        </tr>
+                                                
 
-                                            </tr>
-                                      
+                                                        
 
-                                            
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div><!-- end col -->
 
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                        </div><!-- end col -->
+                                @else
+                                    <div class="text-center , alert alert-danger">
+                                        <h3> No Data</h3> 
+                                    </div>
+                                @endif
 
                     </div>
                     <!-- end row -->
-
+                    
 
 
 

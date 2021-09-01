@@ -59,7 +59,8 @@ class BrandsController extends Controller
         $request->logo->move(public_path('Uploaded/image/brand'), $logo);
         $brand->logo = $logo;
         $brand -> save();
-         return redirect('brand.all');
+
+        return redirect('brand.all');
     }
     
 
