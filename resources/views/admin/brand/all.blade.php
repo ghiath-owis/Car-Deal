@@ -10,11 +10,11 @@
                         <h3 class="text-center">All Brands</h3>
 
 
-                        @if(count($brand) != 0)
+                        
 
                             <div class="col-lg-12">
                                 <div class="card-box">
-
+                                @if(count($brand) != 0)
 
 
                                     <div class="table-responsive">
