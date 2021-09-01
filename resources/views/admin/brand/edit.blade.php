@@ -27,7 +27,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label class="col-md-2 control-label"> BrandModel: </label>
+                                        <label class="col-md-2 control-label"> Model: </label>
                                         <div class="col-md-10">
                                             <input required type="string" type="text" class="form-control"
                                                 placeholder="Model..."value="{{$brand->model}}" name="model">

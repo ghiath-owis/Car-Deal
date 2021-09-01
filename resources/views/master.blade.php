@@ -14,7 +14,7 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>HartsFord - Buy & Sell Market Place</title>
+		<title>Car-Deal</title>
 		<link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet"> 
 			<!--
 			CSS
@@ -69,14 +69,9 @@
 											</a>
 											<ul class="profile">
 												<li><a href="{{route('user-profile')}}">User Profile</a></li>
-												<li><a href="upload_products.html">Upload Products</a></li>
-												<li><a href="favourite_products.html">Favourite Products</a></li>
+												<li><a href="favourite_products.html">Favourite vehicle</a></li>
 												<li><a href="{{route('change-password')}}">Change Password</a></li>
-												<li><a href="{{route('manage-products')}}">Manage Products</a></li>
-												<li><a href="{{route('notifications')}}">Notifications</a></li>
-												<li><a href="{{route('messages')}}">Messages</a></li>
 												<li><a href="{{route('shopping-cart')}}">Shopping Cart</a></li>
-												<li><a href="{{route('withdraw')}}">Withdraw</a></li>
 												<li><a href="#">Sign Out</a></li>
 											</ul>
 										</li>
@@ -114,30 +109,23 @@
 						        <ul class="nav-menu float-right">
 						          <li class="menu-has-children"><a href="{{route('hom')}}">Home</a>
 						          </li>
-						          <li class="menu-has-children"><a href="">Pages</a>
+						          <li class="menu-has-children"><a href="javascript:void(0);">Pages</a>
 						            <ul>
-						            	<li><a href="{{route('product-listing')}}">Product Listing</a></li>
-										<li><a href="{{route('product-listing-detail')}}">Product Listing Detail</a></li>
+						            	<li><a href="{{route('product-listing')}}">vehicle Listing</a></li>
+										<li><a href="{{route('product-listing-detail')}}">vehicle Listing Detail</a></li>
 										<li><a href="{{route('search')}}">search</a></li>
-										<li><a href="{{route('upload-products')}}">Upload Products</a></li>
-										<li><a href="{{route('favourite-products')}}">Favourite Products</a></li>
+										<li><a href="{{route('favourite-products')}}">Favourite vehicle</a></li>
 										<li><a href="{{route('sign-in')}}">Signin Page</a></li>
 										<li><a href="{{route('sign-up')}}">Signup Page</a></li>					
 										<li><a href="{{route('terms-and-conditions')}}">Terms & Conditions</a></li>
-										<li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
-										<li><a href="{{route('error')}}">404 Page</a></li>
+										
 						            </ul>
 						          </li>
 						          <li class="menu-has-children"><a href="{{route('about-us')}}">About</a>
 						          </li>  
 						          <li class="menu-has-children"><a href="{{route('services')}}">Services</a>
 						          </li>
-						          <li class="menu-has-children"><a href="blog_home.html">Blog</a>
-						          	<ul>
-						            	<li><a href="{{route('blog-home')}}">Blog Page</a></li>
-						            	<li><a href="{{route('blog-single')}}">Blog Detail</a></li>
-						            </ul>
-						          </li>
+						        
 						          
 						          <li class="menu-has-children"><a href="{{route('contact')}}">Contact</a></li>
 						          	        	          

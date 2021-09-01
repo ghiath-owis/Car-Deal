@@ -9,6 +9,7 @@
                     <div class="row">
                         <h3 class="text-center">All Brands</h3>
 
+
                             <div class="col-lg-12">
                                 <div class="card-box">
                                     @if(count($brand) != 0)
@@ -56,6 +57,7 @@
                                                 <h3> No Data</h3> 
                                             </div>
                                     @endif
+
 
                     </div>
                     <!-- end row -->
