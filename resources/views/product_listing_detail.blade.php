@@ -27,24 +27,6 @@
                                 <!-- Slider -->
                                 <div id="slider_05" class="carousel slide thumb_btm_cntr thumb_scroll_x swipe_x ps_ease" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="1000">
 
-                                    <!-- Indicators -->
-                                    <ol class="carousel-indicators ps_indicators_thumb ps_indicators_bottom_center">
-                                        <!-- 1st Indicator -->
-                                        <li data-target="#slider_05" data-slide-to="0" class="active">
-                                            <!-- 1st Indicator Image -->
-                                            <img src="img/featured/detail1.jpg" alt="item_slider.jpg" />
-                                        </li>
-                                        <!-- 2nd Indicator -->
-                                        <li data-target="#slider_05" data-slide-to="1">
-                                            <!-- 2nd Indicator Image -->
-                                            <img src="img/featured/detail2.jpg" alt="item_slider.jpg" />
-                                        </li>
-                                        <!-- 3rd Indicator -->
-                                        <li data-target="#slider_05" data-slide-to="2">
-                                            <!-- 3rd Indicator Image -->
-                                            <img src="img/featured/detail3.jpg" alt="item_slider.jpg" />
-                                        </li>
-                                    </ol>
 
                                     <!-- Wrapper For Slides -->
                                     <div class="carousel-inner" role="listbox">
@@ -166,52 +148,8 @@
                                     </p>                                                                                                                                                            
                                 </div>
                               </div>  
-								<div class="bottom-meta">
-									<div class="user-details row align-items-center">
-										<div class="social-wrap col-lg-12">
-                                            <div class="row">
-                                                <div class="col-md-2 col-12">
-                                                    <h4>Share this:</h4><br>
-                                                </div>
-                                                <div class="col-md-10 col-12">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                                        <li><a href="#"><i class="fa fa-behance"></i></a></li>
-                                                    </ul>
-                                                </div>
-                                            </div>	
-										</div>
-									</div>
-								</div>
-
-                            <!-- Start nav Area -->
-                            <section class="nav-area">
-                                <div class="container">
-                                    <div class="row justify-content-between">
-                                        <div class="col-sm-6 nav-left justify-content-start d-flex">
-                                            <div class="thumb">
-                                                <img class="img-fluid" src="img/icon1.png" alt="">
-                                            </div>
-                                            <div class="post-details">
-                                                <p>Prev Post</p>
-                                                <h4 class="text-uppercase"><a href="#">Ferrari Hyundai</a></h4>
-                                            </div>
-                                        </div>
-                                        <div class="col-sm-6 nav-right justify-content-end d-flex">
-                                            <div class="post-details">
-                                                <p>Prev Post</p>
-                                                <h4 class="text-uppercase"><a href="#">Nissan JR</a></h4>
-                                            </div>             
-                                            <div class="thumb">
-                                                <img class="img-fluid" src="img/icon2.png" alt="">
-                                            </div>                         
-                                        </div>
-                                    </div>
-                                </div>    
-                            </section>
-                            <!-- End nav Area -->
+							
+                           
                             
                             <!-- Nav tabs -->
                               <ul class="nav nav-tabs">
@@ -569,85 +507,7 @@
                                                               
                             </div>
 
-							<div class="profile-widget">
-                                <h1>Product Author</h1> 
-                                <hr class="line-separator">
-								<img src="img/profile_widget.jpg" alt="profile_widget_img">
-								<h5>Jerry Fernandes</h5>
-								<p>Super Samurai Hyundai Los Angeles, Usa</p>
-								<ul class="share_link">
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-								</ul>	
-                                <a href="" class="btn btn-primary btn-block">Profile Page</a>
-                                <a href="" class="btn btn-success btn-block">Send Private Message</a>							
-							</div>
-
-							<div class="more-widget mb-5">
-								<h1>More Author's Items</h1>
-                                <div class="gp_products_item">
-                                    <div class="gp_products_inner">
-                                        <div class="gp_products_item_image">
-                                            <a href="#">
-                                                <img src="img/featured/pic1.jpg" alt="gp product 001" />
-                                            </a>
-                                        </div>
-                                        <div class="gp_products_item_caption">
-                                            <ul class="gp_products_caption_name">
-															<li>
-																<a href="#">Toyota Avalon Hybrid <span class="mr-1 pull-right">$ 350</span></a>
-																
-															</li>
-															<li><a href="#">Model 2018 , <span><i class="fa fa-map-marker mr-1"> Colorada, USA</i></span></a>
-															</li>
-															<li><a href="#"><i class="fa fa-road mr-1"></i>500 Km <span class="pull-right"> <i class="fa fa-tachometer mr-1"></i>300 Miles</span></a>
-															</li>
-														</ul>
-														<ul class="gp_products_caption_rating mt-2">
-															<li class=""><a class="" href="#">Book Now</a></li>
-															<li class="pull-right"><i class="fa fa-star-half-o"></i></li>
-															<li class="pull-right"><i class="fa fa-star"></i></li>
-															<li class="pull-right"><i class="fa fa-star"></i></li>
-															<li class="pull-right"><i class="fa fa-star"></i></li>
-															<li class="pull-right"><i class="fa fa-star"></i></li>
-															
-														</ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="gp_products_item mt-3">
-                                    <div class="gp_products_inner">
-                                        <div class="gp_products_item_image">
-                                            <a href="#">
-                                                <img src="img/featured/pic2.jpg" alt="gp product 001" />
-                                            </a>
-                                        </div>
-                                        <div class="gp_products_item_caption">
-                                            <ul class="gp_products_caption_name">
-															<li>
-																<a href="#">Toyota Nissan <span class="mr-1 pull-right">$ 450</span></a>
-																
-															</li>
-															<li><a href="#">Model 2018 , <span><i class="fa fa-map-marker mr-1"> Colorada, USA</i></span></a>
-															</li>
-															<li><a href="#"><i class="fa fa-road mr-1"></i>500 Km <span class="pull-right"> <i class="fa fa-tachometer mr-1"></i>300 Miles</span></a>
-															</li>
-														</ul>
-														<ul class="gp_products_caption_rating mt-2">
-															<li class=""><a class="" href="#">Book Now</a></li>
-															<li class="pull-right"><i class="fa fa-star-half-o"></i></li>
-															<li class="pull-right"><i class="fa fa-star"></i></li>
-															<li class="pull-right"><i class="fa fa-star"></i></li>
-															<li class="pull-right"><i class="fa fa-star"></i></li>
-															<li class="pull-right"><i class="fa fa-star"></i></li>
-															
-														</ul>
-                                        </div>
-                                    </div>
-                                </div>
-							</div>			
-
+					
 						</div>
 					</div>
 				</div>	

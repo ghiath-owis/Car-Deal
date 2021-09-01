@@ -9,6 +9,7 @@ use App\Http\Resources\VehicleResource;
 use App\Http\Helpers;
 use App\Http\Enums\Fuel;
 use App\Models\Brand;
+use App\Models\Gallery;
 use App\Models\SpecialOffer;
 
 class VehiclesController extends Controller
@@ -51,9 +52,28 @@ class VehiclesController extends Controller
     public function store(Request $request)
     {
         $vehicle = new Vehicle;
+        
         $vehicle -> fill($request->all());
-        $vehicle -> save();
+        
 
+          $vehicle -> save();
+            $image = $request->file('images');
+            foreach ($image as $files) {
+                $destinationPath = 'Uploaded/image/';
+
+                $file_name = time(). "." .$files->getClientOriginalExtension();
+                sleep(1);
+                $files->move($destinationPath, $file_name);
+                $data[] = $file_name;
+            }
+        foreach($data as $d){
+        $file= new Gallery();
+        $file->image=$d;
+        $file->vehicle_id=$vehicle->id;
+        $file->save();
+      
+        }
+    
          return redirect('/vehicle.all'); 
     }
 
