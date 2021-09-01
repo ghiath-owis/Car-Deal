@@ -14,7 +14,7 @@ class Vehicle extends Model
         "kilometrage",
         "max_speed",
         "status",
-        "price",
+        "price", 
         "has_offer",
         "price_after_offer",
         "rent_price",

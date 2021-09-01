@@ -4,11 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Log;
-use App\Http\Resources\LogResource;
-use App\Http\Helpers;
 
-class LogController extends Controller
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -17,13 +14,8 @@ class LogController extends Controller
      */
     public function index()
     {
-<<<<<<< HEAD
-        $log=Log::all();
-        return view ('admin.log.all',compact('log'));
-
-=======
-        return view('admin.Log.all');
->>>>>>> mohamad
+        return view('layouts.dashboard');
+        //
     }
 
     /**

@@ -35,227 +35,62 @@
                                                 <th>isAvailable</th>
                                                 <th>HasOffer</th>
                                                 <th>SpecialOffer</th>
-
+                                                <th>ServiceType</th>
                                                 <th></th>
                                             </tr>
                                         </thead>
                                         <tbody>
+                                            @foreach($vehicle as $car)
                                             <tr>
-                                                <th scope="row">1</th>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
+                                                <th>{{$car->id}}</th>
+                                                @foreach($brands as $brand)
+                                                
+                                                @if($brand->id==$car->brand_id)
+                                                <th>{{$brand->name}}</th>
+                                                @endif
+                                                @endforeach
+                                                <th>{{$car->year}}</th>
+                                                <th>{{$car->price}}</th>
+                                                <th>{{$car->fuel}}</th>
+                                                <th>{{$car->body}}</th>
+                                                <th>{{$car->max_speed}}</th>
+                                                <th>{{$car->transmission}}</th>
+                                                <th>{{$car->kilometrage}}</th>
+                                                <th>{{$car->interior_color}}</th>
+                                                <th>{{$car->exterior_color}}</th>
+                                                <th>{{$car->origin_country}}</th>
+                                                <th>{{$car->status}}</th>
+                                                <th>{{$car->engine_force}}</th>
+                                                <th>{{$car->description}}</th>
+                                                @if($car->is_available==0)
+                                                <th>false</th>
+                                                @else
+                                                <th>true</th>
+                                                @endif
 
-                                                <td><button type="button"
-                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button>
-                                                    <button type="button"
-                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5">Delete</button>
+                                                @if($car->has_offer==0)
+                                                <th>false</th>
+                                                @else
+                                                <th>true</th>
+                                                @endif
+                                                
+                                                @foreach($offers as $offer)
+                                                
+                                                @if($offer->id==$car->special_offer_id)
+                                                <th>{{$offer->ratio}}%</th>
+                                                @endif
+                                                @endforeach
+                                                
+                                                <th>{{$car->service_type}}</th>
+                                                <td>
+                                                <a href="/vehicle.edit{{$car->id}}"> <button type="button"
+                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button></a>
+                                                        <a href="/vehicle/delete/{{$car->id}}">  <button type="button"
+                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5"  >Delete</button></a>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <th scope="row">2</th>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-
-                                                <td><button type="button"
-                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button>
-                                                    <button type="button"
-                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5">Delete</button>
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-
-
-                                                <td><button type="button"
-                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button>
-                                                    <button type="button"
-                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5">Delete</button>
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-
-                                                <td><button type="button"
-                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button>
-                                                    <button type="button"
-                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5">Delete</button>
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-
-                                                <td><button type="button"
-                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button>
-                                                    <button type="button"
-                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5">Delete</button>
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-
-                                                <td><button type="button"
-                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button>
-                                                    <button type="button"
-                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5">Delete</button>
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-
-                                                <td><button type="button"
-                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button>
-                                                    <button type="button"
-                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5">Delete</button>
-                                                </td>
-
-                                            </tr>
-                                            <tr>
-                                                <th scope="row">3</th>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td>Table cell</td>
-                                                <td><button type="button"
-                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button>
-                                                    <button type="button"
-                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5">Delete</button>
-                                                </td>
-
-                                            </tr>
-
+                                            @endforeach
+                                          
                                         </tbody>
                                     </table>
                                 </div>
