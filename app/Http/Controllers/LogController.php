@@ -17,8 +17,10 @@ class LogController extends Controller
      */
     public function index()
     {
+
         $log=Log::all();
         return view ('admin.log.all',compact('log'));
+
 
     }
 

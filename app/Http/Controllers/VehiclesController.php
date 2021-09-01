@@ -7,6 +7,9 @@ use App\Http\Controllers\Controller;
 use App\Models\Vehicle;
 use App\Http\Resources\VehicleResource;
 use App\Http\Helpers;
+use App\Http\Enums\Fuel;
+use App\Models\Brand;
+use App\Models\SpecialOffer;
 
 class VehiclesController extends Controller
 {
@@ -19,7 +22,9 @@ class VehiclesController extends Controller
     //all
     {
         $vehicle=Vehicle::all();
-        return view ('admin.vehicle.all',compact('vehicle')); 
+        $brands=Brand::all();
+        $offers=SpecialOffer::all();
+        return view ('admin.vehicle.all',compact('vehicle'))->with('brands',$brands)->with('offers',$offers); 
 
     }
 
@@ -31,7 +36,9 @@ class VehiclesController extends Controller
     public function create()
     //add
     {
-        return view('admin.vehicle.add');
+        $brand=Brand::all();
+        $offers=SpecialOffer::all();
+        return view('admin.vehicle.add')->with("brand",$brand)->with("offers",$offers);
 
     }
 
@@ -47,7 +54,7 @@ class VehiclesController extends Controller
         $vehicle -> fill($request->all());
         $vehicle -> save();
 
-         return redirect('/vehicle.all');
+         return redirect('/vehicle.all'); 
     }
 
     /**
@@ -68,9 +75,10 @@ class VehiclesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
+    {   $brand=Brand::all();
+        $offers=SpecialOffer::all();
         $vehicle = Vehicle::where('id','=',$id)->first();
-        return view('admin.vehicle.edit',compact('vehicle'));
+        return view('admin.vehicle.edit',compact('vehicle'))->with("brand",$brand)->with("offers",$offers);
 
     }
 
@@ -101,8 +109,9 @@ class VehiclesController extends Controller
         $vehicle -> interior_color= $request->interior_color;
         $vehicle -> exterior_color= $request->exterior_color;
         $vehicle -> body= $request->body;
+        $vehicle -> service_type= $request->service_type;
 
-        $special_offer ->save();
+        $vehicle ->save();
 
         return redirect('/vehicle.all');
     }

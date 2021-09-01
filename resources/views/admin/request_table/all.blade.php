@@ -7,90 +7,102 @@
 
 
                     <div class="row">
-                    <h3 class="text-center" >All Vehicles </h3>
+                    <h3 class="text-center" >All Contracts Requests </h3>
                         <div class="col-lg-12">
                             <div class="card-box">
-                                @if(count($vehicle) != 0)
+                                @if(count($request_table) != 0)
 
 
                                             <div class="table-responsive">
                                                 <table class="table table-striped " id="datatable-editable">
                                                     <thead>
                                                         <tr>
-                                                            <th>id</th>
-                                                            <th>Brand</th>
-                                                            <th>Year</th>
+                                                            <th>ID</th>
+                                                            <th>Date</th>
+                                                            <th>SevviceType</th>
+                                                            <th>clientID</th>
+                                                            <th>FirstName</th>
+                                                            <th>LastName</th>
+                                                            <th>Address</th>
+                                                            <th>phone</th>
+                                                            <th>VehicleID</th>
+                                                            <th>VehicleBrand</th>
                                                             <th>Price</th>
-                                                            <th>Fule</th>
-                                                            <th>Bodie</th>
-                                                            <th>MaxSpeed</th>
-                                                            <th>Transmission</th>
-                                                            <th>Kilometrage</th>
-                                                            <th>InColor</th>
-                                                            <th>ExColor</th>
-                                                            <th>Country</th>
-                                                            <th>Status</th>
-                                                            <th>EngineForce</th>
-                                                            <th>Description</th>
-                                                            <th>isAvailable</th>
-                                                            <th>HasOffer</th>
-                                                            <th>SpecialOffer</th>
-                                                            <th>ServiceType</th>
-                                                            <th></th>
+                                                            <th>StartDate</th>
+                                                            <th>EndDate</th>
+                                                            <th> </th>
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        @foreach($vehicle as $car)
                                                         <tr>
-                                                            <th>{{$car->id}}</th>
-                                                            @foreach($brands as $brand)
-                                                            
-                                                            @if($brand->id==$car->brand_id)
-                                                            <th>{{$brand->name}}</th>
-                                                            @endif
-                                                            @endforeach
-                                                            <th>{{$car->year}}</th>
-                                                            <th>{{$car->price}}</th>
-                                                            <th>{{$car->fuel}}</th>
-                                                            <th>{{$car->body}}</th>
-                                                            <th>{{$car->max_speed}}</th>
-                                                            <th>{{$car->transmission}}</th>
-                                                            <th>{{$car->kilometrage}}</th>
-                                                            <th>{{$car->interior_color}}</th>
-                                                            <th>{{$car->exterior_color}}</th>
-                                                            <th>{{$car->origin_country}}</th>
-                                                            <th>{{$car->status}}</th>
-                                                            <th>{{$car->engine_force}}</th>
-                                                            <th>{{$car->description}}</th>
-                                                            @if($car->is_available==0)
-                                                            <th>false</th>
-                                                            @else
-                                                            <th>true</th>
-                                                            @endif
+                                                            <th scope="row">1</th>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
+                                                            <td>buy</td>
+                                                            <td>11</td>
+                                                            <td>mohamad</td>
+                                                            <td>haikal</td>
+                                                            <td>midan</td>
+                                                            <td>0938045918</td>
+                                                            <td>  55</td>
+                                                            <td>  rio</td>
+                                                            <td>1000$</td>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
+                                                            <td><button type="button"
+                                                                    class="btn btn-success waves-effect w-md waves-light m-b-5">Accept</button>
+                                                                <button type="button"
+                                                                    class="btn btn-danger waves-effect w-md waves-light m-b-5">Decline</button>
+                                                            </td>
+                                                        
+                                                        </tr>
+                                                        <tr>
+                                                        <th scope="row">1</th>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
+                                                            <td>buy</td>
+                                                            <td>11</td>
+                                                            <td>mohamad</td>
+                                                            <td>haikal</td>
+                                                            <td>midan</td>
+                                                            <td>0938045918</td>
+                                                            <td>55</td>
+                                                            <td>rio</td>
+                                                            <td>1000$</td>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
 
-                                                            @if($car->has_offer==0)
-                                                            <th>false</th>
-                                                            @else
-                                                            <th>true</th>
-                                                            @endif
-                                                            
-                                                            @foreach($offers as $offer)
-                                                            
-                                                            @if($offer->id==$car->special_offer_id)
-                                                            <th>{{$offer->ratio}}%</th>
-                                                            @endif
-                                                            @endforeach
-                                                            
-                                                            <th>{{$car->service_type}}</th>
-                                                            <td>
-                                                            <a href="/vehicle.edit{{$car->id}}"> <button type="button"
-                                                                    class="btn btn-success waves-effect w-md waves-light m-b-5">Update</button></a>
-                                                                    <a href="/vehicle/delete/{{$car->id}}">  <button type="button"
-                                                                    class="btn btn-danger waves-effect w-md waves-light m-b-5"  >Delete</button></a>
+                                                            <td><button type="button"
+                                                                    class="btn btn-success waves-effect w-md waves-light m-b-5">Accept</button>
+                                                                <button type="button"
+                                                                    class="btn btn-danger waves-effect w-md waves-light m-b-5">Decline</button>
                                                             </td>
                                                         </tr>
-                                                        @endforeach
-                                                    
+                                                        <tr>
+                                                        <th scope="row">1</th>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
+                                                            <td>buy</td>
+                                                            <td>11</td>
+                                                            <td>mohamad</td>
+                                                            <td>haikal</td>
+                                                            <td>midan</td>
+                                                            <td>0938045918</td>
+                                                            <td>55</td>
+                                                            <td>rio</td>
+                                                            <td>1000$</td>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
+                                                            <td>1/1/2021 - 10:25:33 am</td>
+                                                            <td><button type="button"
+                                                                    class="btn btn-success waves-effect w-md waves-light m-b-5">Accept</button>
+                                                                <button type="button"
+                                                                    class="btn btn-danger waves-effect w-md waves-light m-b-5">Decline</button>
+                                                            </td>
+
+                                                        
+
+                                                        </tr>
+                                                
+
+                                                        
+
                                                     </tbody>
                                                 </table>
                                             </div>
@@ -101,6 +113,7 @@
                                         <h3> No Data</h3> 
                                     </div>
                                 @endif
+
                     </div>
                     <!-- end row -->
 
