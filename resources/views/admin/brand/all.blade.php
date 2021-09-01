@@ -9,7 +9,7 @@
                     <div class="row">
                         <h3 class="text-center">All Brands</h3>
 
-                        @if(count($categories) != 0)
+                        @if(count($brand) != 0)
 
                             <div class="col-lg-12">
                                 <div class="card-box">
@@ -22,7 +22,7 @@
                                                 <tr>
                                                     <th>id</th>
                                                     <th>BrandName</th>
-                                                    <th>BrandModel</th>
+                                                    <th>Model</th>
                                                 
 
                                                     <th></th>

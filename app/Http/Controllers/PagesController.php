@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use App\Models\Vehicle;
+use App\Models\Gallery;
+use App\Models\Brand;
 class PagesController extends Controller
 {
     /**
@@ -13,28 +15,17 @@ class PagesController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        return view ('index');
+    {   $vehicles=Vehicle::all();
+        $gallery=Gallery::all();
+        $brands=Brand::all();
+        return view ('index')->with("vehicles",$vehicles)->with("gallery",$gallery)->with('brands',$brands);
     }
 
-    public function error()
-    {
-        return view ('404');
-    }
+    
 
     public function about_us()
     {
         return view ('about_us');
-    }
-
-    public function blog_home()
-    {
-        return view ('blog_home');
-    }
-
-    public function blog_single()
-    {
-        return view ('blog_single');
     }
 
     public function change_password()
@@ -52,15 +43,8 @@ class PagesController extends Controller
         return view ('favourite_products');
     }
 
-    public function manage_products()
-    {
-        return view ('manage_products');
-    }
-
-    public function privacy_policy()
-    {
-        return view ('privcy_policy');
-    }
+    
+    
 
     public function product_listing()
     {
@@ -72,26 +56,14 @@ class PagesController extends Controller
         return view ('product_listing_detail');
     }
 
-    public function messages()
-    {
-        return view ('product_message');
-    }
-
-    public function notifications()
-    {
-        return view ('notifications');
-    }
-
+    
+    
     public function search()
     {
         return view ('search');
     }
 
-    public function sell_product()
-    {
-        return view ('sell_a_product');
-    }
-
+    
     public function services()
     {
         return view ('services');
@@ -117,20 +89,14 @@ class PagesController extends Controller
         return view ('terms_and_conditions');
     }
 
-    public function upload_products()
-    {
-        return view ('upload_products');
-    }
+    
 
     public function user_profile()
     {
         return view ('user_profile');
     }
 
-    public function withdraw()
-    {
-        return view ('withdraw');
-    }
+   
 
 
 
