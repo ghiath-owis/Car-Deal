@@ -44,11 +44,18 @@ class PagesController extends Controller
     }
 
     
-    
+     public function special_offer()
+    {   $vehicles=Vehicle::all();
+        $gallery=Gallery::all();
+        $brands=Brand::all();
+        return view ('special_offer_cars')->with("vehicles",$vehicles)->with("gallery",$gallery)->with('brands',$brands);
+    }
 
     public function product_listing()
-    {
-        return view ('product_listing');
+    {   $vehicles=Vehicle::all();
+        $gallery=Gallery::all();
+        $brands=Brand::all();
+        return view ('product_listing')->with("vehicles",$vehicles)->with("gallery",$gallery)->with('brands',$brands);
     }
 
     public function product_listing_detail($id)
@@ -66,10 +73,7 @@ class PagesController extends Controller
     }
 
     
-    public function services()
-    {
-        return view ('services');
-    }
+ 
 
     public function shopping_cart()
     {

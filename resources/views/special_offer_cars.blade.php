@@ -9,9 +9,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Vehicle Listing			
+								Special Offer Listing			
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Vehicle </a> <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Vehicle List</a></p>
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Vehicles</a> <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html">  Special Offer Listing</a></p>
 						</div>											
 					</div>
 				</div>
@@ -20,19 +20,19 @@
 			
 						<div class="col-lg-12 post-list blog-post-list">
 							<div class="single-post">
-						
+							
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-40 col-lg-10">
 							<div class="title text-center">
-								<h1 class="mb-10">Our vehicles</h1>
+								<h1 class="mb-10">Our Special Offer</h1>
 								<hr class="lines">
 							</div>
 						</div>
 					</div>
 					<div class="row d-flex justify-content-center mb-30">
 						@foreach($vehicles as $vehicle)
-						@if($vehicle->is_available==1)
+                        @if($vehicle->has_offer==1 && $vehicle->is_available==1)
 						<div class="col-md-4 col-sm-6 col-12 gp_products_item">
 							<div class="gp_products_inner">
 								<div class="gp_products_item_image">
@@ -90,7 +90,7 @@
 										</div>
 							</div>
 						</div>
-						@endif
+                        @endif
 						@endforeach
 					
 						
