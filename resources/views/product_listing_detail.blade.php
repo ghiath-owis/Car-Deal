@@ -178,7 +178,7 @@
 
                                     </div>
                                     @else
-                                    <div class="col-md-7 col-6 pt-1 text-center">
+                                    <div class="col-md-12 col-6 pt-1 text-center">
                                         <h3><s> {{$vehicle->price}}</s><small> S.P</small></h3> 
                                         <h2 style="color:red;">{{$vehicle->price_after_offer}}<small> S.P</small></h2>
 

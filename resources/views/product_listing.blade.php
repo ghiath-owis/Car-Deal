@@ -32,6 +32,7 @@
 					</div>
 					<div class="row d-flex justify-content-center mb-30">
 						@foreach($vehicles as $vehicle)
+						@if($vehicle->is_available==1)
 						<div class="col-md-4 col-sm-6 col-12 gp_products_item">
 							<div class="gp_products_inner">
 								<div class="gp_products_item_image">
@@ -89,6 +90,7 @@
 										</div>
 							</div>
 						</div>
+						@endif
 						@endforeach
 					
 						
