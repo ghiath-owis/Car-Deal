@@ -15,32 +15,32 @@
 		<meta charset="UTF-8">
 		<!-- Site Title -->
 		<title>Car-Deal</title>
-		<link href="https://fonts.googleapis.com/css?family=Mina" rel="stylesheet"> 
+		<link href="{{ asset('https://fonts.googleapis.com/css?family=Mina') }}" rel="stylesheet"> 
 			<!--
 			CSS
 			============================================= -->
-			<link rel="stylesheet" href="css/linearicons.css">
-			<link rel="stylesheet" href="css/font-awesome.min.css">
-			<link rel="stylesheet" href="css/bootstrap.css">
-			<link rel="stylesheet" href="css/magnific-popup.css">
-			<link rel="stylesheet" href="css/nice-select.css">					
-			<link rel="stylesheet" href="css/animate.min.css">
-			<link rel="stylesheet" href="css/owl.carousel.min.css">
-			<link rel="stylesheet" href="css/owl.theme.min.css">
-			<link rel="stylesheet" href="css/owl.transitions.css">
-			<link rel="stylesheet" href="css/carousel_advance.css">
-			<link rel="stylesheet" href="css/main.css">
-			<link rel="stylesheet" href="css/rangeslider.css">
+			<link rel="stylesheet" href="{{ asset('css/linearicons.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/nice-select.css') }}">					
+			<link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/owl.theme.min.css') }}">') }}
+			<link rel="stylesheet" href="{{ asset('css/owl.transitions.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/carousel_advance.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/main.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/rangeslider.css') }}">
 			 <!-- App CSS -->
  
-    <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/core.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/components.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/pages.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" type="text/css" />
 			<!--======= Responsive Bootstrap Carousel StyleSheet =========-->
-		<link href="css/testimonial_speech_bubble_border_carousel.css" rel="stylesheet" media="all">
+		<link href="{{ asset('css/testimonial_speech_bubble_border_carousel.css') }}" rel="stylesheet" media="all">
 		</head>
 		<body>
 
@@ -112,7 +112,6 @@
 						          <li class="menu-has-children"><a href="javascript:void(0);">Pages</a>
 						            <ul>
 						            	<li><a href="{{route('product-listing')}}">vehicle Listing</a></li>
-										<li><a href="{{route('product-listing-detail')}}">vehicle Listing Detail</a></li>
 										<li><a href="{{route('search')}}">search</a></li>
 										<li><a href="{{route('favourite-products')}}">Favourite vehicle</a></li>
 										<li><a href="{{route('sign-in')}}">Signin Page</a></li>
@@ -241,29 +240,29 @@
 		</div>
 		<!-- End footer Area --> 	
 
-		<script src="js/vendor/jquery-2.2.4.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-		<script src="js/vendor/bootstrap.min.js"></script>			
-		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA"></script>
-			<script src="js/easing.min.js"></script>			
-		<script src="js/hoverIntent.js"></script>
+		<script src="{{ asset('js/vendor/jquery-2.2.4.min.js')}}"></script>
+		<script src="{{ asset('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js')}}" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="{{ asset('js/vendor/bootstrap.min.js')}}"></script>			
+		<script src="{{ asset('https://maps.googleapis.com/maps/api/js?key=AIzaSyBhOdIF3Y9382fqJYt5I_sswSrEw5eihAA')}}"></script>
+			<script src="{{ asset('js/easing.min.js')}}"></script>			
+		<script src="{{ asset('js/hoverIntent.js')}}"></script>
 		<!--======= Touch Swipe =========-->
-		<script src="js/jquery.touchSwipe.min.js"></script>	
+		<script src="{{ asset('js/jquery.touchSwipe.min.js')}}"></script>	
 		<!--======= Customize =========-->
-		<script src="js/responsive_bootstrap_carousel.js"></script>
-		<script src="js/superfish.min.js"></script>	
-		<script src="js/rangeslider.js"></script>
-		<script src="js/rangeslider.min.js"></script>	
-		<script src="js/jquery.ajaxchimp.min.js"></script>
-		<script src="js/jquery.magnific-popup.min.js"></script>	
-		<script src="js/owl.carousel.min.js"></script>			
-		<script src="js/jquery.sticky.js"></script>
-		<script src="js/jquery.nice-select.min.js"></script>			
-		<script src="js/parallax.min.js"></script>		
-		<script src="js/mail-script.js"></script>	
-		<script src="js/jquery.touchSwipe.min.js"></script>
-		<script src="js/responsive_bootstrap_carousel.js"></script>
-		<script src="js/paradise_slider_min.js"></script>
-		<script src="js/main.js"></script>	
+		<script src="{{ asset('js/responsive_bootstrap_carousel.js')}}"></script>
+		<script src="{{ asset('js/superfish.min.js')}}"></script>	
+		<script src="{{ asset('js/rangeslider.js')}}"></script>
+		<script src="{{ asset('js/rangeslider.min.js')}}"></script>	
+		<script src="{{ asset('js/jquery.ajaxchimp.min.js')}}"></script>
+		<script src="{{ asset('js/jquery.magnific-popup.min.js')}}"></script>	
+		<script src="{{ asset('js/owl.carousel.min.js')}}"></script>			
+		<script src="{{ asset('js/jquery.sticky.js')}}"></script>
+		<script src="{{ asset('js/jquery.nice-select.min.js')}}"></script>			
+		<script src="{{ asset('js/parallax.min.js')}}"></script>		
+		<script src="{{ asset('js/mail-script.js')}}"></script>	
+		<script src="{{ asset('js/jquery.touchSwipe.min.js')}}"></script>
+		<script src="{{ asset('js/responsive_bootstrap_carousel.js')}}"></script>
+		<script src="{{ asset('js/paradise_slider_min.js')}}"></script>
+		<script src="{{ asset('js/main.js')}}"></script>	
 	</body>
 </html>
