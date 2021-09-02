@@ -52,10 +52,10 @@ class PagesController extends Controller
     }
 
     public function product_listing_detail($id)
-    {   $vehicles=Vehicle::all();
+    {   $vehicle=Vehicle::where('id','=',$id)->first();
         $gallery=Gallery::all();
         $brands=Brand::all();
-        return view ('product_listing_detail');
+        return view ('product_listing_detail')->with("vehicle",$vehicle)->with("gallery",$gallery)->with('brands',$brands);;
     }
 
     

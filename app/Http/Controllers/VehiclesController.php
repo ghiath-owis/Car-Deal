@@ -52,11 +52,11 @@ class VehiclesController extends Controller
     public function store(Request $request)
     {
         $vehicle = new Vehicle;
-        
+        $offers=SpecialOffer::where('id','=',$request->special_offer_id)->first();;
         $vehicle -> fill($request->all());
-        
+        $vehicle -> price_after_offer=($request->price)-((($request->price)*($offers->ratio))/100.0);  
+       $vehicle -> save();
 
-          $vehicle -> save();
             $image = $request->file('images');
             foreach ($image as $files) {
                 $destinationPath = 'Uploaded/image/';
@@ -112,6 +112,7 @@ class VehiclesController extends Controller
     public function update(Request $request, $id)
     {
         $vehicle = Vehicle::find($id);
+        $offers=SpecialOffer::where('id','=', $vehicle->special_offer_id)->first();
         $vehicle -> description= $request->description;
         $vehicle -> is_available= $request->is_available;
         $vehicle -> engine_force= $request->engine_force;
@@ -119,10 +120,11 @@ class VehiclesController extends Controller
         $vehicle -> kilometrage= $request->kilometrage;
         $vehicle -> max_speed= $request->max_speed;
         $vehicle -> status= $request->status;
+        $vehicle -> special_offer_id= $request->special_offer_id;
         $vehicle -> price= $request->price;
+        $vehicle -> price_after_offer=( $request->price)-((( $request->price)*($offers->ratio))/100.0); 
         $vehicle -> rent_price= $request->rent_price;
         $vehicle -> has_offer= $request->has_offer;
-        $vehicle -> price_after_offer= $request->price_after_offer;
         $vehicle -> origin_country= $request->origin_country;
         $vehicle -> year= $request->year;
         $vehicle -> transmission= $request->transmission;

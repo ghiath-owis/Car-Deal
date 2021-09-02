@@ -4,7 +4,7 @@
 		<!-- Mobile Specific Meta -->
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		<!-- Favicon-->
-		<link rel="shortcut icon" href="img/favicon.png">
+		<link rel="shortcut icon" href="{{asset('img/favicon.png')}}">
 		<!-- Author Meta -->
 		<meta name="author" content="">
 		<!-- Meta Description -->
@@ -63,7 +63,7 @@
 									<ul class="account">	
 										<li>
 											<a href="#">
-												<img src="img/boogyman.png" alt="">
+												<img src="{{asset('img/boogyman.png')}}" alt="">
 												<span> Customer Name  
 												<i class="fa fa-angle-down"></i></span>
 											</a>
@@ -149,7 +149,7 @@
 				<div class="row">
 					<div class="col-lg-3  col-md-3 col-sm-6">
 						<div class="single-footer-widget newsletter">
-							<img class="w-50 img-fluid mb-3" src="img/logo.png" alt="">
+							<img class="w-50 img-fluid mb-3" src="{{asset('img/logo.png')}}" alt="">
 							<p>We provide everything you need to build an amazing dealership website developed especially for car sellers dealers or auto motor retailers.</p>
 							<ul class="social-footer">
 								<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
