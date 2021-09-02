@@ -102,7 +102,12 @@
 				<div class="row">
 					<div class="col-lg-6 col-md-6 col-12">
 						<div class="section_heading">
-							<h3 class="">Welcome To Car Deal</h3>
+							<h3 >Welcome To Car Deal</h3>
+							<h4 >-Build Your Deal</h4>
+							<h4 >-Create a personalized deal</h4>
+							<h4 >-Rent Car</h4>
+							<h4 >-evaluate your trade-in – all online</h4>
+					
 						</div>
 					</div>
 
@@ -180,10 +185,22 @@
 												<li>
 													@foreach($brands as $brand)
 													@if($brand->id==$vehicle->brand_id)
-												<a href="product_listing_detail/{{$vehicle->id}}">{{$brand->name}} {{$brand->model}}</a>
+												<a >{{$brand->name}} {{$brand->model}}</a>
 												@endif
 												@endforeach
-													<a href="#" class="pull-right"><span class="mr-1">$</span>{{$vehicle->price}}</a>
+							@if($vehicle->has_offer==0)
+                                    
+									<a href="#" class="pull-right"><span class="mr-1">$</span>{{$vehicle->price}}</a>
+                                   
+                                    @else
+                                  
+									 <a href="#" class="pull-right"><s>{{$vehicle->price}}<span class="mr-1">$</span></a> </s>
+									 <br>
+									<a href="#" class="pull-right" style=" color:red;">{{$vehicle->price_after_offer}}<span class="mr-1" style=" color:red;">$</span></a>
+
+                                   
+                                   @endif
+
 												</li>
 												<li><a href="#">Model {{$vehicle->year}} , </a>
 													<a href="#" class=""><i class="fa fa-map-marker mr-1"></i>{{$vehicle->origin_country}}</a>
@@ -195,7 +212,7 @@
 												</li>
 											</ul>
 											<ul class="gp_products_caption_rating mt-2">
-												<li class=""><a class="" href="#">book now</a></li>
+												<li class=""><a class="" href="product_listing_detail/{{$vehicle->id}}">book now</a></li>
 												<li class="pull-right"><i class="fa fa-star-half-o"></i></li>
 												<li class="pull-right"><i class="fa fa-star"></i></li>
 												<li class="pull-right"><i class="fa fa-star"></i></li>

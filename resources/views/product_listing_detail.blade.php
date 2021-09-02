@@ -9,9 +9,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Vehicle Detail
+								Vehicle Details
 							</h1>	
-							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Product Listing</a> <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Product Listing detail</a></p>
+							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Vehicle Listing</a> <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Vehicle details</a></p>
 						</div>											
 					</div>
 				</div>
@@ -27,65 +27,67 @@
                                 <!-- Slider -->
                                 <div id="slider_05" class="carousel slide thumb_btm_cntr thumb_scroll_x swipe_x ps_ease" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="1000">
 
-
+                              
                                     <!-- Wrapper For Slides -->
                                     <div class="carousel-inner" role="listbox">
 
+                                     @php  $i = 1
+                                        @endphp
+                                    @foreach($gallery as $img)
                                         <!-- First Slide -->
+                                        @if($img->vehicle_id==$vehicle->id)
+                                       
+                                        @if($i==1)
                                         <div class="carousel-item active">
                                             <!-- Slide Background -->
-                                            <img src="{{ asset('img/featured/detail1.jpg')}}" alt="{{ asset('item_slider.jpg')}}" />
+                                            <img src="{{ asset('/Uploaded/image') . '/' .  $img->image }}"  alt="{{ asset('item_slider.jpg')}}"/>
                                            
                                         </div>
-                                        <!-- End of Slide -->
-
-                                        <!-- Second Slide -->
+                                        @php  $i = $i+1
+                                        @endphp
+                                      
+                                         @else   
                                         <div class="carousel-item">
                                             <!-- Slide Background -->
-                                            <img src="{{ asset('img/featured/detail2.jpg')}}" alt="{{ asset('item_slider.jpg')}}" />
+                                            <img src="{{ asset('/Uploaded/image') . '/' . $img->image }}" alt="{{ asset('item_slider.jpg')}}" />
                                            
                                         </div>
+                                          @endif
                                         <!-- End of Slide -->
-
-                                        <!-- Third Slide -->
-                                        <div class="carousel-item">
-                                            <!-- Slide Background -->
-                                            <img src="{{ asset('img/featured/detail3.jpg')}}" alt="{{ asset('item_slider.jpg')}}" />
-                                            
-                                        </div>
-                                        <!-- End of Slide -->
+                                        @endif
+                                        @endforeach
 
                                     </div> <!-- End of Wrapper For Slides -->
-
+                         
                                 </div> <!-- End Slider -->
 
 								<div class="content-wrap">
+                                  @foreach($brands as $brand)
+									@if($brand->id==$vehicle->brand_id)
                                     <h2>
-                                        About Hyundai De Sport:
-                                    </h2>
-									<p>
-										This 2018 model car is Brilliant Black Crystal Pearlcoat with a Black/Diesel Gray interior. Buy confidence knowing Jeep Dodge Ram Surprise has been exceeding customer expectations for many years and always provide customers with a great value!
-									</p>
+                                  
+                                   About {{$brand->name}} : 
+                                     
+                                    </h2> 
+                                    @endif
+                                    @endforeach
+									
 
 									<blockquote class="generic-blockquote mt-3">
-										“Sit amet consectetura dipisicing elit dui sed eiusmod tempor incididunt ut labore uset dolore magna aliqua minim veniam quis nostrud exercitation. Slamco em laborisa aliquip ex ea comdo consequat uis auted irure rehenderit voluptate velit esse cillum dolore eu fugiat nulla sed pariatura ipsum dolor ame consecteu adipis elit sed do eiusmod tempora incididunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit sed do eius tempor incididunt ut labore et dolore magna aliqua.” 
+										“{{$vehicle->description}}” 
 									</blockquote>
-									<p>
-										This 2018 model car is Brilliant Black Crystal Pearlcoat with a Black/Diesel Gray interior. Buy confidence knowing Jeep Dodge Ram Surprise has been exceeding customer expectations for many years and always provide customers with a great value!
-									</p>		
+											
 								</div>
 
 								<!-- Nav tabs -->
                               <ul class="nav nav-tabs general">
-                                <li class="nav-item">
-                                  <a class="nav-link active" data-toggle="tab" href="#info">General Information</a>
+                               <li class="nav-item">
+                                  <a class="nav-link" data-toggle="tab" href="#info2">Vehicle Overview</a>
                                 </li>
                                 <li class="nav-item">
                                   <a class="nav-link" data-toggle="tab" href="#info1">Features & Options</a>
                                 </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" data-toggle="tab" href="#info2">Vehicle Overview</a>
-                                </li>
+                                
                               </ul>
                               <!-- Tab panes -->
                               <div class="tab-content">
@@ -153,279 +155,11 @@
                               </div>  
 							
                            
+                         
+
+                             
                             
-                            <!-- Nav tabs -->
-                              <ul class="nav nav-tabs">
-                                <li class="nav-item">
-                                  <a class="nav-link active" data-toggle="tab" href="#home">Comments (38)</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" data-toggle="tab" href="#menu1">Buyers Corner</a>
-                                </li>
-                                <li class="nav-item">
-                                  <a class="nav-link" data-toggle="tab" href="#menu2">Items FAQ</a>
-                                </li>
-                              </ul>
-
-                              <!-- Tab panes -->
-                              <div class="tab-content">
-                                <div id="home" class="container tab-pane active"><br>
-                                   <div class="comment-sec-area">
-                                        <div class="comment-list">
-                                            <div class="single-comment justify-content-between d-flex">
-                                                <div class="user justify-content-between d-flex">
-                                                    <div class="thumb">
-                                           
-                                                        <img src="{{ asset('img/blog/c1.jpg')}}" alt="">
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h5><a href="#">Emilly Blunt</a></h5>
-                                                        <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                        <p class="comment">
-                                                            Never say goodbye till the end comes!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="reply-btn">
-                                                       <a href="" class="btn-reply text-uppercase">reply</a> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comment-list left-padding">
-                                            <div class="single-comment justify-content-between d-flex">
-                                                <div class="user justify-content-between d-flex">
-                                                    <div class="thumb">
-                                         
-                                                        <img src="{{ asset('img/blog/c2.jpg')}}" alt="">
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h5><a href="#">Emilly Blunt</a></h5>
-                                                        <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                        <p class="comment">
-                                                            Never say goodbye till the end comes!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="reply-btn">
-                                                       <a href="" class="btn-reply text-uppercase">reply</a> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comment-list left-padding">
-                                            <div class="single-comment justify-content-between d-flex">
-                                                <div class="user justify-content-between d-flex">
-                                                    <div class="thumb">
-                                           
-                                                        <img src="{{ asset('img/blog/c3.jpg')}}" alt="">
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h5><a href="#">Emilly Blunt</a></h5>
-                                                        <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                        <p class="comment">
-                                                            Never say goodbye till the end comes!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="reply-btn">
-                                                       <a href="" class="btn-reply text-uppercase">reply</a> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comment-list">
-                                            <div class="single-comment justify-content-between d-flex">
-                                                <div class="user justify-content-between d-flex">
-                                                    <div class="thumb">
-                                           
-                                                        <img src="{{ asset('img/blog/c4.jpg')}}" alt="">
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h5><a href="#">Emilly Blunt</a></h5>
-                                                        <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                        <p class="comment">
-                                                            Never say goodbye till the end comes!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="reply-btn">
-                                                       <a href="" class="btn-reply text-uppercase">reply</a> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comment-list">
-                                            <div class="single-comment justify-content-between d-flex">
-                                                <div class="user justify-content-between d-flex">
-                                                    <div class="thumb">
-                                           
-                                                        <img src="{{ asset('img/blog/c5.jpg')}}" alt="">
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h5><a href="#">Emilly Blunt</a></h5>
-                                                        <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                        <p class="comment">
-                                                            Never say goodbye till the end comes!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="reply-btn">
-                                                       <a href="" class="btn-reply text-uppercase">reply</a> 
-                                                </div>
-                                            </div>
-                                        </div>                                                                                                                                                                
-                                    </div>
-                                </div>
-                                <div id="menu1" class="container tab-pane fade"><br>
-                                  <div class="comment-sec-area">
-                                        <div class="comment-list">
-                                            <div class="single-comment justify-content-between d-flex">
-                                                <div class="user justify-content-between d-flex">
-                                                    <div class="thumb">
-                                           
-                                                        <img src="{{ asset('img/blog/c1.jpg')}}" alt="">
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h5><a href="#">Emilly Blunt</a></h5>
-                                                        <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                        <p class="comment">
-                                                            Never say goodbye till the end comes!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="reply-btn">
-                                                       <a href="" class="btn-reply text-uppercase">reply</a> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comment-list left-padding">
-                                            <div class="single-comment justify-content-between d-flex">
-                                                <div class="user justify-content-between d-flex">
-                                                    <div class="thumb">
-                                           
-                                                        <img src="{{ asset('img/blog/c2.jpg')}}" alt="">
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h5><a href="#">Emilly Blunt</a></h5>
-                                                        <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                        <p class="comment">
-                                                            Never say goodbye till the end comes!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="reply-btn">
-                                                       <a href="" class="btn-reply text-uppercase">reply</a> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comment-list left-padding">
-                                            <div class="single-comment justify-content-between d-flex">
-                                                <div class="user justify-content-between d-flex">
-                                                    <div class="thumb">
-                                          
-                                                        <img src="{{ asset('img/blog/c3.jpg')}}" alt="">
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h5><a href="#">Emilly Blunt</a></h5>
-                                                        <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                        <p class="comment">
-                                                            Never say goodbye till the end comes!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="reply-btn">
-                                                       <a href="" class="btn-reply text-uppercase">reply</a> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comment-list">
-                                            <div class="single-comment justify-content-between d-flex">
-                                                <div class="user justify-content-between d-flex">
-                                                    <div class="thumb">
-                                          
-                                                        <img src="{{ asset('img/blog/c4.jpg')}}" alt="">
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h5><a href="#">Emilly Blunt</a></h5>
-                                                        <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                        <p class="comment">
-                                                            Never say goodbye till the end comes!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="reply-btn">
-                                                       <a href="" class="btn-reply text-uppercase">reply</a> 
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="comment-list">
-                                            <div class="single-comment justify-content-between d-flex">
-                                                <div class="user justify-content-between d-flex">
-                                                    <div class="thumb">
-                                        
-                                                        <img src="{{ asset('img/blog/c5.jpg')}}" alt="">
-                                                    </div>
-                                                    <div class="desc">
-                                                        <h5><a href="#">Emilly Blunt</a></h5>
-                                                        <p class="date">December 4, 2017 at 3:12 pm </p>
-                                                        <p class="comment">
-                                                            Never say goodbye till the end comes!
-                                                        </p>
-                                                    </div>
-                                                </div>
-                                                <div class="reply-btn">
-                                                       <a href="" class="btn-reply text-uppercase">reply</a> 
-                                                </div>
-                                            </div>
-                                        </div>                                                                                                                                                                
-                                    </div>
-                                </div>
-                                <div id="menu2" class="container tab-pane fade">
-                                     <h4>
-                                        Read Before Buying
-                                    </h4>
-
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p><br>  
-                                    <h4>
-                                        Our Return Policy
-                                    </h4>
-
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p><br> 
-                                    <h4>
-                                        Shipping and Delivery
-                                    </h4>
-
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in henderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                                    </p>                                                                                                                                                            
-                                </div>
-                              </div>
                             
-                            <!-- Start commentform Area -->
-                            <section class="commentform-area">
-                                <div class="container">
-                                    <h5 class="pb-50">Leave a Reply</h5>
-                                    <div class="row flex-row d-flex">
-                                        <div class="col-lg-4 col-md-6 col-sm-6">
-                                            <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
-                                        </div>
-
-                                        <div class="col-lg-4 col-md-6 col-sm-6">
-                                        	<input name="email" placeholder="Enter your email" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your email'" class="common-input mb-20 form-control" required="" type="email">
-                                        </div>
-                                        <div class="col-lg-4 col-md-6 col-sm-12">
-                                            <input name="Subject" placeholder="Subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your Subject'" class="common-input mb-20 form-control" required="" type="text">
-
-                                        </div>
-                                        <div class="col-lg-8 col-md-6">
-                                            <textarea class="form-control mb-10" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
-                                            <a class="primary-btn mt-20" href="#">Comment</a>
-                                        </div>
-                                    </div>
-                                </div>    
-                            </section>
-                            <!-- End commentform Area -->
 
 
 							</div>																		
@@ -434,21 +168,21 @@
 							<div class="item-widget">
 								<h1>Car Price</h1>		
                                 <hr class="line-separator">
-                                <div class="row mt-4 mb-4">
-                                    <div class="col-md-5 col-6 pt-1">
-                                        <h3>310<small>$</small></h3>
+                                <div >
+                                    @if($vehicle->has_offer==0)
+                                    <div class="col-md-5 col-6 pt-1 text-center">
+                                        <h3> {{$vehicle->price}}<small>$</small></h3> 
+                                       
+
                                     </div>
-                                    <div class="col-md-7 col-6">
-                                        <div class="dropdown">
-                                            <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                                Regular
-                                            </button>
-                                            <div class="dropdown-menu" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                                <a class="dropdown-item" href="#">Extended</a>
-                                                <a class="dropdown-item" href="#">Regular</a>
-                                            </div>
-                                        </div>
+                                    @else
+                                    <div class="col-md-5 col-6 pt-1 text-center">
+                                        <h3><s> {{$vehicle->price}}</s><small>$</small></h3> 
+                                        <h2 style="color:red;"> {{$vehicle->price_after_offer}}<small>$</small></h2>
+
                                     </div>
+                                   @endif
+                                    
                                 </div>
                                 
                                 <!-- Button trigger modal -->
@@ -497,24 +231,35 @@
 							<div class="item-info-widget">
 								<h1>Car Information</h1>
                                 <hr class="line-separator">
-								<ul>
-									<li><a href="#" class="justify-content-between align-items-center d-flex"><h6>Make:</h6> <span>Hyundai De Sport</span></a></li>
-									<li><a href="#" class="justify-content-between align-items-center d-flex"><h6>Model:</h6> <span>7 Series</span></a></li>
-									<li><a href="#" class="justify-content-between align-items-center d-flex"><h6>Registration Date:</h6> <span>2017</span></a></li>
-									<li><a href="#" class="justify-content-between align-items-center d-flex"><h6>Mileage:</h6> <span>25,000 mi</span></a></li>
-									<li><a href="#" class="justify-content-between align-items-center d-flex"><h6>Condition:</h6> <span>New</span></a></li>
-									<li><a href="#" class="justify-content-between align-items-center d-flex"><h6>Exterior Color:</h6> <span>Red</span></a></li>
-									<li><a href="#" class="justify-content-between align-items-center d-flex"><h6>Interior Color:</h6> <span>Black</span></a></li>
-									<li><a href="#" class="justify-content-between align-items-center d-flex"><h6>Transmission:</h6> <span>Automatic</span></a></li>
-									<li><a href="#" class="justify-content-between align-items-center d-flex"><h6>Engine:</h6> <span>5.1 L</span></a></li>
-									<li><a href="#" class="justify-content-between align-items-center d-flex"><h6>Drive Train:</h6> <span>FWD</span></a></li>
-								</ul>
-                                <p class="tags primary"><a href="#">Security</a>, <a href="#">Air conditioning</a>, <a href="#">icon</a>, <a href="#">Anti theft</a>, <a href="#">antistarter</a>, <a href="#">Hyundai</a>, <a href="#">Alloy wheels</a>, <a href="#">scene</a>, <a href="#">Electric</a>, <a href="#">Remote control</a>, <a href="#">Make</a>, <a href="#">Power</a>, <a href="#">Air bag</a>, <a href="#">Driver</a>, <a href="#">Registration</a></p>
+                               
+								<ul> 
+                                  @foreach($brands as $brand)
+									@if($brand->id==$vehicle->brand_id)
+									<li><a class="justify-content-between align-items-center d-flex"><h6>Brand:</h6> <span>
+
+                                   {{$brand->name}}  
+                                   
+                                    </span></a></li>
+                                    <li><a  class="justify-content-between align-items-center d-flex"><h6>Model:</h6> <span>{{$brand->model}} Series</span></a></li>
+                                     @endif
+                                    @endforeach
+									<li><a  class="justify-content-between align-items-center d-flex"><h6>Fuel:</h6> <span>{{$vehicle->fuel}}</span></a></li>
+									<li><a  class="justify-content-between align-items-center d-flex"><h6>Registration Date:</h6> <span>{{$vehicle->year}}</span></a></li>
+									<li><a  class="justify-content-between align-items-center d-flex"><h6>Max Speed:</h6> <span>{{$vehicle->max_speed}} km/s</span></a></li>
+									<li><a  class="justify-content-between align-items-center d-flex"><h6>Condition:</h6> <span>{{$vehicle->status}}</span></a></li>
+									<li><a  class="justify-content-between align-items-center d-flex"><h6>Exterior Color:</h6> <span>{{$vehicle->exterior_color}}</span></a></li>
+									<li><a  class="justify-content-between align-items-center d-flex"><h6>Interior Color:</h6> <span>{{$vehicle->interior_color}}</span></a></li>
+									<li><a  class="justify-content-between align-items-center d-flex"><h6>Transmission:</h6> <span>{{$vehicle->transmission}}</span></a></li>
+									<li><a  class="justify-content-between align-items-center d-flex"><h6>Engine Force:</h6> <span>{{$vehicle->engine_force}}</span></a></li>
+                                    <li><a  class="justify-content-between align-items-center d-flex"><h6>Origin Country:</h6> <span>{{$vehicle->origin_country}}</span></a></li>
+                                    <li><a  class="justify-content-between align-items-center d-flex"><h6>Service Type:</h6> <span>{{$vehicle->service_type}}</span></a></li>
+							        <li><a  class="justify-content-between align-items-center d-flex"><h6>Body:</h6> <span>{{$vehicle->body}}</span></a></li>
+	                         </ul>
 							</div>
 
                             <div class="sale-widget">
                                 <ul>
-                                    <li><a href="#" class="justify-content-between align-items-center d-flex"><h6><i class="lnr lnr-smile"></i> Total Sales:</h6> <span>37</span></a></li>
+                                    <li><a href="#" class="justify-content-between align-items-center d-flex"><h6><i class="lnr lnr-smile"></i> Total Requests:</h6> <span>37</span></a></li>
                                     <li><a href="#" class="justify-content-between align-items-center d-flex"><h6><i class="lnr lnr-heart"></i> Favourites:</h6> <span>112</span></a></li>
                                 </ul>
                                                               
