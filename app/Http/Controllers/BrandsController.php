@@ -55,11 +55,12 @@ class BrandsController extends Controller
         $brand = new Brand;
         $brand->name = $request->name;
         $brand->model = $request->model;
-        $logo = time() . '.' . $request->logo->getClientOriginalExtension();
+        $logo = time() . '.' . $request->file('logo')->getClientOriginalExtension();
         $request->logo->move(public_path('Uploaded/image/brand'), $logo);
         $brand->logo = $logo;
         $brand -> save();
-         return redirect('brand.all');
+
+        return redirect('brand.all');
     }
     
 
@@ -100,7 +101,13 @@ class BrandsController extends Controller
         $brand = Brand::find($id);
         $brand -> name= $request->name;
         $brand -> model= $request->model;
-        $brand -> logo= "xc";
+
+        // update image if exists.
+        if ($request->hasFile('logo')) {
+            $logo = time() . '.' . $request->file('logo')->getClientOriginalExtension();
+            $request->logo->move(public_path('Uploaded/image/brand'), $logo);
+            $brand->logo = $logo;    
+        }
 
         $brand ->save();
 

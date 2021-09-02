@@ -57,7 +57,7 @@ Route::get('/owner/delete/{id}','OwnersController@delete')->name('delete-owner')
 
 // BrandController Routs
 
-Route::get('/brand.add','BrandsController@create')->name('add-brand');
+Route::get('/brand/add','BrandsController@create')->name('add-brand');
 Route::post('/brand/store','BrandsController@store')->name('store-brand');
 Route::get('/brand.all','BrandsController@index')->name('all-brands');
 Route::get('/brand.edit{id}','BrandsController@edit')->name('edit-brand');
@@ -65,7 +65,7 @@ Route::post('/brand.update{id}','BrandsController@update')->name('update-brand')
 Route::get('/brand/delete/{id}','BrandsController@destroy')->name('delete-brand');
 
 
-// SpecialOfferController Routs
+// SpecialOfferController Routs    
 
 Route::get('/offer.add','SpecialOffersController@create')->name('add-special_offer');
 Route::post('/offer/store','SpecialOffersController@store')->name('store-special_offer');
@@ -103,4 +103,5 @@ Route::get('/request','RequestsTableController@index')->name('all-request');
 
 // ContractBuysController Routs
 Route::get('/buyContracts.all','ContractBuysController@index')->name('all-buys');
+
 
