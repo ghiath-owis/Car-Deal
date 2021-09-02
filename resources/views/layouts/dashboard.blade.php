@@ -14,28 +14,31 @@
     <title>Admin Dashboard</title>
 
     <!-- Plugins css-->
-    <link href="assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css" rel="stylesheet" />
-    <link href="assets/plugins/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
-    <link href="assets/plugins/select2/dist/css/select2.css" rel="stylesheet" type="text/css">
-    <link href="assets/plugins/select2/dist/css/select2-bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
-    <link href="assets/plugins/switchery/switchery.min.css" rel="stylesheet" />
-    <link href="assets/plugins/timepicker/bootstrap-timepicker.min.css" rel="stylesheet">
-    <link href="assets/plugins/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css" rel="stylesheet">
-    <link href="assets/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css" rel="stylesheet">
-    <link href="assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="{{ asset('assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/plugins/multiselect/css/multi-select.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/plugins/select2/dist/css/select2.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/plugins/select2/dist/css/select2-bootstrap.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/plugins/switchery/switchery.min.css') }}" rel="stylesheet" />
+    <link href="{{ asset('assets/plugins/timepicker/bootstrap-timepicker.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/plugins/mjolnic-bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/plugins/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('assets/plugins/bootstrap-daterangepicker/daterangepicker.css') }}" rel="stylesheet">
+    <!-- form Uploads -->
+    <link href="{{ asset('assets/plugins/fileuploads/css/dropify.min.css') }}" rel="stylesheet" type="text/css" />
+
 
     <!-- App CSS -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/icons.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/pages.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/menu.css" rel="stylesheet" type="text/css" />
-    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/core.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/components.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/pages.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/menu.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('assets/css/responsive.css') }}" rel="stylesheet" type="text/css" />
 
 
-    <script src="assets/js/modernizr.min.js"></script>
+    <script src="{{ asset('assets/js/modernizr.min.js') }}"></script>
 
 </head>
 
@@ -200,7 +203,7 @@
                     <li class="list-group-item">
                         <a href="#" class="user-list-item">
                             <div class="avatar">
-                                <img src="assets/images/users/avatar-2.jpg" alt="">
+                                <img src="{{ asset('assets/images/users/avatar-2.jpg') }}" alt="">
                             </div>
                             <div class="user-desc">
                                 <span class="name">Michael Zenaty</span>
@@ -236,7 +239,7 @@
                     <li class="list-group-item active">
                         <a href="#" class="user-list-item">
                             <div class="avatar">
-                                <img src="assets/images/users/avatar-3.jpg" alt="">
+                                <img src="{{ asset('assets/images/users/avatar-3.jpg') }}" alt="">
                             </div>
                             <div class="user-desc">
                                 <span class="name">James Anderson</span>
@@ -273,35 +276,38 @@
     </script>
 
     <!-- jQuery  -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    <script src="assets/js/detect.js"></script>
-    <script src="assets/js/fastclick.js"></script>
-    <script src="assets/js/jquery.slimscroll.js"></script>
-    <script src="assets/js/jquery.blockUI.js"></script>
-    <script src="assets/js/waves.js"></script>
-    <script src="assets/js/jquery.nicescroll.js"></script>
-    <script src="assets/js/jquery.scrollTo.min.js"></script>
+    <script src="{{ asset('assets/js/jquery.min.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/detect.js') }}"></script>
+    <script src="{{ asset('assets/js/fastclick.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.slimscroll.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.blockUI.js') }}"></script>
+    <script src="{{ asset('assets/js/waves.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.nicescroll.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.scrollTo.min.js') }}"></script>
 
     <!-- Plugins Js -->
-    <script src="assets/plugins/switchery/switchery.min.js"></script>
-    <script src="assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/multiselect/js/jquery.multi-select.js"></script>
-    <script type="text/javascript" src="assets/plugins/jquery-quicksearch/jquery.quicksearch.js"></script>
-    <script src="assets/plugins/select2/dist/js/select2.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js"
+    <script src="{{ asset('assets/plugins/switchery/switchery.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/plugins/multiselect/js/jquery.multi-select.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('assets/plugins/jquery-quicksearch/jquery.quicksearch.js') }}"></script>
+    <script src="{{ asset('assets/plugins/select2/dist/js/select2.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/plugins/bootstrap-touchspin/dist/jquery.bootstrap-touchspin.min.js') }}"
         type="text/javascript"></script>
-    <script src="assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/moment/moment.js"></script>
-    <script src="assets/plugins/timepicker/bootstrap-timepicker.min.js"></script>
-    <script src="assets/plugins/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-    <script src="assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
-    <script src="assets/plugins/bootstrap-daterangepicker/daterangepicker.js"></script>
-    <script src="assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js" type="text/javascript"></script>
+    <script src="{{ asset('assets/plugins/bootstrap-inputmask/bootstrap-inputmask.min.js') }}" type="text/javascript"></script>
+    <script src="{{ asset('assets/plugins/moment/moment.js') }}"></script>
+    <script src="{{ asset('assets/plugins/timepicker/bootstrap-timepicker.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/mjolnic-bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+    <script src="{{ asset('assets/plugins/bootstrap-daterangepicker/daterangepicker.js') }}"></script>
+    <script src="{{ asset('assets/plugins/bootstrap-maxlength/bootstrap-maxlength.min.js') }}" type="text/javascript"></script>
+    <!-- file uploads js -->
+    <script src="{{ asset('assets/plugins/fileuploads/js/dropify.min.js') }}"></script>
+
 
     <!-- App js -->
-    <script src="assets/js/jquery.core.js"></script>
-    <script src="assets/js/jquery.app.js"></script>
+    <script src="{{ asset('assets/js/jquery.core.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.app.js') }}"></script>
 
     <script>
         jQuery(document).ready(function () {
@@ -551,6 +557,20 @@
         $('input#placement').maxlength({
             alwaysShow: true,
             placement: 'top-left'
+        });
+    </script>
+
+    <script type="text/javascript">
+        $('.dropify').dropify({
+            messages: {
+                'default': 'Drag and drop a file here or click',
+                'replace': 'Drag and drop or click to replace',
+                'remove': 'Remove',
+                'error': 'Ooops, something wrong appended.'
+            },
+            error: {
+                'fileSize': 'The file size is too big (1M max).'
+            }
         });
     </script>
 

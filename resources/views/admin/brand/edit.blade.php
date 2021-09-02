@@ -38,8 +38,8 @@
                                         <label class="col-md-2 control-label">Logo:</label>
                                         <div class="col-md-10">
                                             
-                                        <input required type="image" class="form-control" name="logo"
-                                                placeholder="address" src="Uploaded/image/brand/{{$brand->logo}}">
+                                        <input  type="file"  name="logo"
+                                        class="dropify" data-height="300" data-default-file="{{ asset('/Uploaded/image/brand') . '/' . $brand->logo }}">
 
                                                 
 
