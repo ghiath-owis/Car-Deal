@@ -120,29 +120,30 @@
 
 				<div class="row text-center">
 					<div class="col-lg-6 col-md-6 col-sm-6 mb">
+					<a  href="/product_listing">
 						<div class="section_service text-center">
 							<div class="section_image">
-								<img class="img-fluid w-25" src="img/welcome/vehicle1.png" alt="">
+								<img  class="img-fluid w-25" src="img/welcome/vehicle1.png" alt="">
 							</div>
-							<div class="section_content">
-								<h3 class="text-capitalize">new vehicles</h3>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+							<div  class="section_content">
+								<h3 class="text-capitalize">Our vehicles</h3>
 							</div>
-
+                     </a>
 						</div>
 					</div>
 
 					<div class="col-lg-6 col-md-6 col-sm-6 mb">
+					<a  href="/product_listing">
 						<div class="section_service text-center">
 							<div class="section_image">
 								<img class="img-fluid w-25" src="img/welcome/discount.png" alt="">
 							</div>
 							<div class="section_content">
-								<h3 class="text-capitalize">special offers</h3>
-								<p>There are many variations of passages of Lorem Ipsum available, but the majority.</p>
+								<h3 class="text-capitalize">special offers cars</h3>
 							</div>
 
 						</div>
+						</a>
 					</div>
 
 					
@@ -153,83 +154,7 @@
 		</section>
 
 		
-		<!-- Start product Area -->
-			<section class="product-area section-full">
-				<div class="container">
-					<div class="row d-flex justify-content-center">
-						<div class="menu-content pb-40 col-lg-10">
-							<div class="title text-center">
-								<h1 class="mb-10">Our vehicles</h1>
-								<hr class="lines">
-							</div>
-						</div>
-					</div>
-					<div class="row d-flex justify-content-center mb-30">
-						@foreach($vehicles as $vehicle)
-						<div class="col-md-4 col-sm-6 col-12 gp_products_item">
-							<div class="gp_products_inner">
-								<div class="gp_products_item_image">
-									<a href="#">
-										@foreach($gallery as $image)
-										@if($image->vehicle_id==$vehicle->id)
-										<img src="Uploaded/image/{{$image->image}}" alt="gp product 001" />
-										@break;
-										@endif
-
-										@endforeach
-									</a>
-								</div>
-								<div class="gp_products_item_caption">
-											<ul class="gp_products_caption_name">
-
-												<li>
-													@foreach($brands as $brand)
-													@if($brand->id==$vehicle->brand_id)
-												<a >{{$brand->name}} {{$brand->model}}</a>
-												@endif
-												@endforeach
-							@if($vehicle->has_offer==0)
-                                    
-									<a href="#" class="pull-right"><span class="mr-1">$</span>{{$vehicle->price}}</a>
-                                   
-                                    @else
-                                  
-									 <a href="#" class="pull-right"><s>{{$vehicle->price}}<span class="mr-1">$</span></a> </s>
-									 <br>
-									<a href="#" class="pull-right" style=" color:red;">{{$vehicle->price_after_offer}}<span class="mr-1" style=" color:red;">$</span></a>
-
-                                   
-                                   @endif
-
-												</li>
-												<li><a href="#">Model {{$vehicle->year}} , </a>
-													<a href="#" class=""><i class="fa fa-map-marker mr-1"></i>{{$vehicle->origin_country}}</a>
-												</li>
-												<li>
-												<li><a href="#"><i class="fa fa-road mr-1"></i>{{$vehicle->kilometrage}} Km</a>
-													<a class="ml-2" href="#"><i class="fa fa-tachometer mr-1"></i>{{$vehicle->max_speed}} Miles</a>
-													<a class="ml-2" href="#"><i class="fa fa-car mr-1"></i>{{$vehicle->fuel}}</a>
-												</li>
-											</ul>
-											<ul class="gp_products_caption_rating mt-2">
-												<li class=""><a class="" href="product_listing_detail/{{$vehicle->id}}">book now</a></li>
-												<li class="pull-right"><i class="fa fa-star-half-o"></i></li>
-												<li class="pull-right"><i class="fa fa-star"></i></li>
-												<li class="pull-right"><i class="fa fa-star"></i></li>
-												<li class="pull-right"><i class="fa fa-star"></i></li>
-												<li class="pull-right"><i class="fa fa-star"></i></li>
-												
-											</ul>
-										</div>
-							</div>
-						</div>
-						@endforeach
-					
-						
-				</div>	
-			</section>
-			<!-- End products Area -->
-
+		
 			<!-- Start callto-action Area -->
 			<section class="callto-action-area" id="join">
 				<div class="container">

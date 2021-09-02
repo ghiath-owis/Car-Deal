@@ -173,14 +173,14 @@
                                 <div >
                                     @if($vehicle->has_offer==0)
                                     <div class="col-md-5 col-6 pt-1 text-center">
-                                        <h3> {{$vehicle->price}}<small>$</small></h3> 
+                                        <h3>{{$vehicle->price}}<small> S.P</small></h3> 
                                        
 
                                     </div>
                                     @else
-                                    <div class="col-md-5 col-6 pt-1 text-center">
-                                        <h3><s> {{$vehicle->price}}</s><small>$</small></h3> 
-                                        <h2 style="color:red;"> {{$vehicle->price_after_offer}}<small>$</small></h2>
+                                    <div class="col-md-7 col-6 pt-1 text-center">
+                                        <h3><s> {{$vehicle->price}}</s><small> S.P</small></h3> 
+                                        <h2 style="color:red;">{{$vehicle->price_after_offer}}<small> S.P</small></h2>
 
                                     </div>
                                    @endif

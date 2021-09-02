@@ -112,6 +112,7 @@
 						          <li class="menu-has-children"><a href="javascript:void(0);">Pages</a>
 						            <ul>
 						            	<li><a href="{{route('product-listing')}}">vehicle Listing</a></li>
+										<li><a href="{{route('special_offer')}}">Special Offer Listing</a></li>
 										<li><a href="{{route('search')}}">search</a></li>
 										<li><a href="{{route('favourite-products')}}">Favourite vehicle</a></li>
 										<li><a href="{{route('sign-in')}}">Signin Page</a></li>
