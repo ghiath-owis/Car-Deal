@@ -33,8 +33,6 @@ Route::get('/privacy_policy','PagesController@privacy_policy')->name('privacy-po
 Route::get('/product_listing','PagesController@product_listing')->name('product-listing');
 Route::get('/special_offer','PagesController@special_offer')->name('special_offer');
 Route::get('/product_listing_detail/{id}','PagesController@product_listing_detail')->name('product-listing-detail');
-Route::get('/search','PagesController@search')->name('search');
-Route::get('/services','PagesController@services')->name('services');
 Route::get('/shopping_cart','PagesController@shopping_cart')->name('shopping-cart');
 Route::get('/sign_in','PagesController@sign_in')->name('sign-in');
 Route::get('/sign_up','PagesController@sign_up')->name('sign-up');

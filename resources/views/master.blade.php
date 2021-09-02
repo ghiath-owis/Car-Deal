@@ -72,6 +72,9 @@
 												<li><a href="favourite_products.html">Favourite vehicle</a></li>
 												<li><a href="{{route('change-password')}}">Change Password</a></li>
 												<li><a href="{{route('shopping-cart')}}">Shopping Cart</a></li>
+												<li><a href="{{route('favourite-products')}}">Favourite Car</a></li>
+												<li><a href="{{route('sign-in')}}">Signin Page</a></li>
+									           	<li><a href="{{route('sign-up')}}">Signup Page</a></li>	
 												<li><a href="#">Sign Out</a></li>
 											</ul>
 										</li>
@@ -109,26 +112,15 @@
 						        <ul class="nav-menu float-right">
 						          <li class="menu-has-children"><a href="{{route('hom')}}">Home</a>
 						          </li>
-						          <li class="menu-has-children"><a href="javascript:void(0);">Pages</a>
-						            <ul>
-						            	<li><a href="{{route('product-listing')}}">vehicle Listing</a></li>
-										<li><a href="{{route('special_offer')}}">Special Offer Listing</a></li>
-										<li><a href="{{route('search')}}">search</a></li>
-										<li><a href="{{route('favourite-products')}}">Favourite vehicle</a></li>
-										<li><a href="{{route('sign-in')}}">Signin Page</a></li>
-										<li><a href="{{route('sign-up')}}">Signup Page</a></li>					
-										<li><a href="{{route('terms-and-conditions')}}">Terms & Conditions</a></li>
-										
-						            </ul>
-						          </li>
-						          <li class="menu-has-children"><a href="{{route('about-us')}}">About</a>
-						          </li>  
-						          <li class="menu-has-children"><a href="{{route('services')}}">Services</a>
-						          </li>
-						        
+						       
+						         
 						          
-						          <li class="menu-has-children"><a href="{{route('contact')}}">Contact</a></li>
-						          	        	          
+						        
+						          <li><a href="{{route('product-listing')}}">Car Listing</a></li>
+								  <li><a href="{{route('special_offer')}}">Special Offer Listing</a></li>
+								  <li class="menu-has-children"><a href="{{route('about-us')}}">About</a>
+						          </li>  
+								  <li><a href="{{route('terms-and-conditions')}}">Terms & Conditions</a></li>    	          
 						        </ul>
 								
 
@@ -168,7 +160,7 @@
 								<li><a href="">Replacement</a></li>
 								<li><a href="{{route('contact')}}">Contact Us</a></li>
 								<li><a href="">Pre-Purchase</a></li>
-								<li><a href="{{route('services')}}">Service</a></li>
+								
 							</ul>
 						</div>
 					</div>
