@@ -31,7 +31,7 @@ Route::get('/contact','PagesController@contact')->name('contact');
 Route::get('/favourite_products','PagesController@favourite_products')->name('favourite-products');
 Route::get('/privacy_policy','PagesController@privacy_policy')->name('privacy-policy');
 Route::get('/product_listing','PagesController@product_listing')->name('product-listing');
-Route::get('/product_listing_detail','PagesController@product_listing_detail')->name('product-listing-detail');
+Route::get('/product_listing_detail/{id}','PagesController@product_listing_detail')->name('product-listing-detail');
 Route::get('/search','PagesController@search')->name('search');
 Route::get('/services','PagesController@services')->name('services');
 Route::get('/shopping_cart','PagesController@shopping_cart')->name('shopping-cart');

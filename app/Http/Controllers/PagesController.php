@@ -51,8 +51,10 @@ class PagesController extends Controller
         return view ('product_listing');
     }
 
-    public function product_listing_detail()
-    {
+    public function product_listing_detail($id)
+    {   $vehicles=Vehicle::all();
+        $gallery=Gallery::all();
+        $brands=Brand::all();
         return view ('product_listing_detail');
     }
 

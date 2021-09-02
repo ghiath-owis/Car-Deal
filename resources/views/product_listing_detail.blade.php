@@ -9,7 +9,7 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Product Listing	Detail
+								Vehicle Detail
 							</h1>	
 							<p class="text-white link-nav"><a href="index.html">Home </a>  <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Product Listing</a> <span class="lnr lnr-arrow-right"></span> <a href="blog-single.html"> Product Listing detail</a></p>
 						</div>											
@@ -34,21 +34,24 @@
                                         <!-- First Slide -->
                                         <div class="carousel-item active">
                                             <!-- Slide Background -->
-                                            <img src="img/featured/detail1.jpg" alt="item_slider.jpg" />
+                                            <img src="{{ asset('img/featured/detail1.jpg')}}" alt="{{ asset('item_slider.jpg')}}" />
+                                           
                                         </div>
                                         <!-- End of Slide -->
 
                                         <!-- Second Slide -->
                                         <div class="carousel-item">
                                             <!-- Slide Background -->
-                                            <img src="img/featured/detail2.jpg" alt="item_slider.jpg" />
+                                            <img src="{{ asset('img/featured/detail2.jpg')}}" alt="{{ asset('item_slider.jpg')}}" />
+                                           
                                         </div>
                                         <!-- End of Slide -->
 
                                         <!-- Third Slide -->
                                         <div class="carousel-item">
                                             <!-- Slide Background -->
-                                            <img src="img/featured/detail3.jpg" alt="item_slider.jpg" />
+                                            <img src="{{ asset('img/featured/detail3.jpg')}}" alt="{{ asset('item_slider.jpg')}}" />
+                                            
                                         </div>
                                         <!-- End of Slide -->
 
@@ -172,7 +175,8 @@
                                             <div class="single-comment justify-content-between d-flex">
                                                 <div class="user justify-content-between d-flex">
                                                     <div class="thumb">
-                                                        <img src="img/blog/c1.jpg" alt="">
+                                           
+                                                        <img src="{{ asset('img/blog/c1.jpg')}}" alt="">
                                                     </div>
                                                     <div class="desc">
                                                         <h5><a href="#">Emilly Blunt</a></h5>
@@ -191,7 +195,8 @@
                                             <div class="single-comment justify-content-between d-flex">
                                                 <div class="user justify-content-between d-flex">
                                                     <div class="thumb">
-                                                        <img src="img/blog/c2.jpg" alt="">
+                                         
+                                                        <img src="{{ asset('img/blog/c2.jpg')}}" alt="">
                                                     </div>
                                                     <div class="desc">
                                                         <h5><a href="#">Emilly Blunt</a></h5>
@@ -210,7 +215,8 @@
                                             <div class="single-comment justify-content-between d-flex">
                                                 <div class="user justify-content-between d-flex">
                                                     <div class="thumb">
-                                                        <img src="img/blog/c3.jpg" alt="">
+                                           
+                                                        <img src="{{ asset('img/blog/c3.jpg')}}" alt="">
                                                     </div>
                                                     <div class="desc">
                                                         <h5><a href="#">Emilly Blunt</a></h5>
@@ -229,7 +235,8 @@
                                             <div class="single-comment justify-content-between d-flex">
                                                 <div class="user justify-content-between d-flex">
                                                     <div class="thumb">
-                                                        <img src="img/blog/c4.jpg" alt="">
+                                           
+                                                        <img src="{{ asset('img/blog/c4.jpg')}}" alt="">
                                                     </div>
                                                     <div class="desc">
                                                         <h5><a href="#">Emilly Blunt</a></h5>
@@ -248,7 +255,8 @@
                                             <div class="single-comment justify-content-between d-flex">
                                                 <div class="user justify-content-between d-flex">
                                                     <div class="thumb">
-                                                        <img src="img/blog/c5.jpg" alt="">
+                                           
+                                                        <img src="{{ asset('img/blog/c5.jpg')}}" alt="">
                                                     </div>
                                                     <div class="desc">
                                                         <h5><a href="#">Emilly Blunt</a></h5>
@@ -271,7 +279,8 @@
                                             <div class="single-comment justify-content-between d-flex">
                                                 <div class="user justify-content-between d-flex">
                                                     <div class="thumb">
-                                                        <img src="img/blog/c1.jpg" alt="">
+                                           
+                                                        <img src="{{ asset('img/blog/c1.jpg')}}" alt="">
                                                     </div>
                                                     <div class="desc">
                                                         <h5><a href="#">Emilly Blunt</a></h5>
@@ -290,7 +299,8 @@
                                             <div class="single-comment justify-content-between d-flex">
                                                 <div class="user justify-content-between d-flex">
                                                     <div class="thumb">
-                                                        <img src="img/blog/c2.jpg" alt="">
+                                           
+                                                        <img src="{{ asset('img/blog/c2.jpg')}}" alt="">
                                                     </div>
                                                     <div class="desc">
                                                         <h5><a href="#">Emilly Blunt</a></h5>
@@ -309,7 +319,8 @@
                                             <div class="single-comment justify-content-between d-flex">
                                                 <div class="user justify-content-between d-flex">
                                                     <div class="thumb">
-                                                        <img src="img/blog/c3.jpg" alt="">
+                                          
+                                                        <img src="{{ asset('img/blog/c3.jpg')}}" alt="">
                                                     </div>
                                                     <div class="desc">
                                                         <h5><a href="#">Emilly Blunt</a></h5>
@@ -328,7 +339,8 @@
                                             <div class="single-comment justify-content-between d-flex">
                                                 <div class="user justify-content-between d-flex">
                                                     <div class="thumb">
-                                                        <img src="img/blog/c4.jpg" alt="">
+                                          
+                                                        <img src="{{ asset('img/blog/c4.jpg')}}" alt="">
                                                     </div>
                                                     <div class="desc">
                                                         <h5><a href="#">Emilly Blunt</a></h5>
@@ -347,7 +359,8 @@
                                             <div class="single-comment justify-content-between d-flex">
                                                 <div class="user justify-content-between d-flex">
                                                     <div class="thumb">
-                                                        <img src="img/blog/c5.jpg" alt="">
+                                        
+                                                        <img src="{{ asset('img/blog/c5.jpg')}}" alt="">
                                                     </div>
                                                     <div class="desc">
                                                         <h5><a href="#">Emilly Blunt</a></h5>
