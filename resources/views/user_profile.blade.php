@@ -27,8 +27,8 @@
 								<figure>
                                     <a href="#" class="employer-dashboard-thumb"><img src="img/avatar_15.jpg" alt=""></a>
                                     <figcaption>
-                                        <h2>Hellen Rebecca</h2>
-                                        <p>Super Samurai Hyundai Los Angeles, Usa</p>
+                                        <h2>Reem Kh</h2>
+                                        <p>Super Samurai Hyundai Damascus, Syria</p>
                                          <ul class="share_link">
 											<li><a href="#"><i class="fa fa-facebook"></i></a></li>
 											<li><a href="#"><i class="fa fa-twitter"></i></a></li>

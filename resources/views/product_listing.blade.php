@@ -25,14 +25,7 @@
 						<div class="col-lg-3 col-md-3 col-sm-12= mb-30 sidebar">
 							<div class="listing-sidebar">
 							      <div class="widget">
-							         <div class="widget-search">
-							           <h5>Advanced Search</h5>
-							           <ul class="list-style
-							           -none">
-							             <li><i class="fa fa-star"> </i> Results Found <span class="float-right">(39)</span></li>
-							             <li><i class="fa fa-shopping-cart"> </i> Compare Vehicles <span class="float-right">(10)</span></li>
-							           </ul>
-							       </div>
+							        
 							       <div class="clearfix">
 							       	<div class="accordion" id="accordionExample">
 									  <div class="card">
@@ -450,9 +443,7 @@
 										</div>    
 							          </div>
 							         </div>
-							        <div class="widget-banner">
-							          <img class="img-fluid center-block" src="img/featured/banner.jpg" alt="">
-							       </div>
+							        
 							      </div>		
 						</div>
 
@@ -460,62 +451,7 @@
 							<div class="single-post">
                                 <div class="sorting-options-main"> 
 							        <div class="row">
-							        <div class="col-lg-8">
 
-							          	<span class="">Price Range</span>
-							          <div class="demo">
-												    <div class="range-slider">
-												        <input type="range" value="150" min="0" max="500" range="true">
-												        <span class="range-value">150$</span>
-												    </div>
-												</div>
-							         </div>
-							         
-							         <div class="col-lg-4">
-							           <div class="price-search">
-							            <span>Price search</span>
-							             <div class="search">
-							              <i class="fa fa-search"></i>
-							             <input type="search" class="form-control placeholder" placeholder="Search....">
-							            </div>
-							           </div>
-							         </div>
-							        </div> 
-							        <div class="row sorting-options">
-							          <div class="col-lg-5">
-							           <div class="change-view-button">
-							             <a class="active" href="#"> <i class="fa fa-th"></i> </a>
-							             <a href="listing-02.html"> <i class="fa fa-list-ul"></i> </a>
-							           </div>
-							          </div> 
-							         <div class="col-lg-3">
-							         	<div class="form-group">
-									      <select id="inputState" class="form-control">
-									        <option selected>Show</option>
-									        <option>1</option>
-									        <option>2</option>
-									        <option>3</option>
-									        <option>4</option>
-									        <option>5</option>
-									      </select>
-									    </div>
-
-							         </div>
-							         <div class="col-lg-4">
-							            <div class="form-group">
-									      <select id="inputState1" class="form-control">
-									        <option selected>Sort By</option>
-									        <option>Price: Lowest First</option>
-									        <option>Price: Highest First</option>
-									        <option>Product Name: A To Z</option>
-									        <option>Product Name: Z To A</option>
-									        <option>In Stock</option>
-									      </select>
-									    </div>
-							         </div>
-							        </div>
-							       </div>
-                            
 							       <div class="row d-flex justify-content-center pt-30 mb-30">
 									<div class="col-md-4 col-sm-6 col-12 gp_products_item">
 										<div class="gp_products_inner">

@@ -436,24 +436,14 @@
                                 <hr class="line-separator">
                                 <div class="row mt-4 mb-4">
                                     <div class="col-md-5 col-6 pt-1">
-                                        <h3>310<small>$</small></h3>
+                                        <h3>1500000<small>S.P</small></h3>
                                     </div>
-                                    <div class="col-md-7 col-6">
-                                        <div class="dropdown">
-                                            <button class="btn btn-light dropdown-toggle" type="button" data-toggle="dropdown" aria-expanded="false">
-                                                Regular
-                                            </button>
-                                            <div class="dropdown-menu" style="position: absolute; transform: translate3d(0px, 38px, 0px); top: 0px; left: 0px; will-change: transform;">
-                                                <a class="dropdown-item" href="#">Extended</a>
-                                                <a class="dropdown-item" href="#">Regular</a>
-                                            </div>
-                                        </div>
-                                    </div>
+                                    
                                 </div>
                                 
                                 <!-- Button trigger modal -->
 								<button type="button" class="btn btn-success contact btn-block" data-toggle="modal" data-target="#exampleModalCenter"><i class="lnr lnr-envelope"></i>
-								  Contact Seller
+								  Send Buy Request
 								</button>
 
 								<!-- Modal -->
@@ -461,7 +451,7 @@
 								  <div class="modal-dialog modal-dialog-centered" role="document">
 								    <div class="modal-content">
 								      <div class="modal-header">
-								        <h4 class="modal-title text-white" id="exampleModalLongTitle">Contact Seller</h4>
+								        <h4 class="modal-title text-white" id="exampleModalLongTitle">Buy Request</h4>
 								        <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
 								          <span aria-hidden="true">&times;</span>
 								        </button>
@@ -491,7 +481,7 @@
 								</div>
                                 
                                 <a href="" class="btn btn-primary btn-block"><i class="lnr lnr-heart"></i> Add to Favourites</a>
-                                <a href="" class="btn btn-danger btn-block"> Buy Now!</a>
+                                <!-- <a href="" class="btn btn-danger btn-block"> Buy Now!</a> -->
 							</div>
 
 							<div class="item-info-widget">

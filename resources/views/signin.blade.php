@@ -63,21 +63,7 @@
 						</button>
 					</div>
 
-					<div class="text-center w-full p-t-42 p-b-22">
-						<span class="txt1">
-							Or login with
-						</span>
-					</div>
-
-					<a href="#" class="btn-face m-b-10">
-						<i class="fa fa-facebook-official"></i>
-						Facebook
-					</a>
-
-					<a href="#" class="btn-google m-b-10">
-						<img src="img/signin_signup/icons/icon-google.png" alt="GOOGLE">
-						Google
-					</a>
+					
 
 					<div class="text-center w-full pt-30">
 						<span class="txt1">
