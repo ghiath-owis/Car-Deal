@@ -25,7 +25,7 @@
 						<div class="col-lg-9 order-sm-2 post-list blog-post-list-2">
 							<div class="single-post">
                                 <!-- Slider -->
-                                <div id="slider_05" class="carousel slide thumb_btm_cntr thumb_scroll_x swipe_x ps_ease" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="1000">
+                                <div id="slider_03" class="carousel slide thumb_btm_cntr thumb_scroll_x swipe_x ps_ease" data-ride="carousel" data-pause="hover" data-interval="5000" data-duration="1000">
 
                               
                                     <!-- Wrapper For Slides -->

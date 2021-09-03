@@ -40,19 +40,6 @@
                             </div>
                         </div>
 
-                        <!-- <div class="form-group">
-                                        <label class="col-md-2 control-label">Logo:</label>
-                                        <div class="col-md-10">
-                                            <input required type="file" class="form-control" name="logo"
-                                                placeholder="address" >
-
-                                        </div>
-                                    </div> -->
-
-
-
-
-
                         <button type="submit" class="btn btn-primary waves-effect w-md waves-light ">Submit</button>
                 </form>
             </div>
