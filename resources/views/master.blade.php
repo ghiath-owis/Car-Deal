@@ -86,6 +86,7 @@
 										<li>
 											<a href="#"><i class="fa fa-envelope-o"></i><span class="number">5</span></a>
 										</li>
+										
 										<li>
 											<a href="#">
 												<i class="fa fa-shopping-basket"></i>
@@ -114,10 +115,20 @@
 						          </li>
 						       
 						         
-						          
-						        
-						          <li><a href="{{route('product-listing')}}">Car Listing</a></li>
-								  <li><a href="{{route('special_offer')}}">Special Offer Listing</a></li>
+								  <li class="menu-has-children"><a href="javascript:void(0);">Car Listing</a>
+						            <ul>
+						            	<li><a href="{{route('vehicle_buy')}}">Buy List</a></li>
+										<li><a href="{{route('vehicle_rent')}}">Rent List</a></li>
+										
+						            </ul>
+						          </li>
+								  <li class="menu-has-children"><a href="javascript:void(0);">Special Offer Listing</a>
+						            <ul>
+									<li><a href="{{route('special_buy')}}">Buy List</a></li>
+										<li><a href="{{route('special_rent')}}">Rent List</a></li>
+						            </ul>
+						          </li>
+						
 								  <li class="menu-has-children"><a href="{{route('about-us')}}">About</a>
 						          </li>  
 								  <li><a href="{{route('terms-and-conditions')}}">Terms & Conditions</a></li>    	          

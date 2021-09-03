@@ -45,19 +45,58 @@ class PagesController extends Controller
 
     
      public function special_offer()
-    {   $vehicles=Vehicle::all();
+    {   
+        $vehicles=Vehicle::where('is_available', '=', '1')->where('has_offer','=','1')->paginate(2);
         $gallery=Gallery::all();
         $brands=Brand::all();
         return view ('special_offer_cars')->with("vehicles",$vehicles)->with("gallery",$gallery)->with('brands',$brands);
     }
 
     public function product_listing()
-    {   $vehicles=Vehicle::all();
+    {   $vehicles=Vehicle::where('is_available','=','1')->paginate(9);
         $gallery=Gallery::all();
         $brands=Brand::all();
         return view ('product_listing')->with("vehicles",$vehicles)->with("gallery",$gallery)->with('brands',$brands);
     }
+    public function vehicle_buy()
+    {   $vehicles=Vehicle::where('is_available','=','1')
+        ->where('has_offer','=','0')
+        ->where('service_type','=','buy')
+        ->paginate(6);
+        $gallery=Gallery::all();
+        $brands=Brand::all();
+        return view ('vehicle_buy')->with("vehicles",$vehicles)->with("gallery",$gallery)->with('brands',$brands);
+    }
+    public function vehicle_rent()
+    {   $vehicles=Vehicle::where('is_available','=','1')
+        ->where('has_offer','=','0')
+        ->where('service_type','=','rent')
+        ->paginate(6);
+        $gallery=Gallery::all();
+        $brands=Brand::all();
+        return view ('vehicle_rent')->with("vehicles",$vehicles)->with("gallery",$gallery)->with('brands',$brands);
+    }
 
+
+    public function special_buy()
+    {   $vehicles=Vehicle::where('is_available','=','1')
+        ->where('has_offer','=','1')
+        ->where('service_type','=','buy')
+        ->paginate(6);
+        $gallery=Gallery::all();
+        $brands=Brand::all();
+        return view ('special_buy')->with("vehicles",$vehicles)->with("gallery",$gallery)->with('brands',$brands);
+    }
+
+    public function special_rent()
+    {   $vehicles=Vehicle::where('is_available','=','1')
+        ->where('has_offer','=','1')
+        ->where('service_type','=','rent')
+        ->paginate(6);
+        $gallery=Gallery::all();
+        $brands=Brand::all();
+        return view ('special_rent')->with("vehicles",$vehicles)->with("gallery",$gallery)->with('brands',$brands);
+    }
     public function product_listing_detail($id)
     {   $vehicle=Vehicle::where('id','=',$id)->first();
         $gallery=Gallery::all();
@@ -67,9 +106,18 @@ class PagesController extends Controller
 
     
     
-    public function search()
-    {
-        return view ('search');
+    public function search(Request $request)
+    {   
+        $vehicles=Vehicle::where('is_available','=','1')
+        ->where('status','=',$request->status)
+        ->where('brand_id','=',$request->brand_id)
+        ->where('year','=',$request->year)
+        ->where('service_type','=',$request->service)
+        ->where('price_after_offer','<=',$request->rang_price)
+        ->paginate(6);
+        $gallery=Gallery::all();
+        $brands=Brand::all();
+        return view ('search')->with("vehicles",$vehicles)->with("gallery",$gallery)->with('brands',$brands);
     }
 
     

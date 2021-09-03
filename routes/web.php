@@ -38,8 +38,11 @@ Route::get('/sign_in','PagesController@sign_in')->name('sign-in');
 Route::get('/sign_up','PagesController@sign_up')->name('sign-up');
 Route::get('/terms_and_conditions','PagesController@terms_and_conditions')->name('terms-and-conditions');
 Route::get('/user_profile','PagesController@user_profile')->name('user-profile');
-
-
+Route::get('/vehicle_rent','PagesController@vehicle_rent')->name('vehicle_rent');
+Route::get('/vehicle_buy','PagesController@vehicle_buy')->name('vehicle_buy');
+Route::post('/search','PagesController@search')->name('search');
+Route::get('/special_rent','PagesController@special_rent')->name('special_rent');
+Route::get('/special_buy','PagesController@special_buy')->name('special_buy');
 // OwnerController Routs
 
 

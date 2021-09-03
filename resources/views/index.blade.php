@@ -16,86 +16,109 @@
 					</div>
 				</div>
 			</div>
-			<!-- End banner Area -->	
-			<div class="banner_form">
-				<div class="container">
-					<div class="row">
-						<div class="col-lg-12 col-md-12 col-12">
-							<div class="banner_content rounded">
-								<h3 class="text-capitalize text-white mb-3">Find Your Dream Car</h3>
-								<div class="row">
-									<div class="col-lg-12 col-md-12 col-sm-12">
-										<div class="row">
-												<div class="col-lg-3 col-md-3 col-sm-6 mb-3">
-													<select class="form-control-lg">
-													  <option>Select Location</option>
-													  <option>Location 1</option>
-													  <option>Location 2</option>
-													</select>
-												</div>
+								<!-- End banner Area -->	
+								<div class="banner_form">
+									<div class="container">
+										<div class="row"> 
+										
+										<div class="col-lg-12 col-md-12 col-12">
+											<form class="form-horizontal" role="form" enctype="multipart/form-data" method="post"
+                                              action="{{route('search')}}">
+											  @csrf
+												<div class="banner_content rounded">
+													<h3 class="text-capitalize text-white mb-3">Find Your Dream Car</h3>
+													<div class="row">
+														
+														<div class="col-lg-12 col-md-12 col-sm-12">
+															<div class="row">
+															
 
-												<div class="col-lg-3 col-md-3 col-sm-6 mb-3">
-													<select class="form-control-lg">
-													  <option>Select Brand</option>
-													  <option>Audi</option>
-													  <option>BMW</option>
-													  <option>Nissan</option>
-													  <option>Toyota</option>
-													</select>
-												</div>
+																	<div class="col-lg-3 col-md-3 col-sm-6 mb-3">
+																		<select class="form-control-lg" name="brand_id">
+																		<option>Select Brand</option>
+																	@foreach($brands as $brand)
+																	<option value="{{$brand->id}}">{{$brand->name}}</option>
+																	@endforeach
+																		
+																		</select>
+																	</div>
 
-												<div class="col-lg-3 col-md-3 col-sm-6 mb-3">
-													<select class="form-control-lg">
-													  <option>Select Model</option>
-													  <option>Series 1</option>
-													  <option>Series 2</option>
-													  <option>Series 3</option>
-													  <option>Series 4</option>
-													</select>
-												</div>
+																<div class="col-lg-3 col-md-3 col-sm-6 mb-3">
+																		<select class="form-control-lg" name="year">
+																			
+																		<option>Year Of Model</option>
+																		<option value="2021">2021</option>
+																		<option value="2020">2020</option>
+																		<option value="2019">2019</option>
+																		<option value="2018">2018</option>
+																		<option value="2017">2017</option>
+																		<option value="2016">2016</option>
+																		<option value="2015">2015</option>
+																		<option value="2014">2014</option>
+																		<option value="2013">2013</option>
+																		<option value="2012">2012</option>
+																		<option value="2011">2011</option>
+																		<option value="2010">2010</option>
+																		<option value="2009">2009</option>
+																		<option value="2008">2008</option>
+																		<option value="2007">2007</option>
+																		<option value="2006">2006</option>
+																		<option value="2005">2005</option>
+																		<option value="2004">2004</option>
+																		<option value="2003">2003</option>
+																		<option value="2002">2002</option>
+																		<option value="2001">2001</option>
+																		<option value="2000">2000</option>
+																		<option value="1999">1999</option>
+																		</select>
+																	</div>
 
-												<div class="col-lg-3 col-md-3 col-sm-6 mb-3">
-													<select class="form-control-lg">
-													  <option>Year Of Model</option>
-													  <option>2018</option>
-													  <option>2017</option>
-													  <option>2016</option>
-													</select>
-												</div>
-										</div>
+																	<div class="col-lg-3 col-md-3 col-sm-6 mb-3">
+																	<select class="form-control-lg mb-3" name="status">
+																		<option>Type Of Car</option>
+																		<option value="NEW">New Car</option>
+																		<option value="USED">Used Car</option>
+																		</select>
+																	</div>
 
-										<div class="row">
-											<div class="col-lg-6 col-md-6 col-sm-12">
-												    	<h4 class="mb-3 text-white">Price Range</h4>
-												<div class="demo">
-												    <div class="range-slider">
-												        <input type="range" value="150" min="0" max="500" range="true">
-												        <span class="range-value">150 $</span>
-												    </div>
-												</div>
-											</div>
+																<div class="col-lg-3 col-md-3 col-sm-6 mb-3">
+																<select class="form-control-lg mb-3" name="service">
+																		<option>Type Of Service</option>
+																		<option value="buy">Buy</option>
+																		<option value="rent" >Rent</option>
+																		</select>
+																	</div>
+															</div>
 
-											<div class="col-lg-3 col-md-6 col-sm-6">
-												<select class="form-control-lg mb-3">
-													  <option>Type Of Car</option>
-													  <option>New Car</option>
-													  <option>Used Car</option>
-													</select>
-											</div>
+															<div class="row">
+																<div class="col-lg-8 col-md-6 col-sm-12">
+																			<h4 class="mb-3 text-white">Price Range</h4>
+																	<div class="demo">
+																		<div class="range-slider">
+																			<input type="range" value="0" min="0" max="1000000" range="true" name="rang_price">
+																			<span class="range-value"> 0 S.P</span>
+																		</div>
+																	</div>
+																</div>
 
-											<div class="col-lg-3 col-md-6 col-sm-6">
-												<div class="section_search">
-													<a class="btn btn-block btn-lg bg-dark text-white"><i class="mr-3 fa fa-search"></i><span>Search Car</span></a>
+																<div class="col-lg-1 col-md-6 col-sm-6">
+                                                                </div>
+
+																<div class="col-lg-3 col-md-6 col-sm-6">
+																	<div class="section_search">
+																	<button type="submit"
+															class="btn btn-block btn-lg bg-dark text-white "><i class="mr-3 fa fa-search"></i><span>Search Car</span></button>												</div>
+																</div>
+															</div>
+														</div>
+														
+													</div>
 												</div>
-											</div>
+											    </div>
+											</form>
 										</div>
 									</div>
 								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 
 		<section id="welcome" class="section-full">
 			<div class="container">
