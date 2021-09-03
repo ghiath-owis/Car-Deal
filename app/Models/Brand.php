@@ -10,4 +10,8 @@ class Brand extends Model
         "name",
         "model",
         "logo",];
+
+
+
+
 }

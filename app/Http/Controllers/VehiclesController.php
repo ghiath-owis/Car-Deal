@@ -136,6 +136,7 @@ class VehiclesController extends Controller
         $vehicle -> body= $request->body;
         $vehicle -> service_type= $request->service_type;
 
+        
 
         $vehicle ->save();
 

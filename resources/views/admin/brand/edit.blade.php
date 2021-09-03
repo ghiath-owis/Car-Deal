@@ -36,13 +36,9 @@
                                     </div>
                                     <div class="form-group">
                                         <label class="col-md-2 control-label">Logo:</label>
-                                        <div class="col-md-10">
-                                            
-                                        <input  type="file"  name="logo"
-                                        class="dropify" data-height="300" data-default-file="{{ asset('/Uploaded/image/brand') . '/' . $brand->logo }}">
-
-                                                
-
+                                        <div class="col-md-10">   
+                                            <input  type="file"  name="logo"
+                                            class="dropify" data-height="300" data-default-file="{{ asset('/Uploaded/image/brand') . '/' . $brand->logo }}">
                                         </div>
                                     </div>
 

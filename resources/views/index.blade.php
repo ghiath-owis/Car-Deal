@@ -103,11 +103,14 @@
 					<div class="col-lg-6 col-md-6 col-12">
 						<div class="section_heading">
 							<h3 >Welcome To Car Deal</h3>
-							<h4 >-Build Your Deal</h4>
-							<h4 >-Create a personalized deal</h4>
-							<h4 >-Rent Car</h4>
-							<h4 >-evaluate your trade-in – all online</h4>
-					
+							<h4 >* Build Your Deal</h4>
+							<h4 >* Create a personalized deal</h4>
+							<h4 >* Buy a Car</h4>
+							<h4 >* Rent a Car</h4>
+							<h4 >* evaluate your trade-in – all online</h4>
+							<h4 >* Choose Your Favourite Cars</h4>
+							<h4 >* You can search all kind of Cars</h4>
+							
 						</div>
 					</div>
 
@@ -212,7 +215,7 @@
 								</div>
 								<div class="service_item_content">
 									<h3>All Brands</h3>
-									<p>Printin lorem Ipsum is simply dummy text of the k a galley of type and car.</p>
+									<p>We have a variety group of all brands and logo galley of type and car.</p>
 								</div>
 							</div>
 						</div>
@@ -224,7 +227,7 @@
 								</div>
 								<div class="service_item_content">
 									<h3>Free Support</h3>
-									<p>Aliquid illo similique minima magni quidem sequi corporis fugiat type car.</p>
+									<p>You Can contact with Admin by Info in the below and we will contact with you.</p>
 								</div>
 							</div>
 						</div>
@@ -236,7 +239,7 @@
 								</div>
 								<div class="service_item_content">
 									<h3>DealerShip</h3>
-									<p>Similique minima magni quidem aliquid illo sequi corporis fugiat type and car.</p>
+									<p>We present deal and Comunication between seler and customer who want to buy.</p>
 								</div>
 							</div>
 						</div>
@@ -247,62 +250,13 @@
 									<i class="fa fa-money fa-2x"></i>
 								</div>
 								<div class="service_item_content">
-									<h3>Affordable</h3>
-									<p>Magni quidem aliquid illo sequi similique minima corporis fugiat type and car.</p>
-								</div>
-							</div>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="col-lg-3 col-md-6 col-sm-6 text-center">
-							<div class="service_item">
-								<div class="section_icon">
-									<i class="fa fa-shower fa-2x"></i>
-								</div>
-								<div class="service_item_content">
-									<h3>Oil Changes</h3>
-									<p>The printin lorem Ipsum is simply dummy text of k a galley of type and car.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-6 col-sm-6 text-center">
-							<div class="service_item">
-								<div class="section_icon">
-									<i class="fa fa-bath fa-2x"></i>
-								</div>
-								<div class="service_item_content">
-									<h3>Air Conditioning</h3>
-									<p>Galley of type lorem Ipsum is simply dummy text of the printin k a type and car.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-6 col-sm-6 text-center">
-							<div class="service_item">
-								<div class="section_icon">
-									<i class="fa fa-empire fa-2x"></i>
-								</div>
-								<div class="service_item_content">
-									<h3>Auto Electric</h3>
-									<p>Simply dummy lorem Ipsum is text of the printin k a galley of type and car.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="col-lg-3 col-md-6 col-sm-6 text-center">
-							<div class="service_item">
-								<div class="section_icon">
-									<i class="fa fa-subway fa-2x"></i>
-								</div>
-								<div class="service_item_content">
 									<h3>Transmission</h3>
-									<p>Simply dummy lorem Ipsum is text of the printin k a galley of type and car.</p>
+									<p>We provid all new kind of trasmission models like Hybrid and Electric cars.</p>
 								</div>
 							</div>
 						</div>
 					</div>
+					
 
 				</div>
 			</section>
