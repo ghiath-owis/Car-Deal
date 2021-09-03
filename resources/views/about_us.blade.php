@@ -178,14 +178,14 @@
 			                        <img src="img/team_member/mohamad haikal.jpg" alt="our-team">
 			                        <ul class="social">
 			                            <li><a href="https://www.facebook.com/profile.php?id=100013222477963"><i class="fa fa-facebook"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			                            <li><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
 			                            <li><a href="https://www.linkedin.com/in/mohamad-haikal-71ba7b1ba/"><i class="fa fa-linkedin"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+			                            <li><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
 			                        </ul>
 			                    </div>
 			                    <div class="team-content">
 			                        <h3 class="title">Mohamad Haikal</h3>
-			                        <span class="post">Front-End</span>
+			                        <span class="post">Front-End / Back-End</span>
 			                    </div>
 			                </div>
 			            </div>
