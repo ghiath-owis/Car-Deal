@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\RequestTable;
 use App\Http\Resources\RequestTableResource;
 use App\Http\Helpers;
+use App\Models\Vehicle;
 
 class RequestsTableController extends Controller
 {
@@ -40,7 +41,22 @@ class RequestsTableController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        // validation vehicle id.
+        $request->validate([
+            'vehicle_id' => 'required|exists:vehicles,id',
+        ]);
+
+        RequestTable::create([
+            'date'       => time(),
+            'type'       => $request->type,
+            'start_date' => $request->start_date,
+            'end_date'   => $request->end_date,
+            'client_id'  => auth()->user()->id,
+            'vehicle_id' => $request->vehicle_id
+        ]);
+
+        return redirect()->back()->with('success', 'Order sended successfully.');
     }
 
     /**
@@ -87,4 +103,35 @@ class RequestsTableController extends Controller
     {
         //
     }
+
+    public function proccessRequest(Request $request, $requestId) {
+
+        $request->validate([
+            'status' => 'required|in:' . implode(',', [0, 1])
+        ]);
+
+        $order = RequestTable::find($requestId);
+
+        if (!$order) {
+            return back()->withErrors('Order NOT found!');
+        }
+
+        $vehicle = Vehicle::find($order->vehicle_id);
+
+        // check if versions are equal.
+        if ($vehicle->version != $request->version) {
+            return redirect()->back()->withErrors('Sorry, this vehicle in not available!');
+        }
+
+        $vehicle->version++;
+
+        $vehicle->save();
+
+        $order->status = $request->status;
+
+        $order->save();
+
+        return redirect()->route('all-request')->with('success', 'Order proccessed successfully.');
+    }
+
 }

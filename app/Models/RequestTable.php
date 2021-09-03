@@ -13,5 +13,7 @@ class RequestTable extends Model
         "start_date",
         "end_date",
         "client_id",
-        "vehicle_id",];
+        "vehicle_id",
+        'status'
+    ];
 }
