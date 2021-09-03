@@ -172,7 +172,7 @@
 
                                 <div >
                                     @if($vehicle->has_offer==0)
-                                    <div class="col-md-5 col-6 pt-1 text-center">
+                                    <div class="col-md-12 col-6 pt-1 text-center">
                                         <h3>{{$vehicle->price}}<small> S.P</small></h3> 
                                        
 
