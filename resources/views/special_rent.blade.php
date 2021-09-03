@@ -9,9 +9,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Vehicle Listing			
+								Special Offer Rent Listing			
 							</h1>	
-							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span> <a href="/product_listing"> Vehicle List</a></p>
+							<p class="text-white link-nav"><a href="\">Home </a>  <span class="lnr lnr-arrow-right"></span> <a href="/product_listing"> Vehicle </a> <span class="lnr lnr-arrow-right"></span> <a href="/special_rent">special offer rent List</a></p>
 						</div>											
 					</div>
 				</div>
@@ -25,7 +25,7 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-40 col-lg-10">
 							<div class="title text-center">
-								<h1 class="mb-10">Our vehicles</h1>
+								<h1 class="mb-10">Our special offer for rent</h1>
 								<hr class="lines">
 							</div>
 						</div>

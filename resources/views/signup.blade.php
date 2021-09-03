@@ -49,13 +49,38 @@
 							<span class="lnr lnr-user"></span>
 						</span>
 					</div>
-
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: english">
+						<input class="input100" type="text" name="text" placeholder="UserName">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-user"></span>
+						</span>
+					</div>
+					
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: english">
+						<input class="input100" type="text" name="text" placeholder="Phone">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-phone-handset"></span>
+						</span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: english">
+						<input class="input100" type="text" name="text" placeholder="Address">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<span class="lnr lnr-home"></span>
+						</span>
+					</div>
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
 						<input class="input100" type="text" name="email" placeholder="Email">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<span class="lnr lnr-envelope"></span>
 						</span>
+					</div>
+					<div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
+						<input type="file"name="image" placeholder="image">Your image</input>
+					
 					</div>
 
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">

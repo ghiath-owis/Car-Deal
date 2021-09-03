@@ -12,7 +12,7 @@ class Client extends Model
         "last_name",
         "username",
         "email",
-        "password",
+        "password", 
         "phone",
         "address",
         "photo",];

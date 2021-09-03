@@ -32,7 +32,7 @@
 					</div>
 					<div class="row d-flex justify-content-center mb-30">
 						@foreach($vehicles as $vehicle)
-                        @if($vehicle->has_offer==1 && $vehicle->is_available==1)
+                      
 						<div class="col-md-4 col-sm-6 col-12 gp_products_item">
 							<div class="gp_products_inner">
 								<div class="gp_products_item_image">
@@ -57,7 +57,7 @@
 												@endforeach
 							@if($vehicle->has_offer==0)
                                     
-									<a href="#" class="pull-right"><span class="mr-1"> S.P</span>{{$vehicle->price}}</a>
+									<a href="#" class="pull-right">{{$vehicle->price}}<span class="mr-1"> S.P</span></a>
                                    
                                     @else
                                   
@@ -76,6 +76,8 @@
 												<li><a href="#"><i class="fa fa-road mr-1"></i>{{$vehicle->kilometrage}} Km</a>
 													<a class="ml-2" href="#"><i class="fa fa-tachometer mr-1"></i>{{$vehicle->max_speed}} Miles</a>
 													<a class="ml-2" href="#"><i class="fa fa-car mr-1"></i>{{$vehicle->fuel}}</a>
+													<a class="ml-2" href="#">    <span class="label label-danger" style=" font-size: 10px;">{{$vehicle->status}}</span></a>
+
 												</li>
 											</ul>
 											<ul class="gp_products_caption_rating mt-2">
@@ -90,7 +92,7 @@
 										</div>
 							</div>
 						</div>
-                        @endif
+                      
 						@endforeach
 					
 						
@@ -99,19 +101,9 @@
 
 								<div class="row">
 									<div class="col-lg-12 col-md-12 col-sm-12 mt-30">
-										<nav aria-label="...">
+									<nav aria-label="...">
 										  <ul class="pagination justify-content-center">
-										    <li class="page-item disabled">
-										      <span class="page-link">Previous</span>
-										    </li>
-										    <li class="page-item active"><a class="page-link" href="#">1</a></li>
-										    <li class="page-item"><a class="page-link" href="#">2</a></li>
-										    <li class="page-item"><a class="page-link" href="#">3</a></li>
-										    <li class="page-item"><a class="page-link" href="#">4</a></li>
-										    <li class="page-item"><a class="page-link" href="#">5</a></li>
-										    <li class="page-item">
-										      <a class="page-link" href="#">Next</a>
-										    </li>
+											{{$vehicles->links()}}
 										  </ul>
 										</nav>
 									</div>

@@ -9,9 +9,9 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Vehicle Listing			
+								Vehicle Rent Listing			
 							</h1>	
-							<p class="text-white link-nav"><a href="/">Home </a>  <span class="lnr lnr-arrow-right"></span> <a href="/product_listing"> Vehicle List</a></p>
+							<p class="text-white link-nav"><a href="\">Home </a>  <span class="lnr lnr-arrow-right"></span> <a href="/product_listing"> Vehicle </a> <span class="lnr lnr-arrow-right"></span> <a href="/vehicle_rent"> Vehicle rent List</a></p>
 						</div>											
 					</div>
 				</div>
@@ -25,7 +25,7 @@
 					<div class="row d-flex justify-content-center">
 						<div class="menu-content pb-40 col-lg-10">
 							<div class="title text-center">
-								<h1 class="mb-10">Our vehicles</h1>
+								<h1 class="mb-10">Our vehicles for rent</h1>
 								<hr class="lines">
 							</div>
 						</div>
@@ -76,7 +76,7 @@
 												<li><a href="#"><i class="fa fa-road mr-1"></i>{{$vehicle->kilometrage}} Km</a>
 													<a class="ml-2" href="#"><i class="fa fa-tachometer mr-1"></i>{{$vehicle->max_speed}} Miles</a>
 													<a class="ml-2" href="#"><i class="fa fa-car mr-1"></i>{{$vehicle->fuel}}</a>
-													<a class="ml-2" href="#">    <span class="label label-danger" style=" font-size: 10px;">{{$vehicle->status}}</span></a>
+                                                    <a class="ml-2" href="#">    <span class="label label-danger" style=" font-size: 10px;">{{$vehicle->status}}</span></a>
 
 												</li>
 											</ul>
