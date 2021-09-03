@@ -139,17 +139,17 @@
 			            <div class="col-md-3 col-sm-6">
 			                <div class="our-team">
 			                    <div class="team_img">
-			                        <img src="img/team_member/team2.jpg" alt="our-team">
+			                        <img src="img/team_member/Ghiath.jpg" alt="our-team">
 			                        <ul class="social">
-			                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+			                            <li><a href="https://www.facebook.com/ghiath.king.1"><i class="fa fa-facebook"></i></a></li>
+			                            <li><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+			                            <li><a href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin"></i></a></li>
+			                            <li><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
 			                        </ul>
 			                    </div>
 			                    <div class="team-content">
-			                        <h3 class="title">Williamson</h3>
-			                        <span class="post">Auto Dealer</span>
+			                        <h3 class="title">Ghiath Owis</h3>
+			                        <span class="post">Back-End / Api</span>
 			                    </div>
 			                </div>
 			            </div>
@@ -157,17 +157,17 @@
 			            <div class="col-md-3 col-sm-6">
 			                <div class="our-team">
 			                    <div class="team_img">
-			                        <img src="img/team_member/team1.jpg" alt="our-team">
+			                        <img src="img/team_member/omar2.jpg" alt="our-team">
 			                        <ul class="social">
-			                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+			                            <li><a href="https://www.facebook.com/omar.alkehda.3"><i class="fa fa-facebook"></i></a></li>
+			                            <li><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+			                            <li><a href="https://www.linkedin.com/in/omar-keddeh-2a146820a/"><i class="fa fa-linkedin"></i></a></li>
+			                            <li><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
 			                        </ul>
 			                    </div>
 			                    <div class="team-content">
-			                        <h3 class="title">kristina</h3>
-			                        <span class="post">Car Dealer</span>
+			                        <h3 class="title">Omar Keddeh</h3>
+			                        <span class="post">Data Base</span>
 			                    </div>
 			                </div>
 			            </div>
@@ -175,17 +175,17 @@
 			            <div class="col-md-3 col-sm-6">
 			                <div class="our-team">
 			                    <div class="team_img">
-			                        <img src="img/team_member/team4.jpg" alt="our-team">
+			                        <img src="img/team_member/mohamad haikal.jpg" alt="our-team">
 			                        <ul class="social">
-			                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+			                            <li><a href="https://www.facebook.com/profile.php?id=100013222477963"><i class="fa fa-facebook"></i></a></li>
 			                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			                            <li><a href="https://www.linkedin.com/in/mohamad-haikal-71ba7b1ba/"><i class="fa fa-linkedin"></i></a></li>
 			                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 			                        </ul>
 			                    </div>
 			                    <div class="team-content">
-			                        <h3 class="title">Julia B</h3>
-			                        <span class="post">Delivery Incharge</span>
+			                        <h3 class="title">Mohamad Haikal</h3>
+			                        <span class="post">Front-End</span>
 			                    </div>
 			                </div>
 			            </div>
@@ -193,17 +193,17 @@
 			            <div class="col-md-3 col-sm-6">
 			                <div class="our-team">
 			                    <div class="team_img">
-			                        <img src="img/team_member/team3.jpg" alt="our-team">
+			                        <img src="img/team_member/soliman.jpg" alt="our-team">
 			                        <ul class="social">
-			                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+			                            <li><a href="https://www.facebook.com/mohammed.suliman.71066"><i class="fa fa-facebook"></i></a></li>
+			                            <li><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
 			                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+			                            <li><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
 			                        </ul>
 			                    </div>
 			                    <div class="team-content">
-			                        <h3 class="title">kevin clein</h3>
-			                        <span class="post">Sales Representative</span>
+			                        <h3 class="title">Soliman Abd Alazeem</h3>
+			                        <span class="post">Client-Server Services</span>
 			                    </div>
 			                </div>
 			            </div>

@@ -156,10 +156,10 @@
 							<img class="w-50 img-fluid mb-3" src="{{asset('img/logo.png')}}" alt="">
 							<p>We provide everything you need to build an amazing dealership website developed especially for car sellers dealers or auto motor retailers.</p>
 							<ul class="social-footer">
-								<li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+								<li><a class="facebook" href="https://www.facebook.com/ghiath.king.1"><i class="fa fa-facebook"></i></a></li>
+								<li><a class="twitter" href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
+								<li><a class="linkedin" href="https://www.linkedin.com/feed/"><i class="fa fa-linkedin"></i></a></li>
+								<li><a class="google-plus" href="https://www.google.com/intl/ar/gmail/about/#"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div>
 					</div>
@@ -167,10 +167,11 @@
 						<div class="single-footer-widget">
 							<h6>Useful Links</h6>
 							<ul class="footer-nav">
+								<li><a href="{{route('sign-in')}}">LogIn</a></li>
+								<li><a href="{{route('sign-up')}}">signUp</a></li>
 								<li><a href="{{route('change-password')}}">Change</a></li>
-								<li><a href="">Replacement</a></li>
 								<li><a href="{{route('contact')}}">Contact Us</a></li>
-								<li><a href="">Pre-Purchase</a></li>
+
 								
 							</ul>
 						</div>
@@ -179,11 +180,8 @@
 						<div class="single-footer-widget">
 							<h6>Our Service</h6>
 							<ul class="footer-nav">
-								<li><a href="{{route('privacy-policy')}}">Privacy Policy</a></li>
 								<li><a href="{{route('about-us')}}">About Us</a></li>
-								<li><a href="">Terms & Conditions</a></li>
-								<li><a href="">Support</a></li>
-								<li><a href="{{route('about-us')}}">About</a></li>
+								<li><a href="{{route('terms-and-conditions')}}">Terms & Conditions</a></li>
 							</ul>
 						</div>
 					</div>
@@ -192,25 +190,22 @@
 							<h6 class="mb-20">Keep In Touch</h6>
 							<ul class="footer-nav">
 								<li>
-								<strong><i class="fa fa-map-marker"></i></strong><span class="pl-2">1900 Pico Blvd, New York</span>
+								<strong><i class="fa fa-map-marker"></i></strong><span class="pl-2">IT Engineering, Damascus, Syria</span>
 								</li>
 								<li>
-								<strong><i class="fa fa-mobile"></i></strong><span class="pl-2">+48 123 456 789</span>
+								<strong><i class="fa fa-mobile"></i></strong><span class="pl-2">+963 938045918</span>
 								</li>
 								<li>
-								<strong><i class="fa fa-envelope-o"></i></strong><span class="pl-2"><a href="#">example@example.com</a></span>
+								<strong><i class="fa fa-mobile"></i></strong><span class="pl-2">+963 941101108</span>
+								</li>
+								<li>
+								<strong><i class="fa fa-envelope-o"></i></strong><span class="pl-2"><a href="javascript:void(0);">mohamadmhaikal@gmail.com</a></span>
+								</li>
+								<li>
+								<strong><i class="fa fa-envelope-o"></i></strong><span class="pl-2"><a href="javascript:void(0);">ghiath.wd40@gmail.com</a></span>
 								</li>
 							</ul>
-							<div class="section_form">
-                                    <div class="col-auto">
-                                      <div class="input-group mb-2">
-                                        <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="Enter Your Email">
-                                         <div class="input-group-prepend">
-                                          <div class="input-group-text"><i class="fa fa-paper-plane"></i></div>
-                                        </div>
-                                      </div>
-                                    </div>  
-                                </div>
+							
 						</div>
 					</div>						
 				</div>	
@@ -221,20 +216,18 @@
 				<div class="row"> 
 					<div class="col-md-6 col-sm-6">
 						<div class="bottom_footer_info">
-							<p> &copy; Copyright 2018. All rights reserved</p>
+							<p> &copy; Copyright 2021. All rights reserved</p>
 						</div>
 					</div>
 					<div class="col-md-6 col-sm-6">
 						<div class="bottom_footer_logo">
 							<ul class="list-inline">
+				                
 				                <li class="list-inline-item">
-				                	<a href="#">Privacy policy &nbsp;|</a>
+				                	<a href="{{route('terms-and-conditions')}}">Terms And Condition &nbsp;|</a>
 				                </li>
 				                <li class="list-inline-item">
-				                	<a href="#">Terms And Condition &nbsp;|</a>
-				                </li>
-				                <li class="list-inline-item">
-				                	<a href="#">Contact Us</a>
+				                	<a href="{{route('about-us')}}">About Us</a>
 				                </li>
 							</ul>
 						</div>
