@@ -43,18 +43,6 @@ Route::get('/vehicle_buy','PagesController@vehicle_buy')->name('vehicle_buy');
 Route::post('/search','PagesController@search')->name('search');
 Route::get('/special_rent','PagesController@special_rent')->name('special_rent');
 Route::get('/special_buy','PagesController@special_buy')->name('special_buy');
-// OwnerController Routs
-
-
-//Route::resource('owners','OwnersController');
-Route::get('/owner/add','OwnersController@add')->name('add-owner');
-Route::post('/owner/store','OwnersController@store')->name('store-owner');
-Route::get('/owner/all','OwnersController@all')->name('all-owners');
-Route::get('/owner/edit/{id}','OwnersController@edit')->name('edit-owner');
-Route::post('/owner/edit/{id}','OwnersController@update')->name('update-owner');
-Route::get('/owner/delete/{id}','OwnersController@delete')->name('delete-owner');
-
-
 
 
 // BrandController Routs

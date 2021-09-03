@@ -28,4 +28,49 @@ class Vehicle extends Model
         "rating_id",
         "brand_id",
         "special_offer_id",];
+
+        /////// Has_many Relations ///////
+        public function galleries(){
+            return $this->hasMany('App\Models\Gallery' , 'vehicle_id');
+        }
+
+        public function logs(){
+            return $this->hasMany('App\Models\Log' , 'vehicle_id');
+        }
+
+        public function requestTable(){
+            return $this->hasMany('App\Models\RequestTable' , 'vehicle_id');
+        }
+
+        public function contractBuy(){
+            return $this->hasMany('App\Models\ContractBuy' , 'vehicle_id');
+        }
+
+        public function contractRent(){
+            return $this->hasMany('App\Models\ContractRent' , 'vehicle_id');
+        }
+
+        public function reportStatus(){
+            return $this->hasMany('App\Models\ReportStatus' , 'vehicle_id');
+        }
+
+
+        ////////////// Belongs_To Relations ////////////////
+        public function brand(){
+            return $this->belongsTo('App\Models\Brand' , 'brand_id');
+        }
+
+        public function rating(){
+            return $this->belongsTo('App\Models\Rating' , 'rating_id');
+        }
+
+        public function specialOffer(){
+            return $this->belongsTo('App\Models\SpecialOffer' , 'special_offer_id');
+        }
+
+
+        ////////////// Belongs_To_Many Relations ////////////////
+        public function clients(){
+            return $this->belongsToMany('App\Client', 'favorite_vehicles', 'client_id', 'vehicle_id')->withTimestamps();
+        }
 }

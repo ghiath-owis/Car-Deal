@@ -2,6 +2,7 @@
 @section('content')
 
 
+
     <!-- start banner Area -->
     <section class="banner-area relative">
         <div class="overlay overlay-bg"></div>
@@ -57,6 +58,7 @@
                                                     alt="{{ asset('item_slider.jpg') }}" />
 
                                             </div>
+
                                         @endif
                                         <!-- End of Slide -->
                                     @endif

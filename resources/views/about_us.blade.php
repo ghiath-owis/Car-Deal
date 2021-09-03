@@ -197,7 +197,7 @@
 			                        <ul class="social">
 			                            <li><a href="https://www.facebook.com/mohammed.suliman.71066"><i class="fa fa-facebook"></i></a></li>
 			                            <li><a href="javascript:void(0);"><i class="fa fa-twitter"></i></a></li>
-			                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+			                            <li><a href="https://www.linkedin.com/in/mohammed-sulaiman-25798419a/"><i class="fa fa-linkedin"></i></a></li>
 			                            <li><a href="javascript:void(0);"><i class="fa fa-google-plus"></i></a></li>
 			                        </ul>
 			                    </div>

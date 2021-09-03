@@ -12,6 +12,8 @@ class Brand extends Model
         "logo",];
 
 
-
+    public function vehicles(){
+            return $this->hasMany('App\Models\Vehicle' , 'brand_id');
+        }
 
 }

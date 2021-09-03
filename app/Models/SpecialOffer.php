@@ -11,4 +11,8 @@ class SpecialOffer extends Model
         "ratio",
         "start_date",
         "end_date",];
+
+    public function vehicles(){
+        return $this->hasMany('App\Models\Vehicle' , 'special_offer_id');
+    }
 }

@@ -36,7 +36,7 @@
 						<div class="col-md-4 col-sm-6 col-12 gp_products_item">
 							<div class="gp_products_inner">
 								<div class="gp_products_item_image">
-									<a href="#">
+									<a href="javascript:void(0);">
 										@foreach($gallery as $image)
 										@if($image->vehicle_id==$vehicle->id)
 										<img src="Uploaded/image/{{$image->image}}" alt="gp product 001" />
