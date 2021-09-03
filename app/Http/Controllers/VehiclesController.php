@@ -25,7 +25,7 @@ class VehiclesController extends Controller
         $vehicle=Vehicle::all();
         $brands=Brand::all();
         $offers=SpecialOffer::all();
-        return view ('admin.vehicle.all',compact('vehicle'))->with('brands',$brands)->with('offers',$offers); 
+        return view ('admin.vehicle.all',compact('vehicle'))->with('brands',$brands)->with('offers',$offers);
 
     }
 
@@ -54,7 +54,14 @@ class VehiclesController extends Controller
         $vehicle = new Vehicle;
         $offers=SpecialOffer::where('id','=',$request->special_offer_id)->first();;
         $vehicle -> fill($request->all());
-        $vehicle -> price_after_offer=($request->price)-((($request->price)*($offers->ratio))/100.0);  
+        if($request->has_offer==1){
+            $vehicle -> price_after_offer=( $request->price)-((( $request->price)*($offers->ratio))/100.0);
+           }
+           else
+           {
+             $vehicle -> price_after_offer=$request->price;
+
+           }
        $vehicle -> save();
 
             $image = $request->file('images');
@@ -71,10 +78,10 @@ class VehiclesController extends Controller
         $file->image=$d;
         $file->vehicle_id=$vehicle->id;
         $file->save();
-      
+
         }
-    
-         return redirect('/vehicle.all'); 
+
+         return redirect('/vehicle.all');
     }
 
     /**
@@ -123,9 +130,15 @@ class VehiclesController extends Controller
         $vehicle -> brand_id= $request->brand_id;
         $vehicle -> special_offer_id= $request->special_offer_id;
         $vehicle -> price= $request->price;
+       if($request->has_offer==1){
+        $vehicle -> price_after_offer=( $request->price)-((( $request->price)*($offers->ratio))/100.0);
+       }
+       else
+       {
+         $vehicle -> price_after_offer=$request->price;
 
-        $vehicle -> price_after_offer=( $request->price)-((( $request->price)*($offers->ratio))/100.0); 
-      
+       }
+
         $vehicle -> rent_price= $request->rent_price;
         $vehicle -> has_offer= $request->has_offer;
         $vehicle -> origin_country= $request->origin_country;
@@ -136,7 +149,7 @@ class VehiclesController extends Controller
         $vehicle -> body= $request->body;
         $vehicle -> service_type= $request->service_type;
 
-        
+
 
         $vehicle ->save();
 
