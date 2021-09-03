@@ -40,7 +40,7 @@ Route::get('/terms_and_conditions','PagesController@terms_and_conditions')->name
 Route::get('/user_profile','PagesController@user_profile')->name('user-profile');
 
 
-// OwnerController Routs
+
 
 
 //Route::resource('owners','OwnersController');
