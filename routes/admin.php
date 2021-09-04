@@ -24,6 +24,8 @@ Route::group(['namespace'=>'Admin\Auth'], function () {
   Route::post('/logout', 'LoginController@logout')->name('admin.logout');
 });
 
+Route::group(['middleware' => 'auth:admin'], function () {
 Route::get('/home','Admin\HomeController@index')->name('admin.home');
+});
 
 
