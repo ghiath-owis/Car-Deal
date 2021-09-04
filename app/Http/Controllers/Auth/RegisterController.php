@@ -39,7 +39,7 @@ class RegisterController extends Controller
     {
         $this->middleware('guest');
     }
-    
+
     /**
      * Get a validator for an incoming registration request.
      *
@@ -77,7 +77,7 @@ class RegisterController extends Controller
             'password'    => bcrybt($data['password']),
             'phone'       => $data['phone'],
             'address'     => $data['address'],
-            // 'photo' => ['string', 'max:255'],
+            'photo'       => $data ['photo'],
         ]);
     }
 }
