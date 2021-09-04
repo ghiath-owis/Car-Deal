@@ -2,11 +2,17 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\Client;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Auth\Events\Registered;
+
+use Illuminate\Http\Request;
+
+use Auth;
+
 
 class RegisterController extends Controller
 {
@@ -28,7 +34,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/login';
 
     /**
      * Create a new controller instance.
@@ -52,9 +58,9 @@ class RegisterController extends Controller
             'first_name'  => ['required', 'string', 'max:255'],
             'last_name'   => ['required', 'string', 'max:255'],
             'username'    => ['required', 'string', 'max:255'],
-            'email'       => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'email'       => ['required', 'string', 'email', 'max:255', 'unique:clients'],
             'password'    => ['required', 'string', 'min:8', 'confirmed'],
-            'phone'       => ['numeric'],
+            'phone'       => ['required','string'],
             'address'     => ['string', 'max:255'],
             // 'photo' => ['string', 'max:255'],
         ]);
@@ -68,16 +74,36 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+        return Client::create([
 
             'first_name'  => $data['first_name'],
             'last_name'   => $data['last_name'],
             'username'    => $data['username'],
             'email'       => $data['email'],
-            'password'    => bcrybt($data['password']),
+            'password'    => Hash::make($data['password']),
             'phone'       => $data['phone'],
             'address'     => $data['address'],
             'photo'       => $data ['photo'],
         ]);
     }
+
+
+    protected function guard()
+    {
+        return Auth::guard('client');
+    }
+
+
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        event(new Registered($user = $this->create($request->all())));
+
+        // $this->guard()->login($user);
+
+        return $this->registered($request, $user)
+                        ?: redirect($this->redirectPath())->with(['success' => 'the Account created successfully']);
+    }
+
 }
