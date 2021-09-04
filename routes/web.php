@@ -44,7 +44,7 @@ Route::get('/vehicle_buy','PagesController@vehicle_buy')->name('vehicle_buy');
 Route::post('/search','PagesController@search')->name('search');
 Route::get('/special_rent','PagesController@special_rent')->name('special_rent');
 Route::get('/special_buy','PagesController@special_buy')->name('special_buy');
-
+Route::get('/add_favourite/{id}','PagesController@add_favourite')->name('add_favourite');
 
 // BrandController Routs
 
@@ -56,7 +56,7 @@ Route::post('/brand.update{id}','BrandsController@update')->name('update-brand')
 Route::get('/brand/delete/{id}','BrandsController@destroy')->name('delete-brand');
 
 
-// SpecialOfferController Routs    
+// SpecialOfferController Routs
 
 Route::get('/offer.add','SpecialOffersController@create')->name('add-special_offer');
 Route::post('/offer/store','SpecialOffersController@store')->name('store-special_offer');

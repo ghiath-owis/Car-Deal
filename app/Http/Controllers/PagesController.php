@@ -8,7 +8,8 @@ use App\Models\Vehicle;
 use App\Models\Gallery;
 use App\Models\Brand;
 use App\Models\SpecialOffer;
-
+use App\Models\FavoriteVehicle;
+use Auth;
 class PagesController extends Controller
 {
     /**
@@ -46,6 +47,17 @@ class PagesController extends Controller
         return view('favourite_products');
     }
 
+    public function add_favourite($id)
+    {  $favo=FavoriteVehicle::where('client_id','=',Auth::guard('client')->user()->id)
+        ->where('vehicle_id','=',$id);
+
+      $fav=new FavoriteVehicle;
+        $fav->client_id=Auth::guard('client')->user()->id;
+        $fav->vehicle_id=$id;
+        $fav->save();
+        return back();
+
+    }
 
     public function special_offer()
     {
