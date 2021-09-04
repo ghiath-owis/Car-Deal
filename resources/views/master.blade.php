@@ -66,15 +66,15 @@
               <ul class="account">
                 @guest
 
-    
+
                   <li><a href="{{ route('login') }}" style="color:red;">Signin Page</a></li>
                   <li><a href="{{ route('register') }}" style="color:red;">Signup Page</a></li>
 
                 @endguest
 
                 @auth('client')
-                  
-                
+
+
                 <li>
                   <a href="#">
                     <img src="{{ asset('img/boogyman.png') }}" alt="">
@@ -90,35 +90,32 @@
                   </a>
                   <ul class="profile">
                     <li><a href="{{ route('user-profile') }}">User Profile</a></li>
-                    <li><a href="{{ route('shopping-cart') }}">Shopping Cart</a></li>
                     <li><a href="{{ route('favourite-products') }}">Favourite Car</a></li>
                     <li><a href="{{ route('change-password') }}">Change Password</a></li>
                     <li><a href="{{ route('logout') }}">Sign Out</a></li>
                   </ul>
                 </li>
                 @endauth
-                
+
               </ul>
               @auth('client')
-                
-              
+
+
               <ul class="notification_icons">
                 <!-- <li>
            <a href="#"><i class="fa fa-bell-o"></i><span class="number">11</span></a>
           </li> -->
-                <li>
-                  <a href="#"><i class="fa fa-envelope-o"></i><span class="number">5</span></a>
-                </li>
+
 
                 <li>
-                  <a href="#">
+                  <a  href="{{ route('shopping-cart') }}">
                     <i class="fa fa-shopping-basket"></i>
                   </a>
                 </li>
-                
+
               </ul>
               @endauth
-              
+
             </div>
           </div>
         </div>
