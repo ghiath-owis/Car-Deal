@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\ContractBuy;
+use App\Models\Brand;
+
 use App\Http\Resources\ContractBuyResource;
 use App\Http\Helpers;
 
@@ -18,8 +20,9 @@ class ContractBuysController extends Controller
     public function index()
     //all
     {
-        $contract_buy=ContractBuy::all();
-        return view ('admin.contract_buy.all',compact('contract_buy')); 
+        $brands=Brand::all();
+        $contract_buy=ContractBuy::with('Client','Vehicle')->where('id','>','0')->paginate(10);
+        return view ('admin.contract_buy.all',compact('contract_buy','brands'));
 
     }
 

@@ -58,14 +58,14 @@
                                     </tbody>
                                 </table>
                                 <div class="row">
-									<div class="col-lg-12 col-md-12 col-sm-12 mt-30">
-										<nav aria-label="...">
-										  <ul class="text-center">
-											{{$logs->links()}}
-										  </ul>
-										</nav>
-									</div>
-								</div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 mt-30">
+                                        <nav aria-label="...">
+                                            <ul class="text-center">
+                                                {{ $logs->links() }}
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
                             </div>
                     </div>
                 </div><!-- end col -->
