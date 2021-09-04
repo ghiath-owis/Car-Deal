@@ -60,21 +60,21 @@ class Handler extends ExceptionHandler
      * @param  \AuthenticationException  $exception
      * @return \Illuminate\Http\Response
      */
-    // protected function unauthenticated($request, AuthenticationException $exception)
-    // {
-    //     if (in_array('admin', $exception->guards())) {
-    //         return $request->expectsJson()
-    //             ? response()->json([
-    //                   'message' => $exception->getMessage()
-    //             ], 401)
-    //             : redirect()->guest(route('admin.login'));
-    //     }
+    protected function unauthenticated($request, AuthenticationException $exception)
+    {
+        if (in_array('admin', $exception->guards())) {
+            return $request->expectsJson()
+                ? response()->json([
+                      'message' => $exception->getMessage()
+                ], 401)
+                : redirect()->guest(route('admin.login'));
+        }
 
-    //     return $request->expectsJson()
-    //         ? response()->json([
-    //               'message' => $exception->getMessage()
-    //         ], 401)
-    //         : redirect()->guest(route('login'));
-    // }
+        return $request->expectsJson()
+            ? response()->json([
+                  'message' => $exception->getMessage()
+            ], 401)
+            : redirect()->guest(route('login'));
+    }
 
 }

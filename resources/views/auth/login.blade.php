@@ -34,6 +34,19 @@
       <div class="wrap-login100">
         <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
           @csrf
+
+          <div class="text-center w-full ">
+            <span class="txt1">
+              {{-- ### show message for operation success ### --}}
+              @if (Session::has('success'))
+                <div class="alert alert-success" role="alert">
+                  {{ Session::get('success') }}
+                </div>
+              @endif
+
+            </span>
+          </div>
+
           <span class="login100-form-title p-b-55">
             Sign in
           </span>
