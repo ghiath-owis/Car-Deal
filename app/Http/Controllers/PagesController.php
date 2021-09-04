@@ -84,7 +84,7 @@ class PagesController extends Controller
                 $vehicle->save();
             }
         }
-        $vehicles = Vehicle::where('is_available', '=', '1')->paginate();
+        $vehicles = Vehicle::where('is_available', '=', '1')->paginate(6);
         return view('product_listing')->with("vehicles", $vehicles)->with("gallery", $gallery)->with('brands', $brands);
     }
     public function vehicle_buy()

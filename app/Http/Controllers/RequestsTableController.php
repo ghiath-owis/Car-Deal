@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\RequestTable;
+use App\Models\Brand;
 use App\Http\Resources\RequestTableResource;
 use App\Http\Helpers;
 
@@ -16,9 +17,9 @@ class RequestsTableController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $request_table=RequestTable::all();
-        return view ('admin.request_table.all',compact('request_table'));
+    {   $brands=Brand::all();
+        $request_table=RequestTable::with('Client','Vehicle')->where('id','>','0')->paginate(10);
+        return view ('admin.request_table.all',compact('request_table','brands'));
 
     }
 

@@ -103,7 +103,7 @@
                                                             <option value="0" >false</option>
                                                         }
                                                         @endif
-                                                        
+
 
 
                                                     </Select>
@@ -121,19 +121,19 @@
                                                     <option value="{{$offer->id}}">{{$offer->ratio}}%</option>
                                                     @endif
                                                @endforeach
-                                                  
+
 
 
                                                     </Select>
                                                 </div>
                                             </div>
 
-                                            
-                                            
+
+
                                             <div class="form-group">
                                                 <label class="col-md-2 control-label">images:</label>
                                                 <div class="col-md-10">
-                                                    <input required type="file" class="form-control" name="images[]"
+                                                    <input  type="file" class="form-control" name="images[]"
                                                         placeholder="address" multiple>
                                                 </div>
                                             </div>
@@ -280,7 +280,7 @@
                                                 <label class="col-md-2 control-label" style=" padding-left: -50px;">Transmission:</label>
                                                 <div class="col-md-10">
                                                     <Select class="form-control" name="transmission">
-                                                        @if($vehicle->transmission=="MANUAL")    
+                                                        @if($vehicle->transmission=="MANUAL")
                                                         {
                                                         <option value="MANUAL" selected="selected">MANUAL</option>
                                                         <option value="AUTOMATIC">AUTOMATIC</option>
@@ -291,13 +291,13 @@
                                                         <option value="MANUAL" >MANUAL</option>
                                                         <option value="AUTOMATIC" selected="selected">AUTOMATIC</option>
                                                         <option value="TIPTRONIC">TIPTRONIC</option>
-                                                        }   
+                                                        }
                                                         @elseif($vehicle->transmission=="TIPTRONIC")
                                                         {
                                                         <option value="MANUAL" >MANUAL</option>
                                                         <option value="AUTOMATIC" >AUTOMATIC</option>
                                                         <option value="TIPTRONIC" selected="selected">TIPTRONIC</option>
-                                                        }   
+                                                        }
                                                         @endif
                                                     </Select>
                                                 </div>
@@ -335,7 +335,7 @@
                                                             <option value="1"selected="selected">true</option>
                                                         }
                                                         @endif
-                                                     
+
 
 
 
@@ -350,18 +350,18 @@
                                                     @if($vehicle->service_type=="rent")
                                                         {  <option value="buy">buy</option>
                                                             <option value="rent" selected="selected">rent</option>
-                                                     
+
                                                         }
                                                         @else
-                                                        {   
+                                                        {
                                                             <option value="buy" selected="selected">buy</option>
                                                             <option value="rent">rent</option>
 
                                                         }
                                                         @endif
-                                                     
 
-                                                        
+
+
                                                     </Select>
                                                 </div>
                                             </div>

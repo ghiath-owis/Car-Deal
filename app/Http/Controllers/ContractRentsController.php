@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\ContractRent;
 use App\Http\Resources\ContractRentResource;
 use App\Http\Helpers;
+use App\Models\Brand;
 
 class ContractRentsController extends Controller
 {
@@ -16,9 +17,9 @@ class ContractRentsController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $contract_rent=ContractRent::all();
-        return view ('admin.contract_rent.all',compact('contract_rent')); 
+    {    $brands=Brand::all();
+        $contract_rent=ContractRent::with('Client','Vehicle')->where('id','>','0')->paginate(10);
+        return view ('admin.contract_rent.all',compact('contract_rent','brands'));
 
     }
 

@@ -149,10 +149,28 @@ class VehiclesController extends Controller
         $vehicle -> body= $request->body;
         $vehicle -> service_type= $request->service_type;
 
-
-
         $vehicle ->save();
+        if ($request->hasFile('images')) {
+        $gallery = Gallery::where('vehicle_id','=',$id);
+        $gallery->delete();
+        $image = $request->file('images');
+        foreach ($image as $files) {
+            $destinationPath = 'Uploaded/image/';
 
+            $file_name = time(). "." .$files->getClientOriginalExtension();
+            sleep(1);
+        
+            $files->move($destinationPath, $file_name);
+            $data[] = $file_name;
+        }
+    foreach($data as $d){
+    $file= new Gallery();
+    $file->image=$d;
+    $file->vehicle_id=$vehicle->id;
+    $file->save();
+
+    }
+        }
         return redirect('/vehicle.all');
     }
 
