@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Log;
+use App\Models\Brand;
 use App\Http\Resources\LogResource;
 use App\Http\Helpers;
 
@@ -17,9 +18,9 @@ class LogController extends Controller
      */
     public function index()
     {
-
-        $log=Log::all();
-        return view ('admin.log.all',compact('log'));
+        $brands=Brand::all();
+        $logs=Log::with('Client','Vehicle')->where('id','>','0')->paginate(10);
+        return view ('admin.log.all',compact('logs','brands'));
 
 
     }

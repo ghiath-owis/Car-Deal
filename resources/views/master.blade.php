@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-<<<<<<< HEAD
+
     <!-- Mobile Specific Meta -->
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Favicon-->
@@ -108,8 +108,7 @@
                 <div class="row align-items-center d-flex">
                     <div class="col-lg-2 col-md-2">
                         <div id="logo">
-                            <a class="logo"><span style="color:black;  font-size: 45px;
-}">Car<span style="color:red;">Deal</span></span><i class="zmdi zmdi-layers"></i></a>
+                            <a class="logo"><span style="color:black;  font-size: 45px;">Car<span style="color:red;">Deal</span></span><i class="zmdi zmdi-layers"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-10 col-md-2">
