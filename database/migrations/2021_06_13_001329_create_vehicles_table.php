@@ -27,7 +27,7 @@ class CreateVehiclesTable extends Migration
         Schema::create('vehicles', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->text("description")->nullable();
-            $table->boolean("is_available")->default('0');
+            $table->boolean("is_available")->default('1');
             $table->integer("engine_force")->nullable();
             $table->enum('fuel',[Fuel::BENZIN,Fuel::DIESEL,Fuel::ELICTRIC,Fuel::OTHER])->default(Fuel::BENZIN);
             $table->integer("kilometrage")->nullable();

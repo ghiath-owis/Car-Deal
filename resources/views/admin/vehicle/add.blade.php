@@ -75,10 +75,8 @@
                                     <label class="col-md-2 control-label">isAvailable:</label>
                                     <div class="col-md-10">
                                         <Select class="form-control" name="is_available">
-                                            <option value="0">false</option>
                                             <option value="1">true</option>
-
-
+                                            <option value="0">false</option>
                                         </Select>
                                     </div>
                                 </div>
