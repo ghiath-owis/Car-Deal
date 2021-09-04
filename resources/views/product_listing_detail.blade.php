@@ -1,8 +1,6 @@
 @extends('master')
 @section('content')
 
-
-
     <!-- start banner Area -->
     <section class="banner-area relative">
         <div class="overlay overlay-bg"></div>
