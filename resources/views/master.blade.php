@@ -67,8 +67,22 @@
                                 <li>
                                     <a href="#">
                                         <img src="{{ asset('img/boogyman.png') }}" alt="">
-                                        <span> Customer Name
-                                            <i class="fa fa-angle-down"></i></span>
+                                        @guest
+                                        <span> ccc <i class="fa fa-angle-down"> </i></span>
+                                        @endguest
+                                        
+                                        @auth('client')
+                                        <span> {{ Auth::guard('client')->user()->first_name }} <i class="fa fa-angle-down"> </i></span>
+                                        @endauth
+
+                                        
+                                        
+                                        {{--  --}}
+                                        {{-- @else --}}
+                                        
+                                        {{-- @endif --}}
+                                        
+                                            
                                     </a>
                                     <ul class="profile">
                                         <li><a href="{{ route('user-profile') }}">User Profile</a></li>
@@ -76,9 +90,9 @@
                                         <li><a href="{{ route('change-password') }}">Change Password</a></li>
                                         <li><a href="{{ route('shopping-cart') }}">Shopping Cart</a></li>
                                         <li><a href="{{ route('favourite-products') }}">Favourite Car</a></li>
-                                        <li><a href="{{ route('sign-in') }}">Signin Page</a></li>
-                                        <li><a href="{{ route('sign-up') }}">Signup Page</a></li>
-                                        <li><a href="#">Sign Out</a></li>
+                                        <li><a href="{{ route('login') }}">Signin Page</a></li>
+                                        <li><a href="{{ route('register') }}">Signup Page</a></li>
+                                        <li><a href="{{ route('logout') }}">Sign Out</a></li>
                                     </ul>
                                 </li>
                             </ul>

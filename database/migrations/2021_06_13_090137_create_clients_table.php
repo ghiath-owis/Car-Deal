@@ -20,12 +20,11 @@ class CreateClientsTable extends Migration
             $table->string('last_name')->nullable();
             $table->string('username')->nullable();
             $table->string('email')->unique();
-            $table->string('password')->nullable();
+            $table->string('password');
+            $table->rememberToken();
             $table->string('phone')->nullable();
             $table->string('address')->nullable();
             $table->string('photo')->nullable();
-            
-
             $table->timestamps();
         });
 
@@ -34,7 +33,7 @@ class CreateClientsTable extends Migration
         $client->last_name="owis";
         $client->username="gio";
         $client->email="ghiath.wd40@gmail.com";
-        $client->password="gh1234";
+        $client->password= bcrypt('gh1234');
         $client->phone="0941101108";
         $client->address="damascus";
         $client->photo="";
