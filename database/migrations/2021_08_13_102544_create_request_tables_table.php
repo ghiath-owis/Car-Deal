@@ -32,14 +32,7 @@ class CreateRequestTablesTable extends Migration
             $table->timestamps();
         });
 
-        $request_table = new RequestTable;
-        $request_table->date="2021/8/1";
-        $request_table->type="1";
-        $request_table->start_date="2021/8/5";
-        $request_table->end_date="2021/8/15";
-        $request_table->client_id="1";
-        $request_table->vehicle_id="1";
-        $request_table->save();
+      
     }
 
     /**

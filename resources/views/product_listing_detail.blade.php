@@ -239,30 +239,29 @@
                       </button>
                     </div>
                     <div class="modal-body">
-                      <form>
+                      <form action="/rent_request/{{$vehicle->id}}" method="post">
+                          @csrf
                         <div class="form-group">
-                          <label for="recipient-name" class="col-form-label">Name:</label>
-                          <input type="text" class="form-control" placeholder="Full Name" id="recipient-name">
+                          <label for="recipient-name" class="col-form-label">Start Date:</label>
+                          <input required type="date" class="form-control" placeholder="Start Date" id="recipient-name" name="start_date">
                         </div>
                         <div class="form-group">
-                          <label for="recipient-email" class="col-form-label">Email:</label>
-                          <input type="text" class="form-control" placeholder="Email" id="recipient-email">
+                          <label for="recipient-email" class="col-form-label">End Date:</label>
+                          <input required type="date" class="form-control" placeholder="End Date:" id="recipient-email" name="end_date">
                         </div>
-                        <div class="form-group">
-                          <label for="message-text" class="col-form-label">Message:</label>
-                          <textarea rows="4" class="form-control" id="message-text"></textarea>
-                        </div>
-                      </form>
-                    </div>
+
                     <div class="modal-footer">
-                      <button type="button" class="btn btn-success">Send</button>
+                      <button type="submit" class="btn btn-success">Send</button>
                       <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                     </div>
+                      </form>
+                    </div>
+
                   </div>
                 </div>
               </div>
             @else
-            <a href="/buy/request/{{$vehicle->id}}">
+            <a href="/buy_request/{{$vehicle->id}}">
               <button type="button" class="btn btn-success contact btn-block"
               data-target="#exampleModalCenter"><i class="lnr lnr-envelope"></i>
               Send Buy Request

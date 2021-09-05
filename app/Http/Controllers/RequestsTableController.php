@@ -9,7 +9,8 @@ use App\Models\Brand;
 use App\Http\Resources\RequestTableResource;
 use App\Http\Helpers;
 use App\Models\Vehicle;
-
+use App\Models\ReportStatus;
+use Auth;
 class RequestsTableController extends Controller
 {
     /**
@@ -39,7 +40,7 @@ class RequestsTableController extends Controller
 
     public function request_buy_create($id)
     {
-        
+
     }
     /**
      * Store a newly created resource in storage.
@@ -47,25 +48,58 @@ class RequestsTableController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-
+    public function create_buy_request($id)
+    {$exists=RequestTable::where('client_id','=',Auth::guard('client')->user()->id)
+        ->where('vehicle_id','=',$id)->first();
+        if($exists)
+        {
+            return back();
+        }
+        else{
+      $vehicle=vehicle::where('id','=',$id)->first();
         // validation vehicle id.
-        $request->validate([
-            'vehicle_id' => 'required|exists:vehicles,id',
-        ]);
 
         RequestTable::create([
-            'date'       => time(),
-            'type'       => $request->type,
+            'date'       => now()->toDateString(),
+            'type'       => $vehicle->service_type,
+            'client_id'  => Auth::guard('client')->user()->id,
+            'vehicle_id' => $id
+        ]);
+        $req=RequestTable::where('client_id','=',Auth::guard('client')->user()->id)
+        ->where('vehicle_id','=',$id)->first();
+        ReportStatus::create([
+                    'date'       => now()->toDateString(),
+                    'client_id'  => Auth::guard('client')->user()->id,
+                    'vehicle_id' => $id,
+                    'request_table_id' => $req->id,
+                ]);
+        return redirect()->back()->with('success', 'Order sended successfully.');}
+    }
+
+
+    public function create_rent_request(Request $request,$id)
+    {$exists=RequestTable::where('client_id','=',Auth::guard('client')->user()->id)
+        ->where('vehicle_id','=',$id)->first();
+        if($exists)
+        {
+            return back();
+        }
+        else{
+      $vehicle=vehicle::where('id','=',$id)->first();
+        // validation vehicle id.
+
+        RequestTable::create([
+            'date'       => now()->toDateString(),
+            'type'       => $vehicle->service_type,
             'start_date' => $request->start_date,
             'end_date'   => $request->end_date,
-            'client_id'  => auth()->user()->id,
-            'vehicle_id' => $request->vehicle_id
+            'client_id'  => Auth::guard('client')->user()->id,
+            'vehicle_id' => $id
         ]);
 
-        return redirect()->back()->with('success', 'Order sended successfully.');
+        return redirect()->back()->with('success', 'Order sended successfully.');}
     }
+
 
     /**
      * Display the specified resource.

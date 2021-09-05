@@ -111,4 +111,5 @@ Route::get('/buyContracts.all','ContractBuysController@index')->name('all-buys')
 
 
 // RequestTablesController Routs
-Route::get('/buy/request/{id}','RequestsTableController@request_buy_create');
+Route::get('/buy_request/{id}','RequestsTableController@create_buy_request');
+Route::post('/rent_request/{id}','RequestsTableController@create_rent_request');
