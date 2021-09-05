@@ -8,7 +8,8 @@ use App\Models\Vehicle;
 use App\Models\Gallery;
 use App\Models\Brand;
 use App\Models\SpecialOffer;
-
+use App\Models\FavoriteVehicle;
+use Auth;
 class PagesController extends Controller
 {
     /**
@@ -36,12 +37,33 @@ class PagesController extends Controller
         return view('change_password');
     }
 
-
     public function favourite_products()
-    {
-        return view('favourite_products');
+    {$gallery = Gallery::all();
+        $brands = Brand::all();
+        $favo=FavoriteVehicle::where('client_id','=',Auth::guard('client')->user()->id)->get();
+        $vehicles = Vehicle::where('is_available', '=', '1')
+            ->paginate(6);
+
+        return view('favourite_products')->with("vehicles", $vehicles)->with("gallery", $gallery)->with('brands', $brands)->with('favo', $favo);
     }
 
+    public function add_favourite($id)
+    {  $favo=FavoriteVehicle::where('client_id','=',Auth::guard('client')->user()->id)
+        ->where('vehicle_id','=',$id)->first();
+        if($favo)
+        {
+            return back();
+        }
+        else{
+            $fav=new FavoriteVehicle;
+                $fav->client_id=Auth::guard('client')->user()->id;
+                $fav->vehicle_id=$id;
+                $fav->save();
+                return back();
+
+        }
+
+    }
 
     public function special_offer()
     {
@@ -184,15 +206,6 @@ class PagesController extends Controller
         return view('report_of_requests');
     }
 
-    public function sign_in()
-    {
-        return view('signin');
-    }
-
-    public function sign_up()
-    {
-        return view('signup');
-    }
 
     public function terms_and_conditions()
     {

@@ -94,7 +94,7 @@
                        
 
                         <li>
-                            <a  href="{{route('home')}}" class="waves-effect text-center"><i class=" ti-home"></i><span>
+                            <a  href="{{route('admin.home')}}" class="waves-effect text-center"><i class=" ti-home"></i><span>
                                     Dashboard </span> </a>
                         </li>
 
