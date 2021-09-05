@@ -50,3 +50,7 @@ Route::get('/add_favourite/{id}','PagesController@add_favourite')->name('add_fav
 // RequestTablesController Client Routs
 Route::get('/buy_request/{id}','RequestsTableController@create_buy_request');
 Route::post('/rent_request/{id}','RequestsTableController@create_rent_request');
+
+Route::get('/decline/{id}','RequestsTableController@decline')->name('decline');
+
+Route::get('/Accept/{id}','RequestsTableController@Accept')->name('Accept');

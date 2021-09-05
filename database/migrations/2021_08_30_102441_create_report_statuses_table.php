@@ -27,8 +27,7 @@ class CreateReportStatusesTable extends Migration
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
             $table->bigInteger('vehicle_id')->unsigned();
             $table->foreign('vehicle_id')->references('id')->on('vehicles')->onDelete('cascade');
-            $table->bigInteger('request_table_id')->unsigned();
-            $table->foreign('request_table_id')->references('id')->on('request_tables')->onDelete('cascade');
+            $table->Integer('request_table_id');
             $table->timestamps();
         });
 

@@ -8,6 +8,7 @@ use App\Models\Vehicle;
 use App\Models\Gallery;
 use App\Models\Brand;
 use App\Models\SpecialOffer;
+use App\Models\ReportStatus;
 use App\Models\FavoriteVehicle;
 use Auth;
 class PagesController extends Controller
@@ -212,6 +213,12 @@ class PagesController extends Controller
         return view('terms_and_conditions');
     }
 
+
+    public function report_of_requests()
+    {
+        $report=ReportStatus::where('client_id','=',Auth::guard('client')->user()->id)->get();
+        return view('report_of_requests',compact('report'));
+    }
 
 
     public function user_profile()

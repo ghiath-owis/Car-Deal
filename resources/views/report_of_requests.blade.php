@@ -3,20 +3,22 @@
 
 
 			<!-- start banner Area -->
-			<section class="banner-area relative" id="home">	
+			<section class="banner-area relative" id="home">
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Report Of Requests			
-							</h1>	
-							<p class="text-white link-nav mt-3"><a href="index.html">Return To Home Page </a>  <span class="lnr lnr-arrow-right"></span></p>
-						</div>											
+
+								Your Previous Request
+							</h1>
+							<p class="text-white link-nav mt-3"><a href="\"> Home  </a>  <span class="lnr lnr-arrow-right"></span></p>
+						</div>
+
 					</div>
 				</div>
 			</section>
-			<!-- End banner Area -->	
+			<!-- End banner Area -->
 
 			<!-- Start Shopping Cart Area -->
 			<section class="cart_area mb-30 pt-120">
@@ -24,11 +26,21 @@
 					<div class="row d-flex justify-content-center">
 						<div class="cart_content col-lg-10">
 							<div class="cart-top-border">
+<<<<<<< HEAD
 								<h2 class="mb-30">Report Of Requests</h2>
+=======
+								<h2 class="mb-30">Your Request Table</h2>
+>>>>>>> mohamad
 								<div class="progress-table-wrap">
 									<div class="progress-table">
 										<div class="table-head">
+
+											<div class="image">Id</div>
+											<div class="product-details">Status</div>
+											<div class="price">Date</div>
+											<div class="quantity">vehicle_ID</div>
 											
+<<<<<<< HEAD
 											<div class="image">ID</div>
 											<div class="product-details">Car Brand</div>
 											<div class="quantity">Model</div>
@@ -85,35 +97,36 @@
 										  <input type="text" placeholder="Enter Coupon Code" class="form-control mb-3">
 										  <button type="submit" class="btn-block btn btn-primary">Apply Coupon Code</button>								
 									</div>
+=======
 
-									<div class="single-widget search-widget mb-0">
-										<h4 class="title">Calculate Shipping</h4>
-										<select class="form-control mb-3">
-											  <option>Select Your Country</option>
-											  <option>China</option>
-											  <option>England</option>
-											  <option>Turkey</option>
-											  <option>Ireland</option>
-											  <option>Russia</option>
-										</select>
-										<select class="form-control mb-3">
-											  <option>Select State/City</option>
-											  <option>London</option>
-											  <option>Beijing</option>
-											  <option>Istanbul</option>
-											  <option>Ireland</option>
-											  <option>Moscow</option>
-										</select>
-										<input type="text" placeholder=" PostCode/Zip" class="mb-3 form-control">
-										  <button type="submit" class="btn-block btn btn-danger">Calculate Shipping</button>								
-									</div>			
+										</div>
+                                        @foreach ( $report as $rep)
 
+
+										<div class="table-row">
+
+											<div class="image"> {{$rep->id}}</div>
+											<div class="product-details">{{$rep->status}}</div>
+											<div class="price">{{$rep->date}}</div>
+											<div class="quantity">{{$rep->vehicle_id}}</div>
+>>>>>>> mohamad
+
+
+										</div>
+
+                                        @endforeach
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>	
+				</div>
 			</section>
+<<<<<<< HEAD
 			
  -->
 @stop
+=======
+
+@stop
+>>>>>>> mohamad
