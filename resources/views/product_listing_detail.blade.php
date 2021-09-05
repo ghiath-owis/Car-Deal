@@ -220,11 +220,11 @@
             </div>
 
             @auth('client')
-
+            @if($vehicle->service_type=="rent")
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-success contact btn-block" data-toggle="modal"
                 data-target="#exampleModalCenter"><i class="lnr lnr-envelope"></i>
-                Send Buy Request
+                Send Rent Request
               </button>
 
               <!-- Modal -->
@@ -261,6 +261,15 @@
                   </div>
                 </div>
               </div>
+            @else
+            <a href="/buy/request/{{$vehicle->id}}">
+              <button type="button" class="btn btn-success contact btn-block"
+              data-target="#exampleModalCenter"><i class="lnr lnr-envelope"></i>
+              Send Buy Request
+            </button>
+        </a>
+
+            @endif
 
               <a href="\add_favourite\{{$vehicle->id}}" class="btn btn-primary btn-block"><i class="lnr lnr-heart"></i> Add to Favourites</a>
               <!-- <a href="" class="btn btn-danger btn-block"> Buy Now!</a> -->

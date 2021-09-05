@@ -16,6 +16,8 @@ class RequestsTableController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {   $brands=Brand::all();
         $request_table=RequestTable::with('Client','Vehicle')->where('id','>','0')->paginate(10);
@@ -28,11 +30,16 @@ class RequestsTableController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function create()
     {
         //
     }
 
+    public function request_buy_create($id)
+    {
+        
+    }
     /**
      * Store a newly created resource in storage.
      *

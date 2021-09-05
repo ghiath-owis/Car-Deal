@@ -29,7 +29,7 @@ Route::get('/index','PagesController@index')->name('hom');
 Route::get('/about_us','PagesController@about_us')->name('about-us');
 Route::get('/change_password','PagesController@change_password')->name('change-password');
 Route::get('/contact','PagesController@contact')->name('contact');
-Route::get('/favourite_products','PagesController@favourite_products')->name('favourite-products');
+Route::get('/favourite_car','PagesController@favourite_products')->name('favourite-products');
 Route::get('/privacy_policy','PagesController@privacy_policy')->name('privacy-policy');
 Route::get('/product_listing','PagesController@product_listing')->name('product-listing');
 Route::get('/special_offer','PagesController@special_offer')->name('special_offer');
@@ -96,3 +96,5 @@ Route::get('/request','RequestsTableController@index')->name('all-request');
 Route::get('/buyContracts.all','ContractBuysController@index')->name('all-buys');
 
 
+// RequestTablesController Routs
+Route::get('/buy/request/{id}','RequestsTableController@request_buy_create');
