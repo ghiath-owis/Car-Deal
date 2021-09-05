@@ -10,6 +10,10 @@ use App\Http\Resources\RequestTableResource;
 use App\Http\Helpers;
 use App\Models\Vehicle;
 use App\Models\ReportStatus;
+use App\Models\Log;
+use App\Models\Client;
+use App\Models\ContractBuy;
+use App\Models\ContractRent;
 use Auth;
 class RequestsTableController extends Controller
 {
@@ -97,6 +101,14 @@ class RequestsTableController extends Controller
             'vehicle_id' => $id
         ]);
 
+        $req=RequestTable::where('client_id','=',Auth::guard('client')->user()->id)
+        ->where('vehicle_id','=',$id)->first();
+        ReportStatus::create([
+                    'date'       => now()->toDateString(),
+                    'client_id'  => Auth::guard('client')->user()->id,
+                    'vehicle_id' => $id,
+                    'request_table_id' => $req->id,
+                ]);
         return redirect()->back()->with('success', 'Order sended successfully.');}
     }
 
@@ -141,9 +153,91 @@ class RequestsTableController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function decline($id)
     {
-        //
+      $status=ReportStatus::where('request_table_id','=',$id)->first();
+
+      $rstatus=ReportStatus::find($status->id);
+      $rstatus->status='unacceptable';
+      $rstatus->save();
+      $request=RequestTable::where('id','=',$id)->first();
+      $log=new Log;
+      $log->client_id=$request->client_id;
+      $log->vehicle_id=$request->vehicle_id;
+      $log->date=now()->toDateString();
+      $log->action="Decline";
+      $log->save();
+      $request->delete();
+      return back();
+
+    }
+
+    public function Accept($id)
+    {
+      $status=ReportStatus::where('request_table_id','=',$id)->first();
+
+      $rstatus=ReportStatus::find($status->id);
+      $rstatus->status='acceptable';
+      $rstatus->save();
+      $request=RequestTable::where('id','=',$id)->first();
+      $vehicle=vehicle::find($request->vehicle_id);
+      $vehicle->is_available=0;
+      $requests=RequestTable::where('vehicle_id','=',$request->vehicle_id)->get();
+      $client=Client::find($request->client_id);
+    if($vehicle->service_type=="buy")
+    { $cbuy=new ContractBuy;
+      $cbuy->date=now()->toDateString();
+      $cbuy->client_id= $client->id;
+      $cbuy->vehicle_id=$vehicle->id;
+      $cbuy->save();
+       $log=new Log;
+      $log->client_id=$request->client_id;
+      $log->vehicle_id=$request->vehicle_id;
+      $log->date=now()->toDateString();
+      $log->action="Request Buy Accepted";
+      $log->save();
+
+    }
+    if($vehicle->service_type=="rent")
+    { $cbuy=new ContractRent;
+      $cbuy->client_id= $client->id;
+      $cbuy->vehicle_id=$vehicle->id;
+      $cbuy->start_date=$request->start_date;
+      $cbuy->end_date=$request->end_date;
+      $cbuy->save();
+       $log=new Log;
+      $log->client_id=$request->client_id;
+      $log->vehicle_id=$request->vehicle_id;
+      $log->date=now()->toDateString();
+      $log->action="Request Rent Accepted";
+      $log->save();
+
+    }
+    $vehicle->save();
+    foreach ($requests as $req)
+{     $status=ReportStatus::where('vehicle_id','=',$request->vehicle_id)
+    ->where('client_id','!=',$request->client_id)
+    ->get();
+    foreach($status as $st){
+      $rstatus=ReportStatus::find($st->id);
+      $rstatus->status='unacceptable';
+      $rstatus->save();
+    }
+    if($req->client_id!=$request->client_id){
+      $log=new Log;
+      $log->client_id=$req->client_id;
+      $log->vehicle_id=$req->vehicle_id;
+      $log->date=now()->toDateString();
+      $log->action="Decline";
+      $log->save();
+    }
+      $req->delete();
+
+
+}
+    $request->delete();
+      return back();
+
     }
 
     public function proccessRequest(Request $request, $requestId) {

@@ -55,10 +55,12 @@
                                                 <td>{{ $req->Vehicle->price_after_offer }} $</td>
                                                 <td>{{ $req->start_date }}</td>
                                                 <td>{{ $req->end_date }}</td>
-                                                <td><button type="button"
-                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Accept</button>
-                                                    <button type="button"
-                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5">Decline</button>
+                                                <td>
+                                                    <a href="/Accept/{{$req->id}}"> <button type="button"
+                                                        class="btn btn-success waves-effect w-md waves-light m-b-5">Accept</button></a>
+
+                                                  <a href="/decline/{{$req->id}}">  <button type="button"
+                                                        class="btn btn-danger waves-effect w-md waves-light m-b-5" >Decline</button></a>
                                                 </td>
 
                                             </tr>
