@@ -32,9 +32,9 @@
 
               <!-- Wrapper For Slides -->
               <div class="carousel-inner" role="listbox">
-                
+
                 @php $i = 1;
-                                @endphp 
+                                @endphp
                 @foreach ($gallery as $img)
                   <!-- First Slide -->
                   @if ($img->vehicle_id == $vehicle->id)
@@ -47,7 +47,7 @@
 
                       </div>
                       @php $i = $i + 1;
-                                            @endphp 
+                                            @endphp
 
                     @else
                       <div class="carousel-item">
@@ -220,11 +220,11 @@
             </div>
 
             @auth('client')
-
+            @if($vehicle->service_type=="rent")
               <!-- Button trigger modal -->
               <button type="button" class="btn btn-success contact btn-block" data-toggle="modal"
                 data-target="#exampleModalCenter"><i class="lnr lnr-envelope"></i>
-                Send Buy Request
+                Send Rent Request
               </button>
 
               <!-- Modal -->
@@ -261,8 +261,17 @@
                   </div>
                 </div>
               </div>
+            @else
+            <a href="/buy/request/{{$vehicle->id}}">
+              <button type="button" class="btn btn-success contact btn-block"
+              data-target="#exampleModalCenter"><i class="lnr lnr-envelope"></i>
+              Send Buy Request
+            </button>
+        </a>
 
-              <a href="" class="btn btn-primary btn-block"><i class="lnr lnr-heart"></i> Add to Favourites</a>
+            @endif
+
+              <a href="\add_favourite\{{$vehicle->id}}" class="btn btn-primary btn-block"><i class="lnr lnr-heart"></i> Add to Favourites</a>
               <!-- <a href="" class="btn btn-danger btn-block"> Buy Now!</a> -->
             @endauth
           </div>

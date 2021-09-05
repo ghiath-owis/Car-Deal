@@ -20,8 +20,8 @@ class CreateFavoriteVehiclesTable extends Migration
             $table->foreign('client_id')->references('id')->on('clients')->onDelete('cascade');
             $table->bigInteger('vehicle_id')->unsigned();
             $table->foreign('vehicle_id')->references('id')->on('vehicles')->onDelete('cascade');
-
             $table->primary(['client_id','vehicle_id']);
+            $table->timestamps();
         });
     }
 

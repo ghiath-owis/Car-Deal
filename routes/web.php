@@ -25,7 +25,10 @@ Route::get('/','PagesController@index')->name('hom');
 Route::get('/index','PagesController@index')->name('hom');
 Route::get('/about_us','PagesController@about_us')->name('about-us');
 Route::get('/change_password','PagesController@change_password')->name('change-password');
-Route::get('/favourite_products','PagesController@favourite_products')->name('favourite-products');
+
+Route::get('/contact','PagesController@contact')->name('contact');
+Route::get('/favourite_car','PagesController@favourite_products')->name('favourite-products');
+
 Route::get('/privacy_policy','PagesController@privacy_policy')->name('privacy-policy');
 Route::get('/product_listing','PagesController@product_listing')->name('product-listing');
 Route::get('/special_offer','PagesController@special_offer')->name('special_offer');
@@ -33,11 +36,25 @@ Route::get('/product_listing_detail/{id}','PagesController@product_listing_detai
 Route::get('/shopping_cart','PagesController@shopping_cart')->name('shopping-cart');
 Route::get('/terms_and_conditions','PagesController@terms_and_conditions')->name('terms-and-conditions');
 Route::get('/user_profile','PagesController@user_profile')->name('user-profile');
+
 Route::get('/vehicle_rent','PagesController@vehicle_rent')->name('vehicle_rent');
 Route::get('/vehicle_buy','PagesController@vehicle_buy')->name('vehicle_buy');
 Route::post('/search','PagesController@search')->name('search');
 Route::get('/special_rent','PagesController@special_rent')->name('special_rent');
 Route::get('/special_buy','PagesController@special_buy')->name('special_buy');
+Route::get('/add_favourite/{id}','PagesController@add_favourite')->name('add_favourite');
+
+
+//Route::resource('owners','OwnersController');
+Route::get('/owner/add','OwnersController@add')->name('add-owner');
+Route::post('/owner/store','OwnersController@store')->name('store-owner');
+Route::get('/owner/all','OwnersController@all')->name('all-owners');
+Route::get('/owner/edit/{id}','OwnersController@edit')->name('edit-owner');
+Route::post('/owner/edit/{id}','OwnersController@update')->name('update-owner');
+Route::get('/owner/delete/{id}','OwnersController@delete')->name('delete-owner');
+
+
+
 
 
 // BrandController Routs
@@ -50,7 +67,7 @@ Route::post('/brand.update{id}','BrandsController@update')->name('update-brand')
 Route::get('/brand/delete/{id}','BrandsController@destroy')->name('delete-brand');
 
 
-// SpecialOfferController Routs    
+// SpecialOfferController Routs
 
 Route::get('/offer.add','SpecialOffersController@create')->name('add-special_offer');
 Route::post('/offer/store','SpecialOffersController@store')->name('store-special_offer');
@@ -90,3 +107,5 @@ Route::get('/request','RequestsTableController@index')->name('all-request');
 Route::get('/buyContracts.all','ContractBuysController@index')->name('all-buys');
 
 
+// RequestTablesController Routs
+Route::get('/buy/request/{id}','RequestsTableController@request_buy_create');
