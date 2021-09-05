@@ -12,25 +12,51 @@
 
 ### Auth routes for admin###
 Route::group(['namespace'=>'Admin\Auth'], function () {
-  Route::get('/login', 'LoginController@showLoginForm')->name('admin.login');
-  Route::post('/login', 'LoginController@login')->name('admin.login');
-  Route::post('/logout', 'LoginController@logout')->name('admin.logout');
+    Route::get('/login', 'LoginController@showLoginForm')->name('admin.login');
+    Route::post('/login', 'LoginController@login')->name('admin.login');
+    Route::post('/logout', 'LoginController@logout')->name('admin.logout');
 });
 
 Route::group(['middleware' => 'auth:admin'], function () {
-Route::get('/home','Admin\HomeController@index')->name('admin.home');
+    //Home admin (dashboard) 
+    Route::get('/home', 'Admin\HomeController@index')->name('admin.home');
 
+    // BrandController Routs
+    Route::get('/brand/add', 'BrandsController@create')->name('add-brand');
+    Route::post('/brand/store', 'BrandsController@store')->name('store-brand');
+    Route::get('/brand.all', 'BrandsController@index')->name('all-brands');
+    Route::get('/brand.edit{id}', 'BrandsController@edit')->name('edit-brand');
+    Route::post('/brand.update{id}', 'BrandsController@update')->name('update-brand');
+    Route::get('/brand/delete/{id}', 'BrandsController@destroy')->name('delete-brand');
 
+    // SpecialOfferController Routs
+    Route::get('/offer.add', 'SpecialOffersController@create')->name('add-special_offer');
+    Route::post('/offer/store', 'SpecialOffersController@store')->name('store-special_offer');
+    Route::get('/offer.all', 'SpecialOffersController@index')->name('all-special_offers');
+    Route::get('/offer.edit{id}', 'SpecialOffersController@edit')->name('edit-special_offer');
+    Route::post('/offer.update{id}', 'SpecialOffersController@update')->name('update-special_offer');
+    Route::get('/offer/delete/{id}', 'SpecialOffersController@destroy')->name('delete-special_offer');
 
+    // VehiclesController Routs
+    Route::get('/vehicle.add', 'vehiclesController@create')->name('add-vehicle');
+    Route::post('/vehicle/store', 'vehiclesController@store')->name('store-vehicle');
+    Route::get('/vehicle.all', 'vehiclesController@index')->name('all-vehicles');
+    Route::get('/vehicle.edit{id}', 'vehiclesController@edit')->name('edit-vehicle');
+    Route::post('/vehicle.update{id}', 'vehiclesController@update')->name('update-vehicle');
+    Route::get('/vehicle/delete/{id}', 'vehiclesController@destroy')->name('delete-vehicle');
 
+    // LogsController Routs
+    Route::get('/log.all', 'LogController@index')->name('all-logs');
 
-Route::get('/vehicle.add','vehiclesController@create')->name('add-vehicle');
-Route::post('/vehicle/store','vehiclesController@store')->name('store-vehicle');
-Route::get('/vehicle.all','vehiclesController@index')->name('all-vehicles');
-Route::get('/vehicle.edit{id}','vehiclesController@edit')->name('edit-vehicle');
-Route::post('/vehicle.update{id}','vehiclesController@update')->name('update-vehicle');
-Route::get('/vehicle/delete/{id}','vehiclesController@destroy')->name('delete-vehicle');
+    // ContractRentsController Routs
+    Route::get('/rentContracts.all', 'ContractRentsController@index')->name('all-rents');
 
+    // RequestTablesController Routs
+    Route::get('/request', 'RequestsTableController@index')->name('all-request');
+
+    // ContractBuysController Routs
+    Route::get('/buyContracts.all', 'ContractBuysController@index')->name('all-buys');
+
+    // RequestTablesController Routs
+    Route::get('/buy/request/{id}', 'RequestsTableController@request_buy_create');
 });
-
-
