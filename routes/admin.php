@@ -11,7 +11,7 @@
 */
 
 ### Auth routes for admin###
-Route::group(['namespace'=>'Admin\Auth'], function () {
+Route::group(['namespace'=>'Admin\Auth','prefix'=>'admin'], function () {
     Route::get('/login', 'LoginController@showLoginForm')->name('admin.login');
     Route::post('/login', 'LoginController@login')->name('admin.login');
     Route::post('/logout', 'LoginController@logout')->name('admin.logout');
@@ -19,7 +19,7 @@ Route::group(['namespace'=>'Admin\Auth'], function () {
 
 Route::group(['middleware' => 'auth:admin'], function () {
     //Home admin (dashboard) 
-    Route::get('/home', 'Admin\HomeController@index')->name('admin.home');
+    Route::get('/dashboard', 'Admin\HomeController@index')->name('admin.home');
 
     // BrandController Routs
     Route::get('/brand/add', 'BrandsController@create')->name('add-brand');

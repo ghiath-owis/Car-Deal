@@ -20,7 +20,7 @@ class CreateReportStatusesTable extends Migration
     {
         Schema::create('report_statuses', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('content')->nullable();
+            $table->string('status')->default("waiting");
             $table->date('date')->nullable();
 
             $table->bigInteger('client_id')->unsigned();
@@ -32,14 +32,7 @@ class CreateReportStatusesTable extends Migration
             $table->timestamps();
         });
 
-        $report_status = new ReportStatus;
-        $report_status->content="";
-        $report_status->date="2021/8/1";
-        $report_status->client_id="1";
-        $report_status->vehicle_id="1";
-        $report_status->request_table_id="1";
 
-        $report_status->save();
     }
 
     /**

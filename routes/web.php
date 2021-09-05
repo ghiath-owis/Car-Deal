@@ -34,7 +34,9 @@ Route::get('/product_listing','PagesController@product_listing')->name('product-
 Route::get('/special_offer','PagesController@special_offer')->name('special_offer');
 Route::get('/product_listing_detail/{id}','PagesController@product_listing_detail')->name('product-listing-detail');
 
+
 Route::get('/report_of_requests','PagesController@report_of_requests')->name('report_of_requests');
+
 
 Route::get('/terms_and_conditions','PagesController@terms_and_conditions')->name('terms-and-conditions');
 Route::get('/user_profile','PagesController@user_profile')->name('user-profile');
@@ -45,4 +47,6 @@ Route::post('/search','PagesController@search')->name('search');
 Route::get('/special_rent','PagesController@special_rent')->name('special_rent');
 Route::get('/special_buy','PagesController@special_buy')->name('special_buy');
 Route::get('/add_favourite/{id}','PagesController@add_favourite')->name('add_favourite');
-
+// RequestTablesController Client Routs
+Route::get('/buy_request/{id}','RequestsTableController@create_buy_request');
+Route::post('/rent_request/{id}','RequestsTableController@create_rent_request');

@@ -49,7 +49,8 @@ class SpecialOffersController extends Controller
         $special_offer -> save();
 
 
-         return redirect('/offer.all');
+        return redirect('/offer.all');
+        // return redirect()->route('all-special_offers');
     }
 
     /**
@@ -97,6 +98,7 @@ class SpecialOffersController extends Controller
         $special_offer ->save();
 
         return redirect('/offer.all');
+        // return redirect()->route('all-special_offers');
     }
 
     /**

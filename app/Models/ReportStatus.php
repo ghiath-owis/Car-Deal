@@ -9,7 +9,7 @@ class ReportStatus extends Model
 {
     protected $fillable =[
         "content",
-        "date",
+        "date", 
         "client_id",
         "vehicle_id",
         "request_table_id",];
