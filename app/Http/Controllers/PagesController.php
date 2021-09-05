@@ -36,11 +36,7 @@ class PagesController extends Controller
         return view('change_password');
     }
 
-    public function contact()
-    {
-        return view('contact');
-    }
-
+    
     public function favourite_products()
     {
         return view('favourite_products');
@@ -188,15 +184,6 @@ class PagesController extends Controller
         return view('shopping_cart');
     }
 
-    public function sign_in()
-    {
-        return view('signin');
-    }
-
-    public function sign_up()
-    {
-        return view('signup');
-    }
 
     public function terms_and_conditions()
     {
