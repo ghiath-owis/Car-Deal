@@ -108,7 +108,7 @@
 
 
                 <li>
-                  <a  href="{{ route('shopping-cart') }}">
+                  <a  href="{{ route('report_of_requests') }}">
                     <i class="fa fa-shopping-basket"></i>
                   </a>
                 </li>
