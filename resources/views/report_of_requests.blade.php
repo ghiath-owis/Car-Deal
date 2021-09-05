@@ -9,7 +9,7 @@
 					<div class="row d-flex align-items-center justify-content-center">
 						<div class="about-content col-lg-12">
 							<h1 class="text-white">
-								Shopping Cart			
+								Report Of Requests			
 							</h1>	
 							<p class="text-white link-nav mt-3"><a href="index.html">Return To Home Page </a>  <span class="lnr lnr-arrow-right"></span></p>
 						</div>											
@@ -24,17 +24,17 @@
 					<div class="row d-flex justify-content-center">
 						<div class="cart_content col-lg-10">
 							<div class="cart-top-border">
-								<h2 class="mb-30">Shopping Cart</h2>
+								<h2 class="mb-30">Report Of Requests</h2>
 								<div class="progress-table-wrap">
 									<div class="progress-table">
 										<div class="table-head">
 											
-											<div class="image">Image</div>
-											<div class="product-details">Product Details</div>
+											<div class="image">ID</div>
+											<div class="product-details">Car Brand</div>
+											<div class="quantity">Model</div>
 											<div class="price">Price</div>
-											<div class="quantity">Quantity</div>
-											<div class="total">Total</div>
-											<div class="remove">Remove</div>
+											<div class="total">Date</div>
+											<div class="remove">Status</div>
 										</div>
 										<div class="table-row">
 											
@@ -46,61 +46,14 @@
 											<div class="remove"><a href="#"><i class="fa fa-times"></i></a></div>
 										</div>
 										<div class="table-row">
+											
 											<div class="image"> <img src="img/shopping-cart1.jpg" alt="flag"></div>
 											<div class="product-details">	Chomok Website Mock Up</div>
 											<div class="price">$15.00</div>
 											<div class="quantity">2</div>
 											<div class="total">$30.00</div>
 											<div class="remove"><a href="#"><i class="fa fa-times"></i></a></div>
-										</div>
-										<div class="table-row">
-											<div class="image"> <img src="img/shopping-cart1.jpg" alt="flag"></div>
-											<div class="product-details">	Chomok Website Mock Up</div>
-											<div class="price">$15.00</div>
-											<div class="quantity">2</div>
-											<div class="total">$30.00</div>
-											<div class="remove"><a href="#"><i class="fa fa-times"></i></a></div>
-										</div>
-										<div class="table-row">
-											<div class="image"> <img src="img/shopping-cart1.jpg" alt="flag"></div>
-											<div class="product-details">	Chomok Website Mock Up</div>
-											<div class="price">$15.00</div>
-											<div class="quantity">2</div>
-											<div class="total">$30.00</div>
-											<div class="remove"><a href="#"><i class="fa fa-times"></i></a></div>
-										</div>
-										<div class="table-row">
-											<div class="image"> <img src="img/shopping-cart1.jpg" alt="flag"></div>
-											<div class="product-details">	Chomok Website Mock Up</div>
-											<div class="price">$15.00</div>
-											<div class="quantity">2</div>
-											<div class="total">$30.00</div>
-											<div class="remove"><a href="#"><i class="fa fa-times"></i></a></div>
-										</div>
-										<div class="table-row">
-											<div class="image"> <img src="img/shopping-cart1.jpg" alt="flag"></div>
-											<div class="product-details">	Chomok Website Mock Up</div>
-											<div class="price">$15.00</div>
-											<div class="quantity">2</div>
-											<div class="total">$30.00</div>
-											<div class="remove"><a href="#"><i class="fa fa-times"></i></a></div>
-										</div>
-										<div class="table-row">
-											<div class="image"> <img src="img/shopping-cart1.jpg" alt="flag"></div>
-											<div class="product-details">	Chomok Website Mock Up</div>
-											<div class="price">$15.00</div>
-											<div class="quantity">2</div>
-											<div class="total">$30.00</div>
-											<div class="remove"><a href="#"><i class="fa fa-times"></i></a></div>
-										</div>
-										<div class="table-row">
-											<div class="image"> <img src="img/shopping-cart1.jpg" alt="flag"></div>
-											<div class="product-details">	Chomok Website Mock Up</div>
-											<div class="price">$15.00</div>
-											<div class="quantity">2</div>
-											<div class="total">$30.00</div>
-											<div class="remove"><a href="#"><i class="fa fa-times"></i></a></div>
-										</div>
+										</div>	
 									</div>
 								</div>
 							</div>
@@ -110,7 +63,7 @@
 			</section>
 			<!-- End Shopping Cart Area -->
 
-			<section class="blog-posts-area pb-120">
+			<!-- <section class="blog-posts-area pb-120">
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="cart_content col-lg-10">
@@ -161,6 +114,6 @@
 					</div>
 				</div>	
 			</section>
-			<!-- End blog-posts Area -->
-
+			
+ -->
 @stop

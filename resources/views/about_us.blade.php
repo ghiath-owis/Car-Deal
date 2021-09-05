@@ -26,8 +26,7 @@
 		            <div class="about-details">
 		              <h2 class="main-subtitle">We Are Experienced & Largest Auto Car Dealer</h2>
 		              <hr class="line">
-		              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled Lorem Ipsum has been the industry's it to make a type specimen book.</p>
-		              <p>It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently. Excepteur sint occaecat cupi datat non proidt, sunt in culpa qui offi cia deserunt.</p>
+		              <p>We are a team of four persons who studying information technology engineering.</p>
 		            </div>
 		          </div>
 		          <div class="col-sm-12 col-md-6 wow fadeInRight">
@@ -114,9 +113,7 @@
 						<div class="menu-content col-lg-9">
 							<div class="title text-center">
 								<h1 class="mb-10 text-white text-capitalize">Join us today without any hesitation</h1>
-								<p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
-								<a class="primary-btn mb" href="#">I am a Client</a>
-								<a class="primary-btn" href="#">We are a Car dealer</a>
+								
 							</div>
 						</div>
 					</div>	

@@ -55,7 +55,7 @@ class Handler extends ExceptionHandler
     /**
      * handler exception if user (client or admin) is unauthenticated
      * redrirect to login page depending on what type of guard
-     * 
+     *
      * @param  \Illuminate\Http\Request  $request
      * @param  \AuthenticationException  $exception
      * @return \Illuminate\Http\Response
@@ -69,12 +69,12 @@ class Handler extends ExceptionHandler
                 ], 401)
                 : redirect()->guest(route('admin.login'));
         }
-    
+
         return $request->expectsJson()
             ? response()->json([
                   'message' => $exception->getMessage()
             ], 401)
             : redirect()->guest(route('login'));
     }
-    
+
 }
