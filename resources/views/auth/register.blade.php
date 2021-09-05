@@ -148,9 +148,11 @@
 
           {{-- ########################## need update ########################### --}}
           {{-- photo --}}
-          <div class="wrap-input100 validate-input m-b-16">
+
+          
+          <!-- <div class="wrap-input100 validate-input m-b-16">
             <input type="file" name="photo" placeholder="image">
-          </div>
+          </div> -->
           {{-- ##########################  end need update ########################### --}}
 
           {{-- password --}}
